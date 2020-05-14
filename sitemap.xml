@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://codehao.top/about/index.html</loc>
+    
+    <lastmod>2020-05-14T03:34:27.588Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://codehao.top/2020/05/11/IQ%E6%B5%8B%E8%AF%95%E9%9B%86%E9%94%A6%EF%BC%88%E9%9D%A2%E8%AF%95%EF%BC%89/</loc>
+    
+    <lastmod>2020-05-14T02:35:05.008Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://codehao.top/movies/index.html</loc>
     
     <lastmod>2020-05-13T15:59:22.224Z</lastmod>
@@ -23,13 +37,6 @@
   </url>
   
   <url>
-    <loc>http://codehao.top/about/index.html</loc>
-    
-    <lastmod>2020-05-13T06:46:24.793Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://codehao.top/categories/index.html</loc>
     
     <lastmod>2020-05-13T06:44:32.762Z</lastmod>
@@ -47,13 +54,6 @@
     <loc>http://codehao.top/2020/04/22/%E5%9F%BA%E4%BA%8ECentOS7%E5%AE%89%E8%A3%85virtualenv%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/</loc>
     
     <lastmod>2020-05-13T03:10:04.012Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://codehao.top/2020/05/11/IQ%E6%B5%8B%E8%AF%95%E9%9B%86%E9%94%A6%EF%BC%88%E9%9D%A2%E8%AF%95%EF%BC%89/</loc>
-    
-    <lastmod>2020-05-11T23:51:05.920Z</lastmod>
     
   </url>
   
