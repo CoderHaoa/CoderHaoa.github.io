@@ -91,7 +91,7 @@
     <link href="http://codehao.top/2020/04/22/%E6%B5%85%E8%B0%88Red%20Hat%E5%92%8C%20Centos7/"/>
     <id>http://codehao.top/2020/04/22/%E6%B5%85%E8%B0%88Red%20Hat%E5%92%8C%20Centos7/</id>
     <published>2020-04-22T13:28:20.000Z</published>
-    <updated>2020-05-13T03:10:31.382Z</updated>
+    <updated>2020-05-14T06:13:13.974Z</updated>
     
     <content type="html"><![CDATA[<p>#<a href="http://www.redhat.com" target="_blank" rel="noopener">Red Hat</a>         </p><blockquote><p>##简介及盈利模式</p></blockquote><ul><li>###<font face="楷体" >Red Hat是商业上运作最成功的一个Linux发行套件，普及程度很高，由Red Hat公司发行。以Red Hat Linux为基础派生的Linux发行套件有很多，其中包括以桌面用戶为目标的Mandrake Linux（原为包含KDE的Red Hat Linux），Yellow Dog Linux（开始時为支持PowerPC的Red Hat Linux）和 ASPLinux（对非拉丁语言有较好支持的Red Hat Linux）。</font></li><li>###<font face="楷体" >红帽把自己的收费模式叫做==“订阅模式”==，不管新老客户只要在订阅期内，除了可以免费享受这些,支持以外，用户也无需再次购买产品的升级，根据用户的需要可随时进行更新。费用的收取也是相对透明公平的。</font></li></ul><hr><blockquote><p>##RED HAT和centos的区别</p></blockquote><ul><li>###<font face="楷体" >首先它俩的内核都是Linux，都是开源免费使用，redhat会提供源代码，而作为完全免费的centos是不提供源代码;</font></li><li>###<font face="楷体" >如果你使用 CentOS，你不会因新的有 bug 的应用程序版本而遇到任何稳定性问题，因为你不会得到那个新的有 bug 的版本。</font></li><li>###<font face="楷体" >centos可谓是是red hat的社区版本，红帽公司只为red hat版本提供技术服务（当然肯定是收费的），而对centos不提供。</font></li></ul><hr><blockquote><p>##为何<a href="http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-1804.iso" target="_blank" rel="noopener">Centos7</a>使用的较多？ </p></blockquote><ul><li>###<font face="楷体" >CentOS是基于red hat的，更新频度少，更稳定更安全，作为服务器来说，centos的桌面发行版不流行，因为桌面的不友好性，反而大大的增加了它的安全性，对于技术人员来说，熟练使用centos则更加考验技术。</font></li></ul>]]></content>
     
@@ -104,6 +104,30 @@
 &lt;p&gt;##简介及盈利模式&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ul&gt;
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Centos" scheme="http://codehao.top/tags/Centos/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Centos 7下安装nginx，使用yum install nginx，提示没有可用的软件包。</title>
+    <link href="http://codehao.top/2020/04/22/Centos%207%E4%B8%8B%E5%AE%89%E8%A3%85nginx%EF%BC%8C%E4%BD%BF%E7%94%A8yum%20install%20nginx%EF%BC%8C%E6%8F%90%E7%A4%BA%E6%B2%A1%E6%9C%89%E5%8F%AF%E7%94%A8%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%8C%85%E3%80%82/"/>
+    <id>http://codehao.top/2020/04/22/Centos%207%E4%B8%8B%E5%AE%89%E8%A3%85nginx%EF%BC%8C%E4%BD%BF%E7%94%A8yum%20install%20nginx%EF%BC%8C%E6%8F%90%E7%A4%BA%E6%B2%A1%E6%9C%89%E5%8F%AF%E7%94%A8%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%8C%85%E3%80%82/</id>
+    <published>2020-04-22T13:21:20.000Z</published>
+    <updated>2020-04-22T15:38:38.861Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="Centos-7下安装nginx，使用yum-install-nginx，提示没有可用的软件包。"><a href="#Centos-7下安装nginx，使用yum-install-nginx，提示没有可用的软件包。" class="headerlink" title="Centos 7下安装nginx，使用yum install nginx，提示没有可用的软件包。"></a>Centos 7下安装nginx，使用yum install nginx，提示没有可用的软件包。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># yum -y install nginx</span><br><span class="line">已加载插件：fastestmirror, langpacks</span><br><span class="line">Loading mirror speeds from cached hostfile</span><br><span class="line"> * base: mirrors.aliyun.com</span><br><span class="line"> * extras: mirrors.aliyun.com</span><br><span class="line"> * updates: mirrors.aliyun.com</span><br><span class="line">没有可用软件包 nginx。</span><br><span class="line">错误：无须任何处理</span><br></pre></td></tr></table></figure><hr><p><strong>原因</strong>： nginx位于第三方的yum源里面，而不在centos官方yum源里面。 </p><p><strong>了解</strong>： <em>Nginx</em> (engine x) 是一个高性能的<a href="https://baike.baidu.com/item/HTTP" target="_blank" rel="noopener">HTTP</a>和<a href="https://baike.baidu.com/item/反向代理/7793488" target="_blank" rel="noopener">反向代理</a>web服务器，同时也提供了IMAP/POP3/SMTP<a href="https://baike.baidu.com/item/服务/100571" target="_blank" rel="noopener">服务</a>。 </p><p><strong>解决方案</strong>： 很多软件包在yum里面没有的，我们要使用epel源,也就是安装epel-release软件包。EPEL (Extra Packages for Enterprise Linux)是基于Fedora的一个项目，为“红帽系”的操作系统提供额外的软件包，适用于RHEL、CentOS等系统。</p><p><strong>具体步骤</strong>：</p><ol><li><p>安装epel </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install epel-release</span><br></pre></td></tr></table></figure></li><li><p>更新 （时间较长）</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum update</span><br></pre></td></tr></table></figure></li><li><p>安装nginx</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y nginx</span><br></pre></td></tr></table></figure></li><li><p>安装成功： </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">已安装:</span><br><span class="line">nginx.x86_64 1:1.12.2-3.el7                                                             </span><br><span class="line"></span><br><span class="line">作为依赖被安装:</span><br><span class="line">   nginx-all-modules.noarch 1:1.12.2-3.el7                                                 </span><br><span class="line">   nginx-filesystem.noarch 1:1.12.2-3.el7                                                  </span><br><span class="line">   nginx-mod-http-geoip.x86_64 1:1.12.2-3.el7                                              </span><br><span class="line">   nginx-mod-http-image-filter.x86_64 1:1.12.2-3.el7                                       </span><br><span class="line">   nginx-mod-http-perl.x86_64 1:1.12.2-3.el7                                               </span><br><span class="line">   nginx-mod-http-xslt-filter.x86_64 1:1.12.2-3.el7                                        </span><br><span class="line">   nginx-mod-mail.x86_64 1:1.12.2-3.el7                                                    </span><br><span class="line">   nginx-mod-stream.x86_64 1:1.12.2-3.el7                                                  </span><br><span class="line"></span><br><span class="line">完毕！</span><br></pre></td></tr></table></figure></li></ol><hr><p><a href="https://www.cnblogs.com/kaerxifa/" target="_blank" rel="noopener">参考</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;Centos-7下安装nginx，使用yum-install-nginx，提示没有可用的软件包。&quot;&gt;&lt;a href=&quot;#Centos-7下安装nginx，使用yum-install-nginx，提示没有可用的软件包。&quot; class=&quot;headerlink&quot; tit
       
     
     </summary>
@@ -135,30 +159,6 @@
     
     
       <category term="Git" scheme="http://codehao.top/tags/Git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Centos 7下安装nginx，使用yum install nginx，提示没有可用的软件包。</title>
-    <link href="http://codehao.top/2020/04/22/Centos%207%E4%B8%8B%E5%AE%89%E8%A3%85nginx%EF%BC%8C%E4%BD%BF%E7%94%A8yum%20install%20nginx%EF%BC%8C%E6%8F%90%E7%A4%BA%E6%B2%A1%E6%9C%89%E5%8F%AF%E7%94%A8%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%8C%85%E3%80%82/"/>
-    <id>http://codehao.top/2020/04/22/Centos%207%E4%B8%8B%E5%AE%89%E8%A3%85nginx%EF%BC%8C%E4%BD%BF%E7%94%A8yum%20install%20nginx%EF%BC%8C%E6%8F%90%E7%A4%BA%E6%B2%A1%E6%9C%89%E5%8F%AF%E7%94%A8%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%8C%85%E3%80%82/</id>
-    <published>2020-04-22T13:21:20.000Z</published>
-    <updated>2020-04-22T15:38:38.861Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="Centos-7下安装nginx，使用yum-install-nginx，提示没有可用的软件包。"><a href="#Centos-7下安装nginx，使用yum-install-nginx，提示没有可用的软件包。" class="headerlink" title="Centos 7下安装nginx，使用yum install nginx，提示没有可用的软件包。"></a>Centos 7下安装nginx，使用yum install nginx，提示没有可用的软件包。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># yum -y install nginx</span><br><span class="line">已加载插件：fastestmirror, langpacks</span><br><span class="line">Loading mirror speeds from cached hostfile</span><br><span class="line"> * base: mirrors.aliyun.com</span><br><span class="line"> * extras: mirrors.aliyun.com</span><br><span class="line"> * updates: mirrors.aliyun.com</span><br><span class="line">没有可用软件包 nginx。</span><br><span class="line">错误：无须任何处理</span><br></pre></td></tr></table></figure><hr><p><strong>原因</strong>： nginx位于第三方的yum源里面，而不在centos官方yum源里面。 </p><p><strong>了解</strong>： <em>Nginx</em> (engine x) 是一个高性能的<a href="https://baike.baidu.com/item/HTTP" target="_blank" rel="noopener">HTTP</a>和<a href="https://baike.baidu.com/item/反向代理/7793488" target="_blank" rel="noopener">反向代理</a>web服务器，同时也提供了IMAP/POP3/SMTP<a href="https://baike.baidu.com/item/服务/100571" target="_blank" rel="noopener">服务</a>。 </p><p><strong>解决方案</strong>： 很多软件包在yum里面没有的，我们要使用epel源,也就是安装epel-release软件包。EPEL (Extra Packages for Enterprise Linux)是基于Fedora的一个项目，为“红帽系”的操作系统提供额外的软件包，适用于RHEL、CentOS等系统。</p><p><strong>具体步骤</strong>：</p><ol><li><p>安装epel </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install epel-release</span><br></pre></td></tr></table></figure></li><li><p>更新 （时间较长）</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum update</span><br></pre></td></tr></table></figure></li><li><p>安装nginx</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y nginx</span><br></pre></td></tr></table></figure></li><li><p>安装成功： </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">已安装:</span><br><span class="line">nginx.x86_64 1:1.12.2-3.el7                                                             </span><br><span class="line"></span><br><span class="line">作为依赖被安装:</span><br><span class="line">   nginx-all-modules.noarch 1:1.12.2-3.el7                                                 </span><br><span class="line">   nginx-filesystem.noarch 1:1.12.2-3.el7                                                  </span><br><span class="line">   nginx-mod-http-geoip.x86_64 1:1.12.2-3.el7                                              </span><br><span class="line">   nginx-mod-http-image-filter.x86_64 1:1.12.2-3.el7                                       </span><br><span class="line">   nginx-mod-http-perl.x86_64 1:1.12.2-3.el7                                               </span><br><span class="line">   nginx-mod-http-xslt-filter.x86_64 1:1.12.2-3.el7                                        </span><br><span class="line">   nginx-mod-mail.x86_64 1:1.12.2-3.el7                                                    </span><br><span class="line">   nginx-mod-stream.x86_64 1:1.12.2-3.el7                                                  </span><br><span class="line"></span><br><span class="line">完毕！</span><br></pre></td></tr></table></figure></li></ol><hr><p><a href="https://www.cnblogs.com/kaerxifa/" target="_blank" rel="noopener">参考</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h4 id=&quot;Centos-7下安装nginx，使用yum-install-nginx，提示没有可用的软件包。&quot;&gt;&lt;a href=&quot;#Centos-7下安装nginx，使用yum-install-nginx，提示没有可用的软件包。&quot; class=&quot;headerlink&quot; tit
-      
-    
-    </summary>
-    
-    
-    
-      <category term="Centos" scheme="http://codehao.top/tags/Centos/"/>
     
   </entry>
   
@@ -222,7 +222,7 @@
     <link href="http://codehao.top/2020/04/22/Markdown%E6%96%B0%E6%89%8B%E6%8C%87%E5%8D%97/"/>
     <id>http://codehao.top/2020/04/22/Markdown%E6%96%B0%E6%89%8B%E6%8C%87%E5%8D%97/</id>
     <published>2020-04-22T12:28:20.000Z</published>
-    <updated>2020-04-22T15:27:22.644Z</updated>
+    <updated>2020-05-14T06:12:52.610Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Markdown"><a href="#Markdown" class="headerlink" title="Markdown"></a><a href="https://tool.oschina.net/markdown" target="_blank" rel="noopener">Markdown</a></h1><h3 id="一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。"><a href="#一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。" class="headerlink" title="一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。"></a>一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。</h3><p>###下面我们就开始学习十个常用的语法，方便快速上手Markdown：<br>##一、标题<br>###==示例：==</p><pre># 这是一级标题## 这是二级标题### 这是三级标题#### 这是四级标题##### 这是五级标题###### 这是六级标题</pre><p>###==效果：==</p><h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><h4 id="这是四级标题"><a href="#这是四级标题" class="headerlink" title="这是四级标题"></a>这是四级标题</h4><h5 id="这是五级标题"><a href="#这是五级标题" class="headerlink" title="这是五级标题"></a>这是五级标题</h5><h6 id="这是六级标题"><a href="#这是六级标题" class="headerlink" title="这是六级标题"></a>这是六级标题</h6><p>##二、字体<br>###==示例：==</p><pre>**加粗的文字***倾斜的文字*`***斜体加粗的文字***~~加删除线的文字~~</pre><p>###==效果：==<br><strong>加粗的文字</strong><br><em>倾斜的文字</em>`<br><strong><em>斜体加粗的文字</em></strong><br><del>加删除线的文字</del></p><p>##三、引用<br>###==示例：==</p><pre>>这是引用的内容>>这是引用的内容>>>>>>>>>>这是引用的内容</pre><p>###==效果：==</p><blockquote><p>这是引用的内容</p><blockquote><p>这是引用的内容</p><blockquote><blockquote><blockquote><blockquote><blockquote><blockquote><blockquote><blockquote><p>这是引用的内容</p></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote><p>##四、分割线<br>###三个或者三个以上的 - 或者 * 都可以。</p><p>##五、图片<br>###==语法：==<br>####![图片alt](图片地址 ‘’图片title’’)<br>###==示例：==</p><pre>![code](https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1585898357099&di=df61daf8b660c0192e1e7422f2f016f5&imgtype=0&src=http%3A%2F%2Fimg3.imgtn.bdimg.com%2Fit%2Fu%3D2002775288%2C2461323119%26fm%3D214%26gp%3D0.jpg)</pre><p>###==效果：==<br><img src="/" class="lazyload" data-src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1585898357099&di=df61daf8b660c0192e1e7422f2f016f5&imgtype=0&src=http%3A%2F%2Fimg3.imgtn.bdimg.com%2Fit%2Fu%3D2002775288%2C2461323119%26fm%3D214%26gp%3D0.jpg"  alt="code"></p><p>##六、超链接<br>###==示例：==</p><pre>[百度](http://baidu.com)</pre><p>###==效果：==<br>###<a href="http://baidu.com" target="_blank" rel="noopener">百度</a><br>###注：Markdown本身语法不支持链接在新页面中打开</p><p>##七、列表<br>###==无序列表：==</p><pre>- 列表内容+ 列表内容* 列表内容注意：- + * 跟内容之间都要有一个空格</pre><ul><li>列表内容</li></ul><ul><li>列表内容</li></ul><ul><li>列表内容<br>###==有序列表：==<pre>1. 列表内容</li></ul><ol start="2"><li>列表内容</li><li>列表内容</pre></li><li>列表内容</li><li>列表内容</li><li>列表内容<br>###==列表嵌套：==<br>###上一级和下一级之间敲三个空格即可</li></ol><p>##八、表格<br>###==示例：==<br><code><br>  姓名|技能|排行<br>  --|:--:|--:<br>  刘备|哭|大哥<br>  关羽|打|二哥<br>  张飞|骂|三弟<br></code></p><p>###==效果：==<br>姓名|技能|排行<br>–|:–:|–:<br>刘备|哭|大哥<br>关羽|打|二哥<br>张飞|骂|三弟</p><p>##九、代码<br>###==示例：==<br>###添加 &lt;&gt;  里面Pre<br>###==效果：==</p><pre>    function fun(){         echo "这是一句非常牛逼的代码";    }    fun();</pre><p>##共同学习，共同进步！</p>]]></content>
     
@@ -237,6 +237,8 @@
     
     
     
+      <category term="Study" scheme="http://codehao.top/tags/Study/"/>
+    
   </entry>
   
   <entry>
@@ -244,7 +246,7 @@
     <link href="http://codehao.top/2020/04/22/%E5%9F%BA%E4%BA%8ECentOS7%E5%AE%89%E8%A3%85virtualenv%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/"/>
     <id>http://codehao.top/2020/04/22/%E5%9F%BA%E4%BA%8ECentOS7%E5%AE%89%E8%A3%85virtualenv%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/</id>
     <published>2020-04-22T07:31:20.000Z</published>
-    <updated>2020-05-13T03:10:04.012Z</updated>
+    <updated>2020-05-14T06:12:59.892Z</updated>
     
     <content type="html"><![CDATA[<p>###virtualenv优势：<br>用来为一个应用创建一套“隔离”的Python运行环境，另外上线流程简单，大大减轻运维人员的出错率，比如每一个项目使用一个docker镜像，在镜像中去安装项目所需的环境，库版本等等。</p><h3 id="安装步骤："><a href="#安装步骤：" class="headerlink" title="安装步骤："></a>安装步骤：</h3><h4 id="1-安装虚拟环境"><a href="#1-安装虚拟环境" class="headerlink" title="1.安装虚拟环境"></a>1.安装虚拟环境</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 install virtualenv</span><br></pre></td></tr></table></figure><h4 id="2-创建虚拟环境"><a href="#2-创建虚拟环境" class="headerlink" title="2.创建虚拟环境"></a>2.创建虚拟环境</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">virtualenv -p pythonX venv3</span><br><span class="line"></span><br><span class="line">注：pythonX代替为自己系统已有的版本，会创建一个干净的虚拟环境；</span><br></pre></td></tr></table></figure><h4 id="3-激活虚拟环境"><a href="#3-激活虚拟环境" class="headerlink" title="3.激活虚拟环境"></a>3.激活虚拟环境</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">source venv3&#x2F;bin&#x2F;activate</span><br><span class="line">激活后，在控制台会有一个带有（venv）的标志，如下：</span><br></pre></td></tr></table></figure><p><img src="/" class="lazyload" data-src="http://m.qpic.cn/psc?/V112BMY13Y8uCR/KMnzwBNJT4ZeiPmlYdobb5Fm8z33A5*KSyJYAgphLdq6MVIS4hEULj7GBu4vjCoB4rtXObb3zcek38DgWWPj8Q!!/b&bo=jAKRAAAAAAADBz0!&rf=viewer_4"  alt="img"></p><h4 id="4-安装依赖"><a href="#4-安装依赖" class="headerlink" title="4.安装依赖"></a>4.安装依赖</h4><p>在以上完成之后就可以通过命令pip install 来安装python包了，这里安装python包就不需要root权限了，直接就可以安装。在venv虚拟环境中，使用pip安装的包都不会再是全局性的包，只会在当前的虚拟环境中起作用，避免了系统环境的污染。</p><h4 id="5-退出虚拟环境"><a href="#5-退出虚拟环境" class="headerlink" title="5.退出虚拟环境"></a>5.退出虚拟环境</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Deactivate</span><br></pre></td></tr></table></figure><h4 id="6-指定python版本"><a href="#6-指定python版本" class="headerlink" title="6.指定python版本"></a>6.指定python版本</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">virtualenv venv -p python3     # 指定python3</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -260,7 +262,7 @@
     
     
     
-      <category term="CentOS" scheme="http://codehao.top/tags/CentOS/"/>
+      <category term="CentoS" scheme="http://codehao.top/tags/CentoS/"/>
     
   </entry>
   
