@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://codehao.top/music/index.html</loc>
+    
+    <lastmod>2020-05-17T10:39:51.041Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://codehao.top/movies/index.html</loc>
+    
+    <lastmod>2020-05-17T10:39:48.860Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://codehao.top/about/index.html</loc>
     
     <lastmod>2020-05-15T08:40:59.383Z</lastmod>
@@ -12,20 +26,6 @@
     <loc>http://codehao.top/album/index.html</loc>
     
     <lastmod>2020-05-15T08:40:26.359Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://codehao.top/movies/index.html</loc>
-    
-    <lastmod>2020-05-15T05:39:42.907Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://codehao.top/music/index.html</loc>
-    
-    <lastmod>2020-05-15T05:39:40.475Z</lastmod>
     
   </url>
   
