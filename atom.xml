@@ -18,8 +18,8 @@
   
   <entry>
     <title>IQ测试集锦</title>
-    <link href="http://codehao.top/ckaghyswf000fgwwo7l3sd69r/"/>
-    <id>http://codehao.top/ckaghyswf000fgwwo7l3sd69r/</id>
+    <link href="http://codehao.top/ckagtw1ty0002egwoc73zau0d/"/>
+    <id>http://codehao.top/ckagtw1ty0002egwoc73zau0d/</id>
     <published>2020-05-11T03:24:18.394Z</published>
     <updated>2020-05-20T04:11:02.698Z</updated>
     
@@ -42,8 +42,8 @@
   
   <entry>
     <title>中国科学引文数据库 （CSCD）</title>
-    <link href="http://codehao.top/ckaghyswk000kgwwoe0lr20qh/"/>
-    <id>http://codehao.top/ckaghyswk000kgwwoe0lr20qh/</id>
+    <link href="http://codehao.top/ckagtw1v6000degwods88eecb/"/>
+    <id>http://codehao.top/ckagtw1v6000degwods88eecb/</id>
     <published>2020-04-30T05:57:14.332Z</published>
     <updated>2020-05-20T04:11:02.706Z</updated>
     
@@ -64,8 +64,8 @@
   
   <entry>
     <title>上传本地项目至gitee（for window）</title>
-    <link href="http://codehao.top/ckaghyswh000hgwwo7ncs37o8/"/>
-    <id>http://codehao.top/ckaghyswh000hgwwo7ncs37o8/</id>
+    <link href="http://codehao.top/ckagtw1v4000cegwo945p41w2/"/>
+    <id>http://codehao.top/ckagtw1v4000cegwo945p41w2/</id>
     <published>2020-04-22T13:31:20.000Z</published>
     <updated>2020-05-20T04:11:02.736Z</updated>
     
@@ -88,8 +88,8 @@
   
   <entry>
     <title>浅谈Red Hat和 Centos7</title>
-    <link href="http://codehao.top/ckaghyswm000ngwwo4njq8apq/"/>
-    <id>http://codehao.top/ckaghyswm000ngwwo4njq8apq/</id>
+    <link href="http://codehao.top/ckagtw1vc000kegwo1bvzc6j4/"/>
+    <id>http://codehao.top/ckagtw1vc000kegwo1bvzc6j4/</id>
     <published>2020-04-22T13:28:20.000Z</published>
     <updated>2020-05-20T04:11:02.729Z</updated>
     
@@ -115,33 +115,9 @@
   </entry>
   
   <entry>
-    <title>Centos 7下安装nginx，使用yum install nginx，提示没有可用的软件包。</title>
-    <link href="http://codehao.top/ckaghyqyv0000gwwo3n5662i8/"/>
-    <id>http://codehao.top/ckaghyqyv0000gwwo3n5662i8/</id>
-    <published>2020-04-22T13:21:20.000Z</published>
-    <updated>2020-05-20T04:11:02.671Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="Centos-7下安装nginx，使用yum-install-nginx，提示没有可用的软件包。"><a href="#Centos-7下安装nginx，使用yum-install-nginx，提示没有可用的软件包。" class="headerlink" title="Centos 7下安装nginx，使用yum install nginx，提示没有可用的软件包。"></a>Centos 7下安装nginx，使用yum install nginx，提示没有可用的软件包。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># yum -y install nginx</span><br><span class="line">已加载插件：fastestmirror, langpacks</span><br><span class="line">Loading mirror speeds from cached hostfile</span><br><span class="line"> * base: mirrors.aliyun.com</span><br><span class="line"> * extras: mirrors.aliyun.com</span><br><span class="line"> * updates: mirrors.aliyun.com</span><br><span class="line">没有可用软件包 nginx。</span><br><span class="line">错误：无须任何处理</span><br></pre></td></tr></table></figure><hr><p><strong>原因</strong>： nginx位于第三方的yum源里面，而不在centos官方yum源里面。 </p><p><strong>了解</strong>： <em>Nginx</em> (engine x) 是一个高性能的<a href="https://baike.baidu.com/item/HTTP" target="_blank" rel="noopener">HTTP</a>和<a href="https://baike.baidu.com/item/反向代理/7793488" target="_blank" rel="noopener">反向代理</a>web服务器，同时也提供了IMAP/POP3/SMTP<a href="https://baike.baidu.com/item/服务/100571" target="_blank" rel="noopener">服务</a>。 </p><p><strong>解决方案</strong>： 很多软件包在yum里面没有的，我们要使用epel源,也就是安装epel-release软件包。EPEL (Extra Packages for Enterprise Linux)是基于Fedora的一个项目，为“红帽系”的操作系统提供额外的软件包，适用于RHEL、CentOS等系统。</p><p><strong>具体步骤</strong>：</p><ol><li><p>安装epel </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install epel-release</span><br></pre></td></tr></table></figure></li><li><p>更新 （时间较长）</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum update</span><br></pre></td></tr></table></figure></li><li><p>安装nginx</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y nginx</span><br></pre></td></tr></table></figure></li><li><p>安装成功： </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">已安装:</span><br><span class="line">nginx.x86_64 1:1.12.2-3.el7                                                             </span><br><span class="line"></span><br><span class="line">作为依赖被安装:</span><br><span class="line">   nginx-all-modules.noarch 1:1.12.2-3.el7                                                 </span><br><span class="line">   nginx-filesystem.noarch 1:1.12.2-3.el7                                                  </span><br><span class="line">   nginx-mod-http-geoip.x86_64 1:1.12.2-3.el7                                              </span><br><span class="line">   nginx-mod-http-image-filter.x86_64 1:1.12.2-3.el7                                       </span><br><span class="line">   nginx-mod-http-perl.x86_64 1:1.12.2-3.el7                                               </span><br><span class="line">   nginx-mod-http-xslt-filter.x86_64 1:1.12.2-3.el7                                        </span><br><span class="line">   nginx-mod-mail.x86_64 1:1.12.2-3.el7                                                    </span><br><span class="line">   nginx-mod-stream.x86_64 1:1.12.2-3.el7                                                  </span><br><span class="line"></span><br><span class="line">完毕！</span><br></pre></td></tr></table></figure></li></ol><hr><p><a href="https://www.cnblogs.com/kaerxifa/" target="_blank" rel="noopener">参考</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h4 id=&quot;Centos-7下安装nginx，使用yum-install-nginx，提示没有可用的软件包。&quot;&gt;&lt;a href=&quot;#Centos-7下安装nginx，使用yum-install-nginx，提示没有可用的软件包。&quot; class=&quot;headerlink&quot; tit
-      
-    
-    </summary>
-    
-    
-    
-      <category term="Centos" scheme="http://codehao.top/tags/Centos/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Git初始化-git init 疑惑</title>
-    <link href="http://codehao.top/ckaghyqz30001gwwo44tk1ogm/"/>
-    <id>http://codehao.top/ckaghyqz30001gwwo44tk1ogm/</id>
+    <link href="http://codehao.top/ckagtw1tq0000egwo9bou7kdq/"/>
+    <id>http://codehao.top/ckagtw1tq0000egwo9bou7kdq/</id>
     <published>2020-04-22T13:21:20.000Z</published>
     <updated>2020-05-20T04:11:02.679Z</updated>
     
@@ -163,9 +139,33 @@
   </entry>
   
   <entry>
+    <title>Centos 7下安装nginx，使用yum install nginx，提示没有可用的软件包。</title>
+    <link href="http://codehao.top/ckagtw1v00009egwofr2b5in9/"/>
+    <id>http://codehao.top/ckagtw1v00009egwofr2b5in9/</id>
+    <published>2020-04-22T13:21:20.000Z</published>
+    <updated>2020-05-20T04:11:02.671Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="Centos-7下安装nginx，使用yum-install-nginx，提示没有可用的软件包。"><a href="#Centos-7下安装nginx，使用yum-install-nginx，提示没有可用的软件包。" class="headerlink" title="Centos 7下安装nginx，使用yum install nginx，提示没有可用的软件包。"></a>Centos 7下安装nginx，使用yum install nginx，提示没有可用的软件包。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># yum -y install nginx</span><br><span class="line">已加载插件：fastestmirror, langpacks</span><br><span class="line">Loading mirror speeds from cached hostfile</span><br><span class="line"> * base: mirrors.aliyun.com</span><br><span class="line"> * extras: mirrors.aliyun.com</span><br><span class="line"> * updates: mirrors.aliyun.com</span><br><span class="line">没有可用软件包 nginx。</span><br><span class="line">错误：无须任何处理</span><br></pre></td></tr></table></figure><hr><p><strong>原因</strong>： nginx位于第三方的yum源里面，而不在centos官方yum源里面。 </p><p><strong>了解</strong>： <em>Nginx</em> (engine x) 是一个高性能的<a href="https://baike.baidu.com/item/HTTP" target="_blank" rel="noopener">HTTP</a>和<a href="https://baike.baidu.com/item/反向代理/7793488" target="_blank" rel="noopener">反向代理</a>web服务器，同时也提供了IMAP/POP3/SMTP<a href="https://baike.baidu.com/item/服务/100571" target="_blank" rel="noopener">服务</a>。 </p><p><strong>解决方案</strong>： 很多软件包在yum里面没有的，我们要使用epel源,也就是安装epel-release软件包。EPEL (Extra Packages for Enterprise Linux)是基于Fedora的一个项目，为“红帽系”的操作系统提供额外的软件包，适用于RHEL、CentOS等系统。</p><p><strong>具体步骤</strong>：</p><ol><li><p>安装epel </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install epel-release</span><br></pre></td></tr></table></figure></li><li><p>更新 （时间较长）</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum update</span><br></pre></td></tr></table></figure></li><li><p>安装nginx</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y nginx</span><br></pre></td></tr></table></figure></li><li><p>安装成功： </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">已安装:</span><br><span class="line">nginx.x86_64 1:1.12.2-3.el7                                                             </span><br><span class="line"></span><br><span class="line">作为依赖被安装:</span><br><span class="line">   nginx-all-modules.noarch 1:1.12.2-3.el7                                                 </span><br><span class="line">   nginx-filesystem.noarch 1:1.12.2-3.el7                                                  </span><br><span class="line">   nginx-mod-http-geoip.x86_64 1:1.12.2-3.el7                                              </span><br><span class="line">   nginx-mod-http-image-filter.x86_64 1:1.12.2-3.el7                                       </span><br><span class="line">   nginx-mod-http-perl.x86_64 1:1.12.2-3.el7                                               </span><br><span class="line">   nginx-mod-http-xslt-filter.x86_64 1:1.12.2-3.el7                                        </span><br><span class="line">   nginx-mod-mail.x86_64 1:1.12.2-3.el7                                                    </span><br><span class="line">   nginx-mod-stream.x86_64 1:1.12.2-3.el7                                                  </span><br><span class="line"></span><br><span class="line">完毕！</span><br></pre></td></tr></table></figure></li></ol><hr><p><a href="https://www.cnblogs.com/kaerxifa/" target="_blank" rel="noopener">参考</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;Centos-7下安装nginx，使用yum-install-nginx，提示没有可用的软件包。&quot;&gt;&lt;a href=&quot;#Centos-7下安装nginx，使用yum-install-nginx，提示没有可用的软件包。&quot; class=&quot;headerlink&quot; tit
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Centos" scheme="http://codehao.top/tags/Centos/"/>
+    
+  </entry>
+  
+  <entry>
     <title>npm和cnpm安装（for windows）</title>
-    <link href="http://codehao.top/ckaghyqz90004gwwo67bc45k6/"/>
-    <id>http://codehao.top/ckaghyqz90004gwwo67bc45k6/</id>
+    <link href="http://codehao.top/ckagtw1va000iegwo6nqcacun/"/>
+    <id>http://codehao.top/ckagtw1va000iegwo6nqcacun/</id>
     <published>2020-04-22T12:58:20.000Z</published>
     <updated>2020-05-20T04:11:02.703Z</updated>
     
@@ -188,8 +188,8 @@
   
   <entry>
     <title>MySQL中pymysql的具体操作</title>
-    <link href="http://codehao.top/ckaghyqza0005gwwoaxh94dt2/"/>
-    <id>http://codehao.top/ckaghyqza0005gwwoaxh94dt2/</id>
+    <link href="http://codehao.top/ckagtw1uw0005egwo8jjf00df/"/>
+    <id>http://codehao.top/ckagtw1uw0005egwo8jjf00df/</id>
     <published>2020-04-22T12:50:20.000Z</published>
     <updated>2020-05-20T04:11:02.687Z</updated>
     
@@ -219,8 +219,8 @@
   
   <entry>
     <title>Markdown新手指南</title>
-    <link href="http://codehao.top/ckaghyqz70003gwwod5hxdqc3/"/>
-    <id>http://codehao.top/ckaghyqz70003gwwod5hxdqc3/</id>
+    <link href="http://codehao.top/ckagtw1uz0007egwo88vf99jn/"/>
+    <id>http://codehao.top/ckagtw1uz0007egwo88vf99jn/</id>
     <published>2020-04-22T12:28:20.000Z</published>
     <updated>2020-05-20T04:11:02.682Z</updated>
     
@@ -243,8 +243,8 @@
   
   <entry>
     <title>基于CentOS7安装virtualenv虚拟环境</title>
-    <link href="http://codehao.top/ckaghyswo000pgwwof1c54r9l/"/>
-    <id>http://codehao.top/ckaghyswo000pgwwof1c54r9l/</id>
+    <link href="http://codehao.top/ckagtw1v9000gegwo2c2q63r8/"/>
+    <id>http://codehao.top/ckagtw1v9000gegwo2c2q63r8/</id>
     <published>2020-04-22T07:31:20.000Z</published>
     <updated>2020-05-20T04:11:02.719Z</updated>
     
