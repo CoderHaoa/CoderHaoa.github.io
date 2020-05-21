@@ -18,8 +18,8 @@
   
   <entry>
     <title>IQ测试集锦</title>
-    <link href="http://codehao.top/ckagtw1ty0002egwoc73zau0d/"/>
-    <id>http://codehao.top/ckagtw1ty0002egwoc73zau0d/</id>
+    <link href="http://codehao.top/ckagun1ec0009zwwo1q80b6ib/"/>
+    <id>http://codehao.top/ckagun1ec0009zwwo1q80b6ib/</id>
     <published>2020-05-11T03:24:18.394Z</published>
     <updated>2020-05-20T04:11:02.698Z</updated>
     
@@ -42,8 +42,8 @@
   
   <entry>
     <title>中国科学引文数据库 （CSCD）</title>
-    <link href="http://codehao.top/ckagtw1v6000degwods88eecb/"/>
-    <id>http://codehao.top/ckagtw1v6000degwods88eecb/</id>
+    <link href="http://codehao.top/ckagun1ej000gzwwo1j0g656b/"/>
+    <id>http://codehao.top/ckagun1ej000gzwwo1j0g656b/</id>
     <published>2020-04-30T05:57:14.332Z</published>
     <updated>2020-05-20T04:11:02.706Z</updated>
     
@@ -64,8 +64,8 @@
   
   <entry>
     <title>上传本地项目至gitee（for window）</title>
-    <link href="http://codehao.top/ckagtw1v4000cegwo945p41w2/"/>
-    <id>http://codehao.top/ckagtw1v4000cegwo945p41w2/</id>
+    <link href="http://codehao.top/ckagun1ep000kzwwo4mkfhhvp/"/>
+    <id>http://codehao.top/ckagun1ep000kzwwo4mkfhhvp/</id>
     <published>2020-04-22T13:31:20.000Z</published>
     <updated>2020-05-20T04:11:02.736Z</updated>
     
@@ -88,8 +88,8 @@
   
   <entry>
     <title>浅谈Red Hat和 Centos7</title>
-    <link href="http://codehao.top/ckagtw1vc000kegwo1bvzc6j4/"/>
-    <id>http://codehao.top/ckagtw1vc000kegwo1bvzc6j4/</id>
+    <link href="http://codehao.top/ckagun1el000izwwodfh5d9r9/"/>
+    <id>http://codehao.top/ckagun1el000izwwodfh5d9r9/</id>
     <published>2020-04-22T13:28:20.000Z</published>
     <updated>2020-05-20T04:11:02.729Z</updated>
     
@@ -115,33 +115,9 @@
   </entry>
   
   <entry>
-    <title>Git初始化-git init 疑惑</title>
-    <link href="http://codehao.top/ckagtw1tq0000egwo9bou7kdq/"/>
-    <id>http://codehao.top/ckagtw1tq0000egwo9bou7kdq/</id>
-    <published>2020-04-22T13:21:20.000Z</published>
-    <updated>2020-05-20T04:11:02.679Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="在使用命令git-init后，在内部会生成-git文件夹。"><a href="#在使用命令git-init后，在内部会生成-git文件夹。" class="headerlink" title="在使用命令git init后，在内部会生成.git文件夹。"></a>在使用命令git init后，在内部会生成.git文件夹。</h1><h2 id="倘若若出现-Reinitialized-existing-Git-repository-in-xxx-xx-xxx-xx-并且没有生成-git文件！"><a href="#倘若若出现-Reinitialized-existing-Git-repository-in-xxx-xx-xxx-xx-并且没有生成-git文件！" class="headerlink" title="倘若若出现==Reinitialized existing Git repository in xxx/xx/xxx/xx== 并且没有生成.git文件！"></a>倘若若出现==Reinitialized existing Git repository in xxx/xx/xxx/xx== 并且没有生成.git文件！</h2><blockquote><h2 id="主要原因：隐藏了-git-文件"><a href="#主要原因：隐藏了-git-文件" class="headerlink" title="主要原因：隐藏了.git 文件"></a>主要原因：隐藏了.git 文件</h2><h2 id="解决：当前文件夹→查看→显示和隐藏→勾选隐藏的文件！"><a href="#解决：当前文件夹→查看→显示和隐藏→勾选隐藏的文件！" class="headerlink" title="解决：当前文件夹→查看→显示和隐藏→勾选隐藏的文件！"></a>解决：当前文件夹→查看→显示和隐藏→勾选隐藏的文件！</h2></blockquote><hr><h2 id="★★博主推荐★★：-常用-Git-命令清单"><a href="#★★博主推荐★★：-常用-Git-命令清单" class="headerlink" title="★★博主推荐★★：==常用 Git 命令清单=="></a>★★博主推荐★★：==<a href="http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html" target="_blank" rel="noopener">常用 Git 命令清单</a>==</h2>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;在使用命令git-init后，在内部会生成-git文件夹。&quot;&gt;&lt;a href=&quot;#在使用命令git-init后，在内部会生成-git文件夹。&quot; class=&quot;headerlink&quot; title=&quot;在使用命令git init后，在内部会生成.git文件夹。&quot;&gt;&lt;/a
-      
-    
-    </summary>
-    
-    
-    
-      <category term="Git" scheme="http://codehao.top/tags/Git/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Centos 7下安装nginx，使用yum install nginx，提示没有可用的软件包。</title>
-    <link href="http://codehao.top/ckagtw1v00009egwofr2b5in9/"/>
-    <id>http://codehao.top/ckagtw1v00009egwofr2b5in9/</id>
+    <link href="http://codehao.top/ckagun1e10002zwwo7f6x3n7j/"/>
+    <id>http://codehao.top/ckagun1e10002zwwo7f6x3n7j/</id>
     <published>2020-04-22T13:21:20.000Z</published>
     <updated>2020-05-20T04:11:02.671Z</updated>
     
@@ -163,9 +139,33 @@
   </entry>
   
   <entry>
+    <title>Git初始化-git init 疑惑</title>
+    <link href="http://codehao.top/ckagun1e90005zwwogi0nebk1/"/>
+    <id>http://codehao.top/ckagun1e90005zwwogi0nebk1/</id>
+    <published>2020-04-22T13:21:20.000Z</published>
+    <updated>2020-05-20T04:11:02.679Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="在使用命令git-init后，在内部会生成-git文件夹。"><a href="#在使用命令git-init后，在内部会生成-git文件夹。" class="headerlink" title="在使用命令git init后，在内部会生成.git文件夹。"></a>在使用命令git init后，在内部会生成.git文件夹。</h1><h2 id="倘若若出现-Reinitialized-existing-Git-repository-in-xxx-xx-xxx-xx-并且没有生成-git文件！"><a href="#倘若若出现-Reinitialized-existing-Git-repository-in-xxx-xx-xxx-xx-并且没有生成-git文件！" class="headerlink" title="倘若若出现==Reinitialized existing Git repository in xxx/xx/xxx/xx== 并且没有生成.git文件！"></a>倘若若出现==Reinitialized existing Git repository in xxx/xx/xxx/xx== 并且没有生成.git文件！</h2><blockquote><h2 id="主要原因：隐藏了-git-文件"><a href="#主要原因：隐藏了-git-文件" class="headerlink" title="主要原因：隐藏了.git 文件"></a>主要原因：隐藏了.git 文件</h2><h2 id="解决：当前文件夹→查看→显示和隐藏→勾选隐藏的文件！"><a href="#解决：当前文件夹→查看→显示和隐藏→勾选隐藏的文件！" class="headerlink" title="解决：当前文件夹→查看→显示和隐藏→勾选隐藏的文件！"></a>解决：当前文件夹→查看→显示和隐藏→勾选隐藏的文件！</h2></blockquote><hr><h2 id="★★博主推荐★★：-常用-Git-命令清单"><a href="#★★博主推荐★★：-常用-Git-命令清单" class="headerlink" title="★★博主推荐★★：==常用 Git 命令清单=="></a>★★博主推荐★★：==<a href="http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html" target="_blank" rel="noopener">常用 Git 命令清单</a>==</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;在使用命令git-init后，在内部会生成-git文件夹。&quot;&gt;&lt;a href=&quot;#在使用命令git-init后，在内部会生成-git文件夹。&quot; class=&quot;headerlink&quot; title=&quot;在使用命令git init后，在内部会生成.git文件夹。&quot;&gt;&lt;/a
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Git" scheme="http://codehao.top/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
     <title>npm和cnpm安装（for windows）</title>
-    <link href="http://codehao.top/ckagtw1va000iegwo6nqcacun/"/>
-    <id>http://codehao.top/ckagtw1va000iegwo6nqcacun/</id>
+    <link href="http://codehao.top/ckagun1ef000dzwwocaecbe27/"/>
+    <id>http://codehao.top/ckagun1ef000dzwwocaecbe27/</id>
     <published>2020-04-22T12:58:20.000Z</published>
     <updated>2020-05-20T04:11:02.703Z</updated>
     
@@ -188,8 +188,8 @@
   
   <entry>
     <title>MySQL中pymysql的具体操作</title>
-    <link href="http://codehao.top/ckagtw1uw0005egwo8jjf00df/"/>
-    <id>http://codehao.top/ckagtw1uw0005egwo8jjf00df/</id>
+    <link href="http://codehao.top/ckagun1eb0007zwwofsik9e83/"/>
+    <id>http://codehao.top/ckagun1eb0007zwwofsik9e83/</id>
     <published>2020-04-22T12:50:20.000Z</published>
     <updated>2020-05-20T04:11:02.687Z</updated>
     
@@ -219,8 +219,8 @@
   
   <entry>
     <title>Markdown新手指南</title>
-    <link href="http://codehao.top/ckagtw1uz0007egwo88vf99jn/"/>
-    <id>http://codehao.top/ckagtw1uz0007egwo88vf99jn/</id>
+    <link href="http://codehao.top/ckagun1du0000zwwo4g4ohcou/"/>
+    <id>http://codehao.top/ckagun1du0000zwwo4g4ohcou/</id>
     <published>2020-04-22T12:28:20.000Z</published>
     <updated>2020-05-20T04:11:02.682Z</updated>
     
@@ -243,8 +243,8 @@
   
   <entry>
     <title>基于CentOS7安装virtualenv虚拟环境</title>
-    <link href="http://codehao.top/ckagtw1v9000gegwo2c2q63r8/"/>
-    <id>http://codehao.top/ckagtw1v9000gegwo2c2q63r8/</id>
+    <link href="http://codehao.top/ckagun1eq000nzwwohrq9btf9/"/>
+    <id>http://codehao.top/ckagun1eq000nzwwohrq9btf9/</id>
     <published>2020-04-22T07:31:20.000Z</published>
     <updated>2020-05-20T04:11:02.719Z</updated>
     
