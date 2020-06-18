@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://codehao.top/"/>
-  <updated>2020-06-09T04:17:24.954Z</updated>
+  <updated>2020-06-18T14:45:16.456Z</updated>
   <id>http://codehao.top/</id>
   
   <author>
@@ -17,9 +17,33 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>七牛云如何配置域名的CNAME</title>
+    <link href="http://codehao.top/ckbkwcr5a000b18wo9vs46446/"/>
+    <id>http://codehao.top/ckbkwcr5a000b18wo9vs46446/</id>
+    <published>2020-06-18T12:28:20.000Z</published>
+    <updated>2020-06-18T14:45:16.456Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="CNAME-简介"><a href="#CNAME-简介" class="headerlink" title="CNAME 简介"></a>CNAME 简介</h1><p> CNAME 即指别名记录，也被称为规范名字。一般用来把域名解析到别的域名上，当需要将域名指向另一个域名，再由另一个域名提供 ip 地址，就需要添加 CNAME 记录。</p><hr><h1 id="CNAME-配置"><a href="#CNAME-配置" class="headerlink" title="CNAME 配置"></a>CNAME 配置</h1><p> 如果需要对七牛创建的加速域名进行 CNAME 配置，您可以在创建加速域名后，通过以下方式为您的加速域名添加解析。</p><h1 id="一-获取CNAME值"><a href="#一-获取CNAME值" class="headerlink" title="一. 获取CNAME值"></a>一. 获取CNAME值</h1><p>  在 页面选择 ，选择 ，鼠标停留在域名对应CNAME值上即可点击复制 ，如下图所示。<a href="https://dn-odum9helk.qbox.me/FkqzaHLz8IkzamxYtONzj--5TscU" target="_blank" rel="noopener"><img src="/" class="lazyload" data-src="https://dn-odum9helk.qbox.me/FkqzaHLz8IkzamxYtONzj--5TscU"  alt="img"></a></p><hr><h1 id="二-添加CNAME记录"><a href="#二-添加CNAME记录" class="headerlink" title="二. 添加CNAME记录"></a>二. 添加CNAME记录</h1><p> 添加CNAME记录需要在您的处配置，比如您在 阿里云 / 腾讯云 / 新网 等处购买的域名，您需要前往相应管理控制台，添加域名解析。</p><ol><li>打开您购买域名的厂商官网，登陆后在页面右上角找到 <strong><code>控制台</code></strong> 或 相关管理后台入口。<br> 如果您不清楚域名解析的入口，建议查看您域名厂商的产品文档，或者寻求域名厂商的售后支持。</li></ol><ol start="2"><li>在域名厂商的控制台中，找到您的域名解析添加页面，例如：<br>a. 阿里云：在控制台页面的左侧，产品与服务栏中选择 <strong>域名</strong>。<br>b. 腾讯云：在控制台的云产品中，搜索并选择 <strong>云解析</strong>。<br>c. DNSPOD：在控制台页面左侧，选择 <strong>域名</strong>。<br>其他域名厂商请参考产品文档说明或咨询产品售后。</li></ol><ol start="3"><li>在域名产品的列表中找到您加速域名对应的<strong><code>主域名</code>，点击域名后面的</strong> <code>解析设置</code> <strong>或</strong> <code>解析</code>，进入解析设置页。</li></ol><ol start="4"><li><p>选择 <code>添加记录</code> ，依次填写 <strong>主机记录</strong>，<strong>记录类型</strong> 以及 <strong>记录值</strong>，其他可设为默认值。<br>如果您不清楚如何填写主机记录，请参考下文第5步提供的示例。</p><p><a href="https://dn-odum9helk.qbox.me/Fn5LvRsKMEUgBQM4PvvAccI-ISyO" target="_blank" rel="noopener"><img src="/" class="lazyload" data-src="https://dn-odum9helk.qbox.me/Fn5LvRsKMEUgBQM4PvvAccI-ISyO"  alt="img"></a></p></li></ol><table><thead><tr><th align="left">参数</th><th align="left">填写说明</th><th align="left">注意事项</th></tr></thead><tbody><tr><td align="left">主机记录</td><td align="left">填写加速域名对应的主机前缀</td><td align="left">该参数唯一，请勿自定义</td></tr><tr><td align="left">记录类型</td><td align="left">选择 CNAME 类型</td><td align="left">该参数唯一，请勿自定义</td></tr><tr><td align="left">线路类型</td><td align="left">保持默认</td><td align="left">该参数可以根据需求自行调整</td></tr><tr><td align="left">记录值</td><td align="left">域名创建后，七牛提供的 <a href="https://developer.qiniu.com/fusion/kb/1322/how-to-configure-cname-domain-name#cname" target="_blank" rel="noopener"><strong>CNAME</strong></a></td><td align="left">该参数唯一，请勿自定义</td></tr><tr><td align="left">TTL</td><td align="left">保持默认</td><td align="left">该参数可以根据需求自行调整</td></tr></tbody></table><p>5.解析示例：</p><p>假设您购买的一级域名为 qiniu.com<br>您需要先在七牛控制台创建加速域名，比如您创建了 cdn.qiniu.com 或 img.qiniu.com 之类的自定义二级域名。<br>创建完成后，在域名厂商后台添加解析记录时，您需要填写主机记录为加速域名对应的前缀，如 cdn 或 img 即可。<br><code>注意：主机记录需要和加速前缀完全一致，请对应填写。</code></p><p>常见的普通域名主机记录填写方式举例：</p><table><thead><tr><th align="left">创建的加速域名</th><th align="left">域名类型</th><th align="left">主机记录</th></tr></thead><tbody><tr><td align="left">qiniu.com</td><td align="left">普通域名</td><td align="left">@</td></tr><tr><td align="left"><a href="http://www.qiniu.com/" target="_blank" rel="noopener">www.qiniu.com</a></td><td align="left">普通域名</td><td align="left">www</td></tr><tr><td align="left">cdn.qiniu.com</td><td align="left">普通域名</td><td align="left">cdn</td></tr><tr><td align="left">video.cdn.qiniu.com</td><td align="left">普通域名</td><td align="left">video.cdn</td></tr></tbody></table><p>常见的泛域名主机记录填写方式举例：</p><table><thead><tr><th align="left">创建的加速域名</th><th align="left">域名类型</th><th align="left">主机记录</th></tr></thead><tbody><tr><td align="left">.qiniu.com</td><td align="left">泛域名</td><td align="left">*</td></tr><tr><td align="left">.cdn.qiniu.com</td><td align="left">泛域名</td><td align="left">*.cdn</td></tr></tbody></table><p><a href="https://developer.qiniu.com/fusion/kb/1322/how-to-configure-cname-domain-name#check" target="_blank" rel="noopener">配置完成，如何检查解析是否生效</a></p><p> 同一个域名只能使用 A 记录解析，或者使用 CNAME 解析，如果您在添加域名的 CNAME 解析时提示存在冲突，请检查该主机记录是否已经存在 A 记录。</p><p>解决方案：</p><ol><li>如果您的域名用于绑定七牛云存储<ul><li>重新添加一个未在其他地方使用的二级加速域名，例如您原本在七牛绑定的是 qiniu.com 或 <a href="http://www.qiniu.com/" target="_blank" rel="noopener">www.qiniu.com</a> ，建议您重新在空间绑定加速域名例如 cdn.qiniu.com 或者 xxx.qiniu.com ，然后针对新添加的加速域名，配置对应的解析即可。</li><li>删除您原有的 A 记录就可做 CNAME 解析<br>(<strong>注</strong>：A 记录删除会导致您的域名无法访问该域名的原有资源，谨慎操作)</li></ul></li><li>如果您的域名用于加速您的源站服务器站点<ul><li>在确认 CDN 配置无误情况下，可以删除A记录。</li><li>通过配置 CNAME 解析，使得域名能够绑定到七牛的加速线路上。</li></ul></li></ol><p> <strong>注</strong> ： 修改 CNAME 配置生效时间：新增 CNAME 记录会实时生效，而修改 CNAME 记录需要等待生效时间 TTL。</p><h1 id="如何判断-CNAME-是否正确配置？"><a href="#如何判断-CNAME-是否正确配置？" class="headerlink" title="如何判断 CNAME 是否正确配置？"></a>如何判断 CNAME 是否正确配置？</h1><p> 先在CDN 的 域名管理 中检查域名是否创建成功，如果已经创建成功，且已经按照步骤添加了 CNAME 解析，但是无法正常访问资源外链，或保持“等待 CNAME ”状态，可以通过以下方法检测本地的域名解析，如果域名长时间没有创建成功，您可以<a href="https://support.qiniu.com/tickets/new" target="_blank" rel="noopener">提交工单</a>处理。</p><p> 您可以通过 nslookup 您的加速域名，域名是否解析到 CNAME 值上。</p><ul><li><p>linux/mac系统您可以通过如图所示的命令 <code>dig 您的加速域名</code> 查看，第一条是否解析到您配置的CNAME值。<br><a href="https://dn-odum9helk.qbox.me/FhZC_DzsNzPA6PzpD2ApNdy1udEE" target="_blank" rel="noopener"><img src="/" class="lazyload" data-src="https://dn-odum9helk.qbox.me/FhZC_DzsNzPA6PzpD2ApNdy1udEE"  alt="img"></a></p></li><li><p>windows系统可以通过Win+R 或 点击左下角的“开始”按钮打开“开始”菜单，打开“运行”，输入cmd回车。<br>在命令行模式下输入<code>nslookup 您的加速域名</code>，例如 nslookup qn.vinchi.club,在结果中可以看到您复制的cname值即可。</p><p><a href="https://dn-odum9helk.qbox.me/FpCsAmZwHyxWvWpIUSQE59GXgGpV" target="_blank" rel="noopener"><img src="/" class="lazyload" data-src="https://dn-odum9helk.qbox.me/FpCsAmZwHyxWvWpIUSQE59GXgGpV"  alt="img"></a></p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;CNAME-简介&quot;&gt;&lt;a href=&quot;#CNAME-简介&quot; class=&quot;headerlink&quot; title=&quot;CNAME 简介&quot;&gt;&lt;/a&gt;CNAME 简介&lt;/h1&gt;&lt;p&gt; CNAME 即指别名记录，也被称为规范名字。一般用来把域名解析到别的域名上，当需要将域名指
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Study" scheme="http://codehao.top/tags/Study/"/>
+    
+  </entry>
+  
+  <entry>
     <title>实用工具&amp;学习网站</title>
-    <link href="http://codehao.top/ckbkv1lo4000mjwwobgnmgvxe/"/>
-    <id>http://codehao.top/ckbkv1lo4000mjwwobgnmgvxe/</id>
+    <link href="http://codehao.top/ckbkwcr5n000n18wo4tig4qg3/"/>
+    <id>http://codehao.top/ckbkwcr5n000n18wo4tig4qg3/</id>
     <published>2020-06-08T08:52:42.463Z</published>
     <updated>2020-06-09T04:17:24.954Z</updated>
     
@@ -45,8 +69,8 @@
   
   <entry>
     <title>基于 Jupyter Notebook 和Plotly的交互式COVID-19实时追踪可视化系统（下）</title>
-    <link href="http://codehao.top/ckbkv1lo5000ojwwo1w3m4r5n/"/>
-    <id>http://codehao.top/ckbkv1lo5000ojwwo1w3m4r5n/</id>
+    <link href="http://codehao.top/ckbkwcr5g000i18wod3sl4ep7/"/>
+    <id>http://codehao.top/ckbkwcr5g000i18wod3sl4ep7/</id>
     <published>2020-05-31T10:55:59.297Z</published>
     <updated>2020-06-01T09:46:35.064Z</updated>
     
@@ -67,8 +91,8 @@
   
   <entry>
     <title>基于 Jupyter Notebook 和Plotly的交互式COVID-19实时追踪可视化系统（上）</title>
-    <link href="http://codehao.top/ckbkv1lo1000ijwwo8t45epy9/"/>
-    <id>http://codehao.top/ckbkv1lo1000ijwwo8t45epy9/</id>
+    <link href="http://codehao.top/ckbkwcr5e000g18woc5ukacka/"/>
+    <id>http://codehao.top/ckbkwcr5e000g18woc5ukacka/</id>
     <published>2020-05-31T10:55:59.293Z</published>
     <updated>2020-06-01T09:46:35.066Z</updated>
     
@@ -89,8 +113,8 @@
   
   <entry>
     <title>IQ测试集锦</title>
-    <link href="http://codehao.top/ckbkv1lnc0002jwwo4hd5ekim/"/>
-    <id>http://codehao.top/ckbkv1lnc0002jwwo4hd5ekim/</id>
+    <link href="http://codehao.top/ckbkwcr55000418wo92am7wvq/"/>
+    <id>http://codehao.top/ckbkwcr55000418wo92am7wvq/</id>
     <published>2020-05-11T03:24:18.394Z</published>
     <updated>2020-05-20T04:11:02.698Z</updated>
     
@@ -113,8 +137,8 @@
   
   <entry>
     <title>中国科学引文数据库 （CSCD）</title>
-    <link href="http://codehao.top/ckbkv1lnv000fjwwogj3iglay/"/>
-    <id>http://codehao.top/ckbkv1lnv000fjwwogj3iglay/</id>
+    <link href="http://codehao.top/ckbkwcr5b000d18wofqqa2snu/"/>
+    <id>http://codehao.top/ckbkwcr5b000d18wofqqa2snu/</id>
     <published>2020-04-30T05:57:14.332Z</published>
     <updated>2020-05-20T04:11:02.706Z</updated>
     
@@ -135,8 +159,8 @@
   
   <entry>
     <title>上传本地项目至gitee（for window）</title>
-    <link href="http://codehao.top/ckbkv1lnu000djwwo2pdb3mmc/"/>
-    <id>http://codehao.top/ckbkv1lnu000djwwo2pdb3mmc/</id>
+    <link href="http://codehao.top/ckbkwcr59000918wo2fly7f9q/"/>
+    <id>http://codehao.top/ckbkwcr59000918wo2fly7f9q/</id>
     <published>2020-04-22T13:31:20.000Z</published>
     <updated>2020-05-20T04:11:02.736Z</updated>
     
@@ -159,8 +183,8 @@
   
   <entry>
     <title>浅谈Red Hat和 Centos7</title>
-    <link href="http://codehao.top/ckbkv1lo6000qjwwo8h6mdnav/"/>
-    <id>http://codehao.top/ckbkv1lo6000qjwwo8h6mdnav/</id>
+    <link href="http://codehao.top/ckbkwcsuc000v18wo7vpm1ux9/"/>
+    <id>http://codehao.top/ckbkwcsuc000v18wo7vpm1ux9/</id>
     <published>2020-04-22T13:28:20.000Z</published>
     <updated>2020-05-20T04:11:02.729Z</updated>
     
@@ -186,33 +210,9 @@
   </entry>
   
   <entry>
-    <title>Git初始化-git init 疑惑</title>
-    <link href="http://codehao.top/ckbkv1ln60000jwwobnt2bnc3/"/>
-    <id>http://codehao.top/ckbkv1ln60000jwwobnt2bnc3/</id>
-    <published>2020-04-22T13:21:20.000Z</published>
-    <updated>2020-05-20T04:11:02.679Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="在使用命令git-init后，在内部会生成-git文件夹。"><a href="#在使用命令git-init后，在内部会生成-git文件夹。" class="headerlink" title="在使用命令git init后，在内部会生成.git文件夹。"></a>在使用命令git init后，在内部会生成.git文件夹。</h1><h2 id="倘若若出现-Reinitialized-existing-Git-repository-in-xxx-xx-xxx-xx-并且没有生成-git文件！"><a href="#倘若若出现-Reinitialized-existing-Git-repository-in-xxx-xx-xxx-xx-并且没有生成-git文件！" class="headerlink" title="倘若若出现==Reinitialized existing Git repository in xxx/xx/xxx/xx== 并且没有生成.git文件！"></a>倘若若出现==Reinitialized existing Git repository in xxx/xx/xxx/xx== 并且没有生成.git文件！</h2><blockquote><h2 id="主要原因：隐藏了-git-文件"><a href="#主要原因：隐藏了-git-文件" class="headerlink" title="主要原因：隐藏了.git 文件"></a>主要原因：隐藏了.git 文件</h2><h2 id="解决：当前文件夹→查看→显示和隐藏→勾选隐藏的文件！"><a href="#解决：当前文件夹→查看→显示和隐藏→勾选隐藏的文件！" class="headerlink" title="解决：当前文件夹→查看→显示和隐藏→勾选隐藏的文件！"></a>解决：当前文件夹→查看→显示和隐藏→勾选隐藏的文件！</h2></blockquote><hr><h2 id="★★博主推荐★★：-常用-Git-命令清单"><a href="#★★博主推荐★★：-常用-Git-命令清单" class="headerlink" title="★★博主推荐★★：==常用 Git 命令清单=="></a>★★博主推荐★★：==<a href="http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html" target="_blank" rel="noopener">常用 Git 命令清单</a>==</h2>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;在使用命令git-init后，在内部会生成-git文件夹。&quot;&gt;&lt;a href=&quot;#在使用命令git-init后，在内部会生成-git文件夹。&quot; class=&quot;headerlink&quot; title=&quot;在使用命令git init后，在内部会生成.git文件夹。&quot;&gt;&lt;/a
-      
-    
-    </summary>
-    
-    
-    
-      <category term="Git" scheme="http://codehao.top/tags/Git/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Centos 7下安装nginx，使用yum install nginx，提示没有可用的软件包。</title>
-    <link href="http://codehao.top/ckbkv1lo8000sjwwo35kk0elm/"/>
-    <id>http://codehao.top/ckbkv1lo8000sjwwo35kk0elm/</id>
+    <link href="http://codehao.top/ckbkwcr4v000018wocnvpcw9l/"/>
+    <id>http://codehao.top/ckbkwcr4v000018wocnvpcw9l/</id>
     <published>2020-04-22T13:21:20.000Z</published>
     <updated>2020-05-20T04:11:02.671Z</updated>
     
@@ -234,9 +234,33 @@
   </entry>
   
   <entry>
+    <title>Git初始化-git init 疑惑</title>
+    <link href="http://codehao.top/ckbkwcr50000118wo2vjw7eqy/"/>
+    <id>http://codehao.top/ckbkwcr50000118wo2vjw7eqy/</id>
+    <published>2020-04-22T13:21:20.000Z</published>
+    <updated>2020-05-20T04:11:02.679Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="在使用命令git-init后，在内部会生成-git文件夹。"><a href="#在使用命令git-init后，在内部会生成-git文件夹。" class="headerlink" title="在使用命令git init后，在内部会生成.git文件夹。"></a>在使用命令git init后，在内部会生成.git文件夹。</h1><h2 id="倘若若出现-Reinitialized-existing-Git-repository-in-xxx-xx-xxx-xx-并且没有生成-git文件！"><a href="#倘若若出现-Reinitialized-existing-Git-repository-in-xxx-xx-xxx-xx-并且没有生成-git文件！" class="headerlink" title="倘若若出现==Reinitialized existing Git repository in xxx/xx/xxx/xx== 并且没有生成.git文件！"></a>倘若若出现==Reinitialized existing Git repository in xxx/xx/xxx/xx== 并且没有生成.git文件！</h2><blockquote><h2 id="主要原因：隐藏了-git-文件"><a href="#主要原因：隐藏了-git-文件" class="headerlink" title="主要原因：隐藏了.git 文件"></a>主要原因：隐藏了.git 文件</h2><h2 id="解决：当前文件夹→查看→显示和隐藏→勾选隐藏的文件！"><a href="#解决：当前文件夹→查看→显示和隐藏→勾选隐藏的文件！" class="headerlink" title="解决：当前文件夹→查看→显示和隐藏→勾选隐藏的文件！"></a>解决：当前文件夹→查看→显示和隐藏→勾选隐藏的文件！</h2></blockquote><hr><h2 id="★★博主推荐★★：-常用-Git-命令清单"><a href="#★★博主推荐★★：-常用-Git-命令清单" class="headerlink" title="★★博主推荐★★：==常用 Git 命令清单=="></a>★★博主推荐★★：==<a href="http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html" target="_blank" rel="noopener">常用 Git 命令清单</a>==</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;在使用命令git-init后，在内部会生成-git文件夹。&quot;&gt;&lt;a href=&quot;#在使用命令git-init后，在内部会生成-git文件夹。&quot; class=&quot;headerlink&quot; title=&quot;在使用命令git init后，在内部会生成.git文件夹。&quot;&gt;&lt;/a
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Git" scheme="http://codehao.top/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
     <title>npm和cnpm安装（for windows）</title>
-    <link href="http://codehao.top/ckbkv1lnr0009jwwoa9izhtkv/"/>
-    <id>http://codehao.top/ckbkv1lnr0009jwwoa9izhtkv/</id>
+    <link href="http://codehao.top/ckbkwcr58000818wo4t215mb8/"/>
+    <id>http://codehao.top/ckbkwcr58000818wo4t215mb8/</id>
     <published>2020-04-22T12:58:20.000Z</published>
     <updated>2020-05-20T04:11:02.703Z</updated>
     
@@ -259,8 +283,8 @@
   
   <entry>
     <title>MySQL中pymysql的具体操作</title>
-    <link href="http://codehao.top/ckbkv1lnp0007jwwoa9kvc41n/"/>
-    <id>http://codehao.top/ckbkv1lnp0007jwwoa9kvc41n/</id>
+    <link href="http://codehao.top/ckbkwcr56000518wo75om0ynt/"/>
+    <id>http://codehao.top/ckbkwcr56000518wo75om0ynt/</id>
     <published>2020-04-22T12:50:20.000Z</published>
     <updated>2020-05-20T04:11:02.687Z</updated>
     
@@ -290,8 +314,8 @@
   
   <entry>
     <title>Markdown新手指南</title>
-    <link href="http://codehao.top/ckbkv1lnn0005jwwo4e0mavvq/"/>
-    <id>http://codehao.top/ckbkv1lnn0005jwwo4e0mavvq/</id>
+    <link href="http://codehao.top/ckbkwcr53000318wo6jmpdm72/"/>
+    <id>http://codehao.top/ckbkwcr53000318wo6jmpdm72/</id>
     <published>2020-04-22T12:28:20.000Z</published>
     <updated>2020-05-20T04:11:02.682Z</updated>
     
@@ -314,8 +338,8 @@
   
   <entry>
     <title>基于CentOS7安装virtualenv虚拟环境</title>
-    <link href="http://codehao.top/ckbkv1lo2000kjwwo5wmsgqcz/"/>
-    <id>http://codehao.top/ckbkv1lo2000kjwwo5wmsgqcz/</id>
+    <link href="http://codehao.top/ckbkwcr5m000l18wo6s3yhuqe/"/>
+    <id>http://codehao.top/ckbkwcr5m000l18wo6s3yhuqe/</id>
     <published>2020-04-22T07:31:20.000Z</published>
     <updated>2020-05-20T04:11:02.719Z</updated>
     
