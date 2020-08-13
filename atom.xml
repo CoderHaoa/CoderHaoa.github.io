@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://codehao.top/"/>
-  <updated>2020-07-21T14:41:59.069Z</updated>
+  <updated>2020-08-13T15:28:29.457Z</updated>
   <id>http://codehao.top/</id>
   
   <author>
@@ -17,9 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>10行代码搞定年会抽奖</title>
+    <link href="http://codehao.top/ckdsyjkla0000lwwo1chsagp4/"/>
+    <id>http://codehao.top/ckdsyjkla0000lwwo1chsagp4/</id>
+    <published>2020-08-13T14:42:58.681Z</published>
+    <updated>2020-08-13T15:28:29.457Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="10行代码搞定年会抽奖"><a href="#10行代码搞定年会抽奖" class="headerlink" title="10行代码搞定年会抽奖"></a>10行代码搞定年会抽奖</h2><p>某科技公司有300员工，开年会抽奖，奖项如下：</p><table><thead><tr><th>一等奖</th><th>3名</th></tr></thead><tbody><tr><td>二等奖</td><td>6名</td></tr><tr><td>三等奖</td><td>30名</td></tr></tbody></table><h5 id="规则："><a href="#规则：" class="headerlink" title="规则："></a>规则：</h5><p>1，共抽3次，第一次抽3等奖，第2次抽2等奖，第3次抽1等奖；</p><p>2，每个员工限中奖一次，不可重复；</p><h5 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h5><p>1,生成一个员工列表，用random模块从里面取随机值；</p><p>2，取完值之后，立刻从列表中把中奖人删掉，防止其再次中奖。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#年会抽奖程序</span></span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line">staffs = [<span class="string">f"员工-<span class="subst">&#123;i&#125;</span>"</span> <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">301</span>)]    <span class="comment">#员工列表</span></span><br><span class="line">levels = [<span class="number">3</span>,<span class="number">6</span>,<span class="number">30</span>]   <span class="comment">#奖项等级人数</span></span><br><span class="line">count = <span class="number">3</span>   <span class="comment">#3次循环</span></span><br><span class="line"><span class="keyword">while</span> c &gt;<span class="number">0</span>:</span><br><span class="line">    choice = input(<span class="string">"pree any button to start&gt;&gt;"</span>)</span><br><span class="line">    winner = random.sample(staffs,levels[c<span class="number">-1</span>])    <span class="comment">#取随机数</span></span><br><span class="line">    print(<span class="string">f"<span class="subst">&#123;c&#125;</span>等奖："</span>,winner)</span><br><span class="line">    <span class="keyword">for</span> p <span class="keyword">in</span> winner:     <span class="comment">#剔除已经中奖人员</span></span><br><span class="line">        staffs.remove(p)</span><br><span class="line">    count -=<span class="number">1</span></span><br></pre></td></tr></table></figure><h5 id="运行结果："><a href="#运行结果：" class="headerlink" title="运行结果："></a>运行结果：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">pree any button to start&gt;&gt;</span><br><span class="line">3等奖： [&#39;员工-298&#39;, &#39;员工-117&#39;, &#39;员工-20&#39;, &#39;员工-180&#39;, &#39;员工-162&#39;, &#39;员工-51&#39;, &#39;员工-27&#39;, &#39;员工-15&#39;, &#39;员工-173&#39;, &#39;员工-133&#39;, &#39;员工-7&#39;, &#39;员工-114&#39;, &#39;员工-127&#39;, &#39;员工-19&#39;, &#39;员工-42&#39;, &#39;员工-172&#39;, &#39;员工-283&#39;, &#39;员工-128&#39;, &#39;员工-273&#39;, &#39;员工-208&#39;, &#39;员工-26&#39;, &#39;员工-221&#39;, &#39;员工-256&#39;, &#39;员工-144&#39;, &#39;员工-138&#39;, &#39;员工-203&#39;, &#39;员工-278&#39;, &#39;员工-48&#39;, &#39;员工-97&#39;, &#39;员工-300&#39;]</span><br><span class="line">pree any button to start&gt;&gt;</span><br><span class="line">2等奖： [&#39;员工-98&#39;, &#39;员工-272&#39;, &#39;员工-88&#39;, &#39;员工-291&#39;, &#39;员工-137&#39;, &#39;员工-116&#39;]</span><br><span class="line">pree any button to start&gt;&gt;</span><br><span class="line">1等奖： [&#39;员工-53&#39;, &#39;员工-238&#39;, &#39;员工-25&#39;]</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="http://codehao.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Python" scheme="http://codehao.top/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Python贪吃蛇游戏</title>
-    <link href="http://codehao.top/ckcw1vylg0009x0wo17n1fdwt/"/>
-    <id>http://codehao.top/ckcw1vylg0009x0wo17n1fdwt/</id>
+    <link href="http://codehao.top/ckdsyjklv000clwwoayie8ald/"/>
+    <id>http://codehao.top/ckdsyjklv000clwwoayie8ald/</id>
     <published>2020-07-21T14:29:25.833Z</published>
     <updated>2020-07-21T14:41:59.069Z</updated>
     
@@ -44,8 +70,8 @@
   
   <entry>
     <title>研究生学位论文格式与书写规范</title>
-    <link href="http://codehao.top/ckcw1vylz0013x0wogv37bet9/"/>
-    <id>http://codehao.top/ckcw1vylz0013x0wogv37bet9/</id>
+    <link href="http://codehao.top/ckdsyjkmc0014lwwo3rm6cka2/"/>
+    <id>http://codehao.top/ckdsyjkmc0014lwwo3rm6cka2/</id>
     <published>2020-07-20T14:02:23.468Z</published>
     <updated>2020-07-21T14:45:43.372Z</updated>
     
@@ -68,8 +94,8 @@
   
   <entry>
     <title>在hexo博客中加入豆瓣读书功能</title>
-    <link href="http://codehao.top/ckcw1vylp000jx0wobzvvf5nz/"/>
-    <id>http://codehao.top/ckcw1vylp000jx0wobzvvf5nz/</id>
+    <link href="http://codehao.top/ckdsyjkm5000olwwo7vvy6trf/"/>
+    <id>http://codehao.top/ckdsyjkm5000olwwo7vvy6trf/</id>
     <published>2020-06-20T10:08:37.091Z</published>
     <updated>2020-06-20T10:44:32.512Z</updated>
     
@@ -94,8 +120,8 @@
   
   <entry>
     <title>七牛云如何配置域名的CNAME</title>
-    <link href="http://codehao.top/ckcw1vylj000dx0wofcnr4wy1/"/>
-    <id>http://codehao.top/ckcw1vylj000dx0wofcnr4wy1/</id>
+    <link href="http://codehao.top/ckdsyjklx000flwwoc78mdp8h/"/>
+    <id>http://codehao.top/ckdsyjklx000flwwoc78mdp8h/</id>
     <published>2020-06-18T12:28:20.000Z</published>
     <updated>2020-06-20T10:44:52.590Z</updated>
     
@@ -120,8 +146,8 @@
   
   <entry>
     <title>实用工具&amp;学习网站</title>
-    <link href="http://codehao.top/ckcw1vylx000yx0wo6uvp3of0/"/>
-    <id>http://codehao.top/ckcw1vylx000yx0wo6uvp3of0/</id>
+    <link href="http://codehao.top/ckdsyjkma0010lwwoa3k1fgjc/"/>
+    <id>http://codehao.top/ckdsyjkma0010lwwoa3k1fgjc/</id>
     <published>2020-06-08T08:52:42.463Z</published>
     <updated>2020-06-09T04:17:24.954Z</updated>
     
@@ -144,8 +170,8 @@
   
   <entry>
     <title>基于 Jupyter Notebook 和Plotly的交互式COVID-19实时追踪可视化系统（下）</title>
-    <link href="http://codehao.top/ckcw1vylu000tx0wo9e3pb8av/"/>
-    <id>http://codehao.top/ckcw1vylu000tx0wo9e3pb8av/</id>
+    <link href="http://codehao.top/ckdsyjkmd0017lwwocioa0m8t/"/>
+    <id>http://codehao.top/ckdsyjkmd0017lwwocioa0m8t/</id>
     <published>2020-05-31T10:55:59.297Z</published>
     <updated>2020-06-20T10:28:20.566Z</updated>
     
@@ -168,8 +194,8 @@
   
   <entry>
     <title>基于 Jupyter Notebook 和Plotly的交互式COVID-19实时追踪可视化系统（上）</title>
-    <link href="http://codehao.top/ckcw1vylr000lx0wo8b48gamx/"/>
-    <id>http://codehao.top/ckcw1vylr000lx0wo8b48gamx/</id>
+    <link href="http://codehao.top/ckdsyjkm6000slwwodee1ee1u/"/>
+    <id>http://codehao.top/ckdsyjkm6000slwwodee1ee1u/</id>
     <published>2020-05-31T10:55:59.293Z</published>
     <updated>2020-06-20T10:28:09.806Z</updated>
     
@@ -192,8 +218,8 @@
   
   <entry>
     <title>IQ测试集锦</title>
-    <link href="http://codehao.top/ckcw1vyla0004x0wog6q08sp1/"/>
-    <id>http://codehao.top/ckcw1vyla0004x0wog6q08sp1/</id>
+    <link href="http://codehao.top/ckdsyjkln0006lwwohc73bra1/"/>
+    <id>http://codehao.top/ckdsyjkln0006lwwohc73bra1/</id>
     <published>2020-05-11T03:24:18.394Z</published>
     <updated>2020-06-20T10:28:23.051Z</updated>
     
@@ -216,8 +242,8 @@
   
   <entry>
     <title>中国科学引文数据库 （CSCD）</title>
-    <link href="http://codehao.top/ckcw1vylt000qx0wobm8o6dj7/"/>
-    <id>http://codehao.top/ckcw1vylt000qx0wobm8o6dj7/</id>
+    <link href="http://codehao.top/ckdsyjkm1000jlwwofh9t3ywb/"/>
+    <id>http://codehao.top/ckdsyjkm1000jlwwofh9t3ywb/</id>
     <published>2020-04-30T05:57:14.332Z</published>
     <updated>2020-07-21T14:45:43.369Z</updated>
     
@@ -240,8 +266,8 @@
   
   <entry>
     <title>上传本地项目至gitee（for window）</title>
-    <link href="http://codehao.top/ckcw1vylk000fx0wo62ta9y69/"/>
-    <id>http://codehao.top/ckcw1vylk000fx0wo62ta9y69/</id>
+    <link href="http://codehao.top/ckdsyjkm4000mlwwo656va5ct/"/>
+    <id>http://codehao.top/ckdsyjkm4000mlwwo656va5ct/</id>
     <published>2020-04-22T13:31:20.000Z</published>
     <updated>2020-05-20T04:11:02.736Z</updated>
     
@@ -264,8 +290,8 @@
   
   <entry>
     <title>浅谈Red Hat和 Centos7</title>
-    <link href="http://codehao.top/ckcw1vylx000zx0wo6omm0ri4/"/>
-    <id>http://codehao.top/ckcw1vylx000zx0wo6omm0ri4/</id>
+    <link href="http://codehao.top/ckdsyjkmb0011lwwohqhh47ju/"/>
+    <id>http://codehao.top/ckdsyjkmb0011lwwohqhh47ju/</id>
     <published>2020-04-22T13:28:20.000Z</published>
     <updated>2020-05-20T04:11:02.729Z</updated>
     
@@ -288,8 +314,8 @@
   
   <entry>
     <title>Centos 7下安装nginx，使用yum install nginx，提示没有可用的软件包。</title>
-    <link href="http://codehao.top/ckcw1vyky0000x0wo0w2u62t8/"/>
-    <id>http://codehao.top/ckcw1vyky0000x0wo0w2u62t8/</id>
+    <link href="http://codehao.top/ckdsyjklh0002lwwoffwl5lgu/"/>
+    <id>http://codehao.top/ckdsyjklh0002lwwoffwl5lgu/</id>
     <published>2020-04-22T13:21:20.000Z</published>
     <updated>2020-05-20T04:11:02.671Z</updated>
     
@@ -312,8 +338,8 @@
   
   <entry>
     <title>Git初始化-git init 疑惑</title>
-    <link href="http://codehao.top/ckcw1vyl50002x0wohr9gd5mf/"/>
-    <id>http://codehao.top/ckcw1vyl50002x0wohr9gd5mf/</id>
+    <link href="http://codehao.top/ckdsyjkm8000vlwwo9l8642hb/"/>
+    <id>http://codehao.top/ckdsyjkm8000vlwwo9l8642hb/</id>
     <published>2020-04-22T13:21:20.000Z</published>
     <updated>2020-05-20T04:11:02.679Z</updated>
     
@@ -336,8 +362,8 @@
   
   <entry>
     <title>npm和cnpm安装（for windows）</title>
-    <link href="http://codehao.top/ckcw1vyli000bx0wo1q4hgltv/"/>
-    <id>http://codehao.top/ckcw1vyli000bx0wo1q4hgltv/</id>
+    <link href="http://codehao.top/ckdsyjklt000blwwo7ebicsqj/"/>
+    <id>http://codehao.top/ckdsyjklt000blwwo7ebicsqj/</id>
     <published>2020-04-22T12:58:20.000Z</published>
     <updated>2020-05-20T04:11:02.703Z</updated>
     
@@ -360,8 +386,8 @@
   
   <entry>
     <title>MySQL中pymysql的具体操作</title>
-    <link href="http://codehao.top/ckcw1vyle0006x0wo97tt111r/"/>
-    <id>http://codehao.top/ckcw1vyle0006x0wo97tt111r/</id>
+    <link href="http://codehao.top/ckdsyjklq0008lwwo5gryfj44/"/>
+    <id>http://codehao.top/ckdsyjklq0008lwwo5gryfj44/</id>
     <published>2020-04-22T12:50:20.000Z</published>
     <updated>2020-06-20T10:28:12.435Z</updated>
     
@@ -386,8 +412,8 @@
   
   <entry>
     <title>Markdown新手指南</title>
-    <link href="http://codehao.top/ckcw1vylc0005x0wocn6ofz8t/"/>
-    <id>http://codehao.top/ckcw1vylc0005x0wocn6ofz8t/</id>
+    <link href="http://codehao.top/ckdsyjklo0007lwwoh4w63mnz/"/>
+    <id>http://codehao.top/ckdsyjklo0007lwwoh4w63mnz/</id>
     <published>2020-04-22T12:28:20.000Z</published>
     <updated>2020-05-20T04:11:02.682Z</updated>
     
@@ -410,8 +436,8 @@
   
   <entry>
     <title>基于CentOS7安装virtualenv虚拟环境</title>
-    <link href="http://codehao.top/ckcw1vylw000wx0wo9ckdebod/"/>
-    <id>http://codehao.top/ckcw1vylw000wx0wo9ckdebod/</id>
+    <link href="http://codehao.top/ckdsyjkm9000ylwwo45r3gnh3/"/>
+    <id>http://codehao.top/ckdsyjkm9000ylwwo45r3gnh3/</id>
     <published>2020-04-22T07:31:20.000Z</published>
     <updated>2020-05-20T04:11:02.719Z</updated>
     
