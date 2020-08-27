@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://codehao.top/"/>
-  <updated>2020-08-13T15:28:29.457Z</updated>
+  <updated>2020-08-27T11:07:56.507Z</updated>
   <id>http://codehao.top/</id>
   
   <author>
@@ -17,9 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>58同城前端笔试</title>
+    <link href="http://codehao.top/ckecpf9zv000a7swoc46gdd1w/"/>
+    <id>http://codehao.top/ckecpf9zv000a7swoc46gdd1w/</id>
+    <published>2020-08-27T09:33:03.117Z</published>
+    <updated>2020-08-27T11:07:56.507Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="一、填空题"><a href="#一、填空题" class="headerlink" title="一、填空题"></a>一、填空题</h3><p>​    1.号码段为131到139的11位手机号码正则校验：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;^13[1-9][0-9]&#123;8&#125;$&#x2F;</span><br></pre></td></tr></table></figure><p>  注：<a href="https://www.cnblogs.com/fozero/p/7868687.html" target="_blank" rel="noopener">史上最全常用正则表达式大全</a></p><p>​    2.移动端，如何在html中通过链接调起拨打电话：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a herf&#x3D;[tel:10086](tel:10086)&gt;10086&lt;&#x2F;a&gt;</span><br></pre></td></tr></table></figure><p>​    3.以下代码的输出结果：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="keyword">var</span> t=‘teacher’;</span><br><span class="line">    <span class="keyword">let</span> s=‘student’;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(t);</span><br><span class="line"><span class="built_in">console</span>.log(s);</span><br><span class="line"></span><br><span class="line">结果：“teacher” ; Uncaught <span class="built_in">ReferenceError</span>: s is not defined</span><br></pre></td></tr></table></figure><p>​        解析： <code>var</code>声明的变量是<strong>没有块级作用域</strong> （全局变量）</p><p>​                      let 声明的变量具<strong>有块级作用域</strong> （局部变量）</p><p>​    4. HTTP协议的状态码200、400、500分别代表什么？ </p><p>​      答案： 200: OK; 400: Bad Request; 500: Internal Server Error </p><p>​    5. JavaScript算术运算：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">‘10’+ 1结果为‘101’ </span><br><span class="line">‘10’-1结果为9</span><br></pre></td></tr></table></figure><p>​    6. var ting = 1, shi=3, wei=2;用ES6字符串模板的方式输出：1室3厅2卫。</p><p>​      答案：<code>${ting}室${shi}厅${wei}卫</code></p><p>​      解析： 在模板字符串中，嵌入变量，需要将变量名写在${}之中 </p><p>​    7. 用ES6解构的方式，将下面代码中的obj.name赋值给n，obj.age赋值给a</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;<span class="attr">name</span>:’韩梅梅’, <span class="attr">age</span>:’<span class="number">20</span>’&#125;;</span><br><span class="line"><span class="keyword">let</span> n, a;</span><br><span class="line"></span><br><span class="line">答案：<span class="keyword">let</span> &#123;<span class="attr">name</span>:n,<span class="attr">age</span>:a&#125; = obj;</span><br></pre></td></tr></table></figure><p>​    题目解析：（ ES6中的对象的解构赋值）<br>​        变量与属性同名情况下，var { bar,foo } = { foo:“aaa”,bar:“bbb”} ,次序不一致不重要；<br>​        变量名与属性不一致（题目这种情况）：</p><p>​        <code>var {foo:baz} = {foo:&quot;aaa&quot;,bar:&quot;bbb&quot;}; baz //&quot;aaa&quot;</code> </p><ol start="8"><li><p>端口号标识了一个主机上进行通信的不同的应用程序。 </p><p>SOCKS代理协议服务器常用端口号：1080</p><p>FTP（文件传输）协议代理服务器常用端口号：21</p><p>Telnet（远程登录）协议代理服务器常用端口号：23</p><p>HTTP服务器，默认端口号为80</p><p>HTTPS（securely transferring web pages）服务器，默认端口号为443</p></li><li><p>MVC、MVP、MVVM 名词解释</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">1、MVC（Model-View-Controller）</span><br><span class="line"></span><br><span class="line">Model: 模型（用于封装与应用程序的业务逻辑相关的数据以及对数据的处理方法）</span><br><span class="line"></span><br><span class="line">View: 视图（渲染页面）</span><br><span class="line"></span><br><span class="line">Controller: 控制器（M和V之间的连接器，用于控制应用程序的流程，及页面的业务逻辑）</span><br><span class="line">——————————————————————————————————————————————————————————————————————</span><br><span class="line"></span><br><span class="line">2、MVP（Model-View-Presenter）是MVC的改良模式。</span><br><span class="line">——————————————————————————————————————————————————————————————————————</span><br><span class="line"></span><br><span class="line">3、MVVM（Model-View-ViewModel）</span><br></pre></td></tr></table></figure><ol start="10"><li><p>Flex布局实现容器box内部元素item垂直居中对齐。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.box&#123;</span><br><span class="line">display: flex; </span><br><span class="line">align-items: center </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ol></li></ol><h3 id="二、简答题"><a href="#二、简答题" class="headerlink" title="二、简答题"></a>二、简答题</h3><p>11、CSS3的box-sizing的取值及各值的说明；</p><p>​         <strong>box-sizing</strong>: content-box|border-box|inherit; </p><table><thead><tr><th align="center">值</th><th align="center">说明</th></tr></thead><tbody><tr><td align="center">content-box</td><td align="center">宽度和高度分别应用到元素的内容框。在宽度和高度之外绘制元素的内边距和边框。</td></tr><tr><td align="center">border-box</td><td align="center">为元素设定的宽度和高度决定了元素的边框盒。就是说，为元素指定的任何内边距和边框都将在已设定的宽度和高度内进行绘制。通过从已设定的宽度和高度分别减去边框和内边距才能得到内容的宽度和高度。</td></tr><tr><td align="center">inherit</td><td align="center">规定应从父元素继承 box-sizing 属性的值。</td></tr></tbody></table><p>12、 请写出下列代码的执行结果：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">switchCase</span>(<span class="params">value</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">switch</span>(value)&#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'0'</span>:<span class="built_in">console</span>.log(<span class="string">'case 0'</span>);</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'1'</span>:<span class="built_in">console</span>.log(<span class="string">'case 1'</span>);<span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="literal">undefined</span>:<span class="built_in">console</span>.log(<span class="string">'undefined'</span>);<span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">default</span>:<span class="built_in">console</span>.log(<span class="string">'default'</span>);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line"><span class="comment">// 写出下列输出结果</span></span><br><span class="line">switchCase(<span class="number">0</span>);</span><br><span class="line">switchCase(<span class="string">'0'</span>);</span><br><span class="line">switchCase();</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line"><span class="keyword">default</span></span><br><span class="line"><span class="keyword">case</span> o</span><br><span class="line"><span class="keyword">case</span> <span class="number">1</span></span><br><span class="line"><span class="literal">undefined</span></span><br></pre></td></tr></table></figure><p>13、列举出通过CSS样式隐藏元素的方法，并说明其区别：</p><table><thead><tr><th align="center"><strong>方法</strong></th><th align="center"><strong>描述</strong></th></tr></thead><tbody><tr><td align="center"><strong>Opacity</strong></td><td align="center">设置对象的不透明度当他的透明度为0的时候,视觉上它是消失了,但是他依然占据着那个位置。它也将响应用户交互</td></tr><tr><td align="center"><strong>Display</strong></td><td align="center">当元素的display属性为none时,该元素就会就会从视觉中消失,并且连盒模型也不生成.也不会在页面占据任何位置</td></tr><tr><td align="center"><strong>Visibility</strong></td><td align="center">类似opacity属性，该属性值为hidden的时候，元素将会隐藏，也会占据着自己的位置，并对网页的布局起作用，与 opacity 唯一不同的是它不会响应任何用户交互。</td></tr><tr><td align="center"><strong>Clip-path</strong></td><td align="center">该属性是通过裁剪的方法实现隐藏的。被隐藏的内容依然占据着那个位置，它周围的元素的行为就如同它可见时一样。</td></tr><tr><td align="center"><strong>Position</strong></td><td align="center">把元素脱离文档流移出视觉区域，添加该属性后既不会影响布局，又能让元素保持可以操作。</td></tr></tbody></table><p>14、请写出下面代码的执行结果：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s = &#123;</span><br><span class="line">    s: <span class="string">'student'</span>,</span><br><span class="line">    getS: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.s);</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> t = &#123;</span><br><span class="line">    s: <span class="string">'teacher'</span></span><br><span class="line">&#125;;</span><br><span class="line">  </span><br><span class="line"><span class="keyword">var</span> getS = s.getS;</span><br><span class="line"><span class="keyword">var</span> getS1 = getS.bind(s);</span><br><span class="line">  </span><br><span class="line"><span class="comment">// 写出以下输出结果</span></span><br><span class="line">s.getS();</span><br><span class="line">s.getS.apply(t);    </span><br><span class="line">getS();</span><br><span class="line">getS1.call(t);</span><br><span class="line"></span><br><span class="line">答案：</span><br><span class="line">‘student’</span><br><span class="line">‘teacher’</span><br><span class="line">&#123;</span><br><span class="line">s:“student”</span><br><span class="line">getS()&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line">‘student’</span><br></pre></td></tr></table></figure><p>解析： </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">第一空：函数中的this对象，即指代的是s。</span><br><span class="line">第二空：函数中的this对象，由于apply绑定到了t对象上，则对应的就是t对象中的’teacher’</span><br><span class="line">第三空：这里有一个小陷阱，首先，getS是由s对象中的函数赋值的，那么getS就是一个函数function()&#123;console.log(this.s)&#125;; 在此处的函数已经被提取出来，赋值给了getS，同s对象已经没有关联了，此处的this指向的是window，即window.s；那么我们就在代码中寻找s，刚好与s对象同名，所以，此处答应的就是s对象，即&#123;s:“student”，getS()&#123;&#125;&#125;。</span><br><span class="line">第四空：首先，getS1绑定了参数s，bind绑定了之后，随后通过apply或者call都无法改变其绑定的对象，所以，打印出来就是student。</span><br></pre></td></tr></table></figure><p>15、列出移动端开发中适配各种屏幕尺寸的解决方案(至少3种)</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">答案： </span><br><span class="line">1、响应式布局    &#x2F;&#x2F;页面元素的位置随着屏幕尺寸的变化而变化，通常会用百分比来定位</span><br><span class="line">2、cover布局    &#x2F;&#x2F;跟background-size的cover属性一样，保持页面的宽高比，取宽或高之中的较小者占满屏                      幕，超出的内容会被隐藏</span><br><span class="line">3、contain布局   &#x2F;&#x2F;跟background-size的contain属性那样，保持页面的宽高比，取宽或高之中的较大者占                       满屏幕，不足的部分会用背景填充。</span><br><span class="line">4、样式缩放      &#x2F;&#x2F;直接用px为单位按视觉进行开发</span><br><span class="line">5、rem缩放      &#x2F;&#x2F;以Rem为单位来进行视觉开发，然后通过计算后改变html的front-size来对页面进行缩放。</span><br></pre></td></tr></table></figure><h3 id="三、应用题"><a href="#三、应用题" class="headerlink" title="三、应用题"></a>三、应用题</h3><p>16、 用js实现一个随机打乱数组顺序的函数，要求可以设定数组种任意1个元素的位置不变，其他位置的元素位置随机变化。 </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;方法一：</span><br><span class="line">function rand(arr) &#123;</span><br><span class="line">    var len &#x3D; arr.length</span><br><span class="line">    &#x2F;&#x2F;首先从最大的数开始遍历，之后递减</span><br><span class="line">    for(var i &#x3D; arr.length - 1; i &gt;&#x3D; 0; i--) &#123;</span><br><span class="line">    &#x2F;&#x2F;随机索引值randomIndex是从0-arr.length中随机抽取的</span><br><span class="line">        var randomIndex &#x3D; Math.floor(Math.random() * (i + 1));</span><br><span class="line">    &#x2F;&#x2F;下面三句相当于把从数组中随机抽取到的值与当前遍历的值互换位置</span><br><span class="line">        var itemIndex &#x3D; arr[randomIndex];</span><br><span class="line">        arr[randomIndex] &#x3D; arr[i];</span><br><span class="line">        arr[i] &#x3D; itemIndex;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F;每一次的遍历都相当于把从数组中随机抽取（不重复）的一个元素放到数组的最后面（索引顺序为：len-1,len-2,len-3......0）</span><br><span class="line">    return arr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;方法二：</span><br><span class="line">var arr &#x3D; [1, 2, 3, 4]</span><br><span class="line">function mess(index)&#123;</span><br><span class="line">    let res &#x3D; arr.splice(index, 1)[0]</span><br><span class="line">    arr.sort((a, b)&#x3D;&gt;Math.random()-0.5)</span><br><span class="line">    arr.splice(index, 0, res)</span><br><span class="line">    console.log(arr)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;方法三：</span><br><span class="line">function (array,index2)&#123;</span><br><span class="line">array.map(function(item,index)&#123;</span><br><span class="line">if(index!&#x3D;index2)&#123;</span><br><span class="line">var x&#x3D;parseInt(Math.random()*(array.length));</span><br><span class="line">if(x!&#x3D;index2)&#123;</span><br><span class="line">array[index]&#x3D;array[x];</span><br><span class="line">array[x]&#x3D;item;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;)</span><br><span class="line">console.log(array);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>17、 用js实现一个比较APP版本号的大小的函数，版本号各市由数字和.组成。例如：1.1.0、1.10、1.2.3等。 </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">function compare(v1, v2)&#123;</span><br><span class="line">    let res1 &#x3D; v1.split(&#39;.&#39;)</span><br><span class="line">    let res2 &#x3D; v2.split(&#39;.&#39;)</span><br><span class="line">    &#x2F;&#x2F;.split  把一个字符串分割成字符串数组。</span><br><span class="line">    &#x2F;&#x2F;如：&quot;2:3:4:5&quot;.split(&quot;:&quot;)  将返回[&quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;]</span><br><span class="line"></span><br><span class="line">    return res1.join(&#39;&#39;) &gt; res2.join(&#39;&#39;) ? v1 : v2</span><br><span class="line">    &#x2F;&#x2F;.join把数组中的所有元素放入一个字符串</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let res &#x3D; compare(str1, str2)</span><br><span class="line">console.log(res)</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;&lt;0   strA 小于 strB。</span><br><span class="line">&#x2F;&#x2F;&#x3D;0   strA 等于 strB。</span><br><span class="line">&#x2F;&#x2F;&gt;0   strA 大于 strB。</span><br></pre></td></tr></table></figure><p>[TOC]</p><p><a href="https://www.nowcoder.com/discuss/67508?type=post&order=time&pos=&page=1&channel=666&source_id=search_post" target="_blank" rel="noopener">致谢</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="http://codehao.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="前端" scheme="http://codehao.top/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>10行代码搞定年会抽奖</title>
-    <link href="http://codehao.top/ckdsyjkla0000lwwo1chsagp4/"/>
-    <id>http://codehao.top/ckdsyjkla0000lwwo1chsagp4/</id>
+    <link href="http://codehao.top/ckecpf9zc00007swoffh79rs7/"/>
+    <id>http://codehao.top/ckecpf9zc00007swoffh79rs7/</id>
     <published>2020-08-13T14:42:58.681Z</published>
     <updated>2020-08-13T15:28:29.457Z</updated>
     
@@ -44,8 +70,8 @@
   
   <entry>
     <title>Python贪吃蛇游戏</title>
-    <link href="http://codehao.top/ckdsyjklv000clwwoayie8ald/"/>
-    <id>http://codehao.top/ckdsyjklv000clwwoayie8ald/</id>
+    <link href="http://codehao.top/ckecpf9zy000e7swohyj7dpky/"/>
+    <id>http://codehao.top/ckecpf9zy000e7swohyj7dpky/</id>
     <published>2020-07-21T14:29:25.833Z</published>
     <updated>2020-07-21T14:41:59.069Z</updated>
     
@@ -70,8 +96,8 @@
   
   <entry>
     <title>研究生学位论文格式与书写规范</title>
-    <link href="http://codehao.top/ckdsyjkmc0014lwwo3rm6cka2/"/>
-    <id>http://codehao.top/ckdsyjkmc0014lwwo3rm6cka2/</id>
+    <link href="http://codehao.top/ckecpfa0e00167swo3ycoc2hu/"/>
+    <id>http://codehao.top/ckecpfa0e00167swo3ycoc2hu/</id>
     <published>2020-07-20T14:02:23.468Z</published>
     <updated>2020-07-21T14:45:43.372Z</updated>
     
@@ -94,8 +120,8 @@
   
   <entry>
     <title>在hexo博客中加入豆瓣读书功能</title>
-    <link href="http://codehao.top/ckdsyjkm5000olwwo7vvy6trf/"/>
-    <id>http://codehao.top/ckdsyjkm5000olwwo7vvy6trf/</id>
+    <link href="http://codehao.top/ckecpfa08000t7swo6bpl83ie/"/>
+    <id>http://codehao.top/ckecpfa08000t7swo6bpl83ie/</id>
     <published>2020-06-20T10:08:37.091Z</published>
     <updated>2020-06-20T10:44:32.512Z</updated>
     
@@ -120,8 +146,8 @@
   
   <entry>
     <title>七牛云如何配置域名的CNAME</title>
-    <link href="http://codehao.top/ckdsyjklx000flwwoc78mdp8h/"/>
-    <id>http://codehao.top/ckdsyjklx000flwwoc78mdp8h/</id>
+    <link href="http://codehao.top/ckecpfa02000l7swo5aw5ebu0/"/>
+    <id>http://codehao.top/ckecpfa02000l7swo5aw5ebu0/</id>
     <published>2020-06-18T12:28:20.000Z</published>
     <updated>2020-06-20T10:44:52.590Z</updated>
     
@@ -146,8 +172,8 @@
   
   <entry>
     <title>实用工具&amp;学习网站</title>
-    <link href="http://codehao.top/ckdsyjkma0010lwwoa3k1fgjc/"/>
-    <id>http://codehao.top/ckdsyjkma0010lwwoa3k1fgjc/</id>
+    <link href="http://codehao.top/ckecpfa0d00157swo6cmr8o5y/"/>
+    <id>http://codehao.top/ckecpfa0d00157swo6cmr8o5y/</id>
     <published>2020-06-08T08:52:42.463Z</published>
     <updated>2020-06-09T04:17:24.954Z</updated>
     
@@ -170,8 +196,8 @@
   
   <entry>
     <title>基于 Jupyter Notebook 和Plotly的交互式COVID-19实时追踪可视化系统（下）</title>
-    <link href="http://codehao.top/ckdsyjkmd0017lwwocioa0m8t/"/>
-    <id>http://codehao.top/ckdsyjkmd0017lwwocioa0m8t/</id>
+    <link href="http://codehao.top/ckecpfa0b00117swobhbnay15/"/>
+    <id>http://codehao.top/ckecpfa0b00117swobhbnay15/</id>
     <published>2020-05-31T10:55:59.297Z</published>
     <updated>2020-06-20T10:28:20.566Z</updated>
     
@@ -194,8 +220,8 @@
   
   <entry>
     <title>基于 Jupyter Notebook 和Plotly的交互式COVID-19实时追踪可视化系统（上）</title>
-    <link href="http://codehao.top/ckdsyjkm6000slwwodee1ee1u/"/>
-    <id>http://codehao.top/ckdsyjkm6000slwwodee1ee1u/</id>
+    <link href="http://codehao.top/ckecpfa09000x7swo5na59lk0/"/>
+    <id>http://codehao.top/ckecpfa09000x7swo5na59lk0/</id>
     <published>2020-05-31T10:55:59.293Z</published>
     <updated>2020-06-20T10:28:09.806Z</updated>
     
@@ -218,8 +244,8 @@
   
   <entry>
     <title>IQ测试集锦</title>
-    <link href="http://codehao.top/ckdsyjkln0006lwwohc73bra1/"/>
-    <id>http://codehao.top/ckdsyjkln0006lwwohc73bra1/</id>
+    <link href="http://codehao.top/ckecpf9zq00067swo0dhx8vd3/"/>
+    <id>http://codehao.top/ckecpf9zq00067swo0dhx8vd3/</id>
     <published>2020-05-11T03:24:18.394Z</published>
     <updated>2020-06-20T10:28:23.051Z</updated>
     
@@ -242,8 +268,8 @@
   
   <entry>
     <title>中国科学引文数据库 （CSCD）</title>
-    <link href="http://codehao.top/ckdsyjkm1000jlwwofh9t3ywb/"/>
-    <id>http://codehao.top/ckdsyjkm1000jlwwofh9t3ywb/</id>
+    <link href="http://codehao.top/ckecpfa06000r7swoalg4dv42/"/>
+    <id>http://codehao.top/ckecpfa06000r7swoalg4dv42/</id>
     <published>2020-04-30T05:57:14.332Z</published>
     <updated>2020-07-21T14:45:43.369Z</updated>
     
@@ -266,8 +292,8 @@
   
   <entry>
     <title>上传本地项目至gitee（for window）</title>
-    <link href="http://codehao.top/ckdsyjkm4000mlwwo656va5ct/"/>
-    <id>http://codehao.top/ckdsyjkm4000mlwwo656va5ct/</id>
+    <link href="http://codehao.top/ckecpfa04000o7swo62ib7bda/"/>
+    <id>http://codehao.top/ckecpfa04000o7swo62ib7bda/</id>
     <published>2020-04-22T13:31:20.000Z</published>
     <updated>2020-05-20T04:11:02.736Z</updated>
     
@@ -290,8 +316,8 @@
   
   <entry>
     <title>浅谈Red Hat和 Centos7</title>
-    <link href="http://codehao.top/ckdsyjkmb0011lwwohqhh47ju/"/>
-    <id>http://codehao.top/ckdsyjkmb0011lwwohqhh47ju/</id>
+    <link href="http://codehao.top/ckecpfa0f00187swo79gp5898/"/>
+    <id>http://codehao.top/ckecpfa0f00187swo79gp5898/</id>
     <published>2020-04-22T13:28:20.000Z</published>
     <updated>2020-05-20T04:11:02.729Z</updated>
     
@@ -314,8 +340,8 @@
   
   <entry>
     <title>Centos 7下安装nginx，使用yum install nginx，提示没有可用的软件包。</title>
-    <link href="http://codehao.top/ckdsyjklh0002lwwoffwl5lgu/"/>
-    <id>http://codehao.top/ckdsyjklh0002lwwoffwl5lgu/</id>
+    <link href="http://codehao.top/ckecpf9zi00027swo94hdga6v/"/>
+    <id>http://codehao.top/ckecpf9zi00027swo94hdga6v/</id>
     <published>2020-04-22T13:21:20.000Z</published>
     <updated>2020-05-20T04:11:02.671Z</updated>
     
@@ -338,8 +364,8 @@
   
   <entry>
     <title>Git初始化-git init 疑惑</title>
-    <link href="http://codehao.top/ckdsyjkm8000vlwwo9l8642hb/"/>
-    <id>http://codehao.top/ckdsyjkm8000vlwwo9l8642hb/</id>
+    <link href="http://codehao.top/ckecpf9zn00057swohva5bopw/"/>
+    <id>http://codehao.top/ckecpf9zn00057swohva5bopw/</id>
     <published>2020-04-22T13:21:20.000Z</published>
     <updated>2020-05-20T04:11:02.679Z</updated>
     
@@ -362,8 +388,8 @@
   
   <entry>
     <title>npm和cnpm安装（for windows）</title>
-    <link href="http://codehao.top/ckdsyjklt000blwwo7ebicsqj/"/>
-    <id>http://codehao.top/ckdsyjklt000blwwo7ebicsqj/</id>
+    <link href="http://codehao.top/ckecpf9zz000g7swo0kijcg1i/"/>
+    <id>http://codehao.top/ckecpf9zz000g7swo0kijcg1i/</id>
     <published>2020-04-22T12:58:20.000Z</published>
     <updated>2020-05-20T04:11:02.703Z</updated>
     
@@ -386,8 +412,8 @@
   
   <entry>
     <title>MySQL中pymysql的具体操作</title>
-    <link href="http://codehao.top/ckdsyjklq0008lwwo5gryfj44/"/>
-    <id>http://codehao.top/ckdsyjklq0008lwwo5gryfj44/</id>
+    <link href="http://codehao.top/ckecpf9zw000b7swo24dffl7q/"/>
+    <id>http://codehao.top/ckecpf9zw000b7swo24dffl7q/</id>
     <published>2020-04-22T12:50:20.000Z</published>
     <updated>2020-06-20T10:28:12.435Z</updated>
     
@@ -412,8 +438,8 @@
   
   <entry>
     <title>Markdown新手指南</title>
-    <link href="http://codehao.top/ckdsyjklo0007lwwoh4w63mnz/"/>
-    <id>http://codehao.top/ckdsyjklo0007lwwoh4w63mnz/</id>
+    <link href="http://codehao.top/ckecpf9zs00077swo1khx28v6/"/>
+    <id>http://codehao.top/ckecpf9zs00077swo1khx28v6/</id>
     <published>2020-04-22T12:28:20.000Z</published>
     <updated>2020-05-20T04:11:02.682Z</updated>
     
@@ -436,8 +462,8 @@
   
   <entry>
     <title>基于CentOS7安装virtualenv虚拟环境</title>
-    <link href="http://codehao.top/ckdsyjkm9000ylwwo45r3gnh3/"/>
-    <id>http://codehao.top/ckdsyjkm9000ylwwo45r3gnh3/</id>
+    <link href="http://codehao.top/ckecpfa0c00127swo8p9y5s6n/"/>
+    <id>http://codehao.top/ckecpfa0c00127swo8p9y5s6n/</id>
     <published>2020-04-22T07:31:20.000Z</published>
     <updated>2020-05-20T04:11:02.719Z</updated>
     
