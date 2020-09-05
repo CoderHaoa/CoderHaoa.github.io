@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://codehao.top/"/>
-  <updated>2020-09-03T14:29:32.708Z</updated>
+  <updated>2020-09-05T14:30:14.274Z</updated>
   <id>http://codehao.top/</id>
   
   <author>
@@ -17,9 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>网易笔试-算法部分</title>
+    <link href="http://codehao.top/ckeprlfbk001ok4woaedkej95/"/>
+    <id>http://codehao.top/ckeprlfbk001ok4woaedkej95/</id>
+    <published>2020-09-05T14:17:17.227Z</published>
+    <updated>2020-09-05T14:30:14.274Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="案例1：接收用户输入的两个字符串（为九进制数），将两个字符串的相加的结果以九进制数输出。"><a href="#案例1：接收用户输入的两个字符串（为九进制数），将两个字符串的相加的结果以九进制数输出。" class="headerlink" title="案例1：接收用户输入的两个字符串（为九进制数），将两个字符串的相加的结果以九进制数输出。"></a>案例1：接收用户输入的两个字符串（为九进制数），将两个字符串的相加的结果以九进制数输出。</h3><h3 id="功能分析"><a href="#功能分析" class="headerlink" title="功能分析"></a>功能分析</h3><ul><li>1.接受用户输入的两个数num1 num2 （字符串型）</li><li>2.设计按位相加函数实现逐位相加</li><li>3.将得到的结果以数字形式输出</li></ul><h3 id="逻辑分析"><a href="#逻辑分析" class="headerlink" title="逻辑分析"></a>逻辑分析</h3><ul><li>1.用prompt接受用户的输入（注意prompt接受为字符串型），将字符串以数组形式存入str1[] str2[]数组中 （string.split(“”)）</li><li>2.n进制数可以用遍历数组的方式对两个数组的对应位进行逐位相加操作，逢n进一，并将相加结果存入新数组str3[]中（本题n=9）<br><strong>注意：相加操作应该从最后一个数组进行（因为防止后一位的进位影响前一位的进位）</strong><br><strong>注意：若当前位存储为小数点时应该将新数组中的对应位也应该为小数点</strong></li><li>3.设置进位标志flag 标志是否有来自后一位的进位<br><strong>注意：当数组第0位产生时，应在新数组str3前插入一个新的元素1</strong></li><li>4.将得到的新数组str3用join(“”)方式变成数字形式</li><li>5.通过alert输出结果</li></ul><h3 id="详细代码："><a href="#详细代码：" class="headerlink" title="详细代码："></a>详细代码：</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Question1<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">    <span class="comment">//获取用户输入的两个字符串</span></span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> num1 = prompt(<span class="string">'请您输入第一个字符串：'</span>);</span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> num2 = prompt(<span class="string">'请您输入第一个字符串：'</span>);</span></span><br><span class="line"><span class="javascript">    <span class="built_in">console</span>.log(num1);</span></span><br><span class="line"><span class="javascript">    <span class="built_in">console</span>.log(num2);</span></span><br><span class="line"><span class="actionscript">    <span class="comment">//将字符串逐位存入数组中</span></span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> str1 = num1.split(<span class="string">""</span>);;</span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> str2 = num2.split(<span class="string">""</span>);;</span></span><br><span class="line"><span class="actionscript">    <span class="comment">//将两个字符串补成等长的字符串</span></span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> i = ( num1.length &gt; num2.length) ? num1.length : num2.length;</span></span><br><span class="line">    if(num1.length == num2.length)&#123;</span><br><span class="line">       </span><br><span class="line"><span class="actionscript">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(i == num1.length)&#123;</span></span><br><span class="line"><span class="actionscript">        <span class="keyword">do</span>&#123;</span></span><br><span class="line"><span class="actionscript">            str2.unshift(<span class="string">"0"</span>);</span></span><br><span class="line"><span class="actionscript">        &#125;<span class="keyword">while</span>(str2.length &lt; i)</span></span><br><span class="line"><span class="actionscript">    &#125;<span class="keyword">else</span>&#123;</span></span><br><span class="line"><span class="actionscript">        <span class="keyword">do</span>&#123;</span></span><br><span class="line"><span class="actionscript">            str1.unshift(<span class="string">"0"</span>);</span></span><br><span class="line"><span class="actionscript">        &#125;<span class="keyword">while</span>(str1.length &lt; i)</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="actionscript">    <span class="comment">//按位相加 逢9进1 </span></span></span><br><span class="line"><span class="actionscript">    <span class="function"><span class="keyword">function</span> <span class="title">addString</span><span class="params">(x,y)</span></span>&#123;</span></span><br><span class="line"><span class="actionscript">        <span class="keyword">var</span> str3 = [];</span></span><br><span class="line"><span class="actionscript">        <span class="keyword">var</span> j = x.length - <span class="number">1</span>;</span></span><br><span class="line"><span class="actionscript">        <span class="keyword">var</span> flag = <span class="number">0</span>; <span class="comment">//进位标志</span></span></span><br><span class="line"><span class="actionscript">        <span class="keyword">for</span>(<span class="keyword">var</span> i = x.length - <span class="number">1</span>;i &gt;= <span class="number">0</span> ;i--)&#123;</span></span><br><span class="line"><span class="actionscript">           <span class="keyword">if</span>(x[i] == <span class="string">'.'</span>)&#123;</span></span><br><span class="line"><span class="actionscript">            str3[j] = <span class="string">'.'</span>;</span></span><br><span class="line">            j--;</span><br><span class="line"><span class="actionscript">           &#125;<span class="keyword">else</span>&#123; </span></span><br><span class="line"><span class="javascript">               str3[j] = <span class="built_in">Number</span>(x[i]) + <span class="built_in">Number</span>(y[i])+flag;</span></span><br><span class="line">               flag = 0;</span><br><span class="line">               if(str3[j] &gt;= 9)&#123;</span><br><span class="line"><span class="actionscript">                   <span class="keyword">if</span>(str3[j<span class="number">-1</span>] != <span class="string">'.'</span>)&#123;</span></span><br><span class="line">                       if(j != 0)&#123;</span><br><span class="line">                            str3[j] = str3[j] % 9;</span><br><span class="line">                            flag = 1;</span><br><span class="line"><span class="actionscript">                       &#125;<span class="keyword">else</span>&#123;</span></span><br><span class="line">                           str3[j] = str3[j] % 9;</span><br><span class="line">                           str3.unshift(1);</span><br><span class="line">                       &#125;</span><br><span class="line">                   &#125;</span><br><span class="line">               &#125;</span><br><span class="line">              j--;</span><br><span class="line">            &#125;</span><br><span class="line">           &#125;    </span><br><span class="line"><span class="actionscript">       <span class="keyword">return</span> str3;</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> result = addString(str1,str2);</span></span><br><span class="line"><span class="javascript">    <span class="built_in">console</span>.log(result.join(<span class="string">''</span>));</span></span><br><span class="line"><span class="actionscript">    alert(<span class="string">'您输入的两个字符串相加后的和为：'</span>+ result.join(<span class="string">''</span>));</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure><hr><h3 id="案例2-最小数位和"><a href="#案例2-最小数位和" class="headerlink" title="案例2   最小数位和"></a>案例2   最小数位和</h3><h3 id="【题目描述】"><a href="#【题目描述】" class="headerlink" title="【题目描述】"></a>【题目描述】</h3><p>定义S(n)，表示n在十进制下的各位数字和。</p><p>现在给定一个x,请你求出最小正整数n，满足x≤S(n).</p><h3 id="【输入描述】"><a href="#【输入描述】" class="headerlink" title="【输入描述】"></a>【输入描述】</h3><p>第一行数据组数T，对于每组数据，一行一个数字x。</p><p>1≤x≤10^5,1≤T≤10</p><h3 id="【输出描述】"><a href="#【输出描述】" class="headerlink" title="【输出描述】"></a>【输出描述】</h3><p>对于每组数据，一行一个整数表示最小的n。</p><h3 id="【示例】"><a href="#【示例】" class="headerlink" title="【示例】"></a>【示例】</h3><h5 id="示例1："><a href="#示例1：" class="headerlink" title="示例1："></a>示例1：</h5><p><strong>输入：</strong></p><blockquote><p>2<br>7<br>9</p></blockquote><p><strong>输出：</strong></p><blockquote><p>7<br>9</p></blockquote><h3 id="【解决思路及要点】"><a href="#【解决思路及要点】" class="headerlink" title="【解决思路及要点】"></a>【解决思路及要点】</h3><ul><li>【贪心】n要尽可能小，说明位数要尽可能少，在十进制中9最大，所以对x除9，就可以得到n中9的个数，n的最高位就是余数。（满足n最高位最小，位数最小）</li><li>可以直接从最高位开始一位一位的输出，先输出余数，再输出x/9个9不需要再整体转换为数字。</li></ul><h3 id="【解决代码】"><a href="#【解决代码】" class="headerlink" title="【解决代码】"></a>【解决代码】</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">public class Solution1 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Scanner sc&#x3D;new Scanner(System.in);</span><br><span class="line">        int T&#x3D;sc.nextInt();</span><br><span class="line">        while(T--&gt;0)&#123;</span><br><span class="line">            int x&#x3D;sc.nextInt();</span><br><span class="line">            solve(x);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    public static void solve(int x)&#123;</span><br><span class="line">        &#x2F;&#x2F;余数做最高位</span><br><span class="line">        if(x%9&gt;0)&#123;</span><br><span class="line">            System.out.print(x%9);</span><br><span class="line">        &#125;</span><br><span class="line">        x-&#x3D;x%9;</span><br><span class="line">        &#x2F;&#x2F;x&#x2F;9就是n中9的个数</span><br><span class="line">        for(int i&#x3D;1;i&lt;&#x3D;x&#x2F;9;i++)&#123;</span><br><span class="line">            System.out.print(&quot;9&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.print(&quot;\n&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><hr><h3 id="案例3-吃葡萄"><a href="#案例3-吃葡萄" class="headerlink" title="案例3  吃葡萄"></a>案例3  吃葡萄</h3><h3 id="【题目描述】-1"><a href="#【题目描述】-1" class="headerlink" title="【题目描述】"></a>【题目描述】</h3><p>有三种葡萄，每种分别有a,b,c颗。有三个人，第一个人只吃第1,2种葡萄，第二个人只吃第2,3种葡萄，第三个人只吃第1,3种葡萄。<br>适当安排三个人使得吃完所有的葡萄,并且三个人中吃的最多的那个人吃得尽量少。</p><h3 id="【输入描述】-1"><a href="#【输入描述】-1" class="headerlink" title="【输入描述】"></a>【输入描述】</h3><p>第一行数字T，表示数据组数。</p><p>接下来T行，每行三个数a,b,c</p><p>1≤a,b,c≤10^18,1≤T≤10</p><h3 id="【输出描述】-1"><a href="#【输出描述】-1" class="headerlink" title="【输出描述】"></a>【输出描述】</h3><p>对于每组数据，输出一行一个数字表示三个人中吃的最多的那个人吃的数量。</p><h3 id="【示例】-1"><a href="#【示例】-1" class="headerlink" title="【示例】"></a>【示例】</h3><h5 id="示例1：-1"><a href="#示例1：-1" class="headerlink" title="示例1："></a>示例1：</h5><p><strong>输入：</strong></p><blockquote><p>2<br>1 2 3<br>1 2 6</p></blockquote><p><strong>输出：</strong></p><blockquote><p>2<br>3</p></blockquote><h3 id="【解决思路及要点】-1"><a href="#【解决思路及要点】-1" class="headerlink" title="【解决思路及要点】"></a>【解决思路及要点】</h3><ul><li>如果两种较少葡萄的和比葡萄最多的一半要多，那么可以实现平分。【此时三人平分能够使得吃的最多的那个人吃得尽量少】</li><li>如果两种较少葡萄的和比葡萄最多的一半要少，那么结果是最多葡萄的一半。</li><li>注意要使用向上取整。（一颗葡萄也要单独吃一次）</li><li>也可以看成是三个人分别站在三角形的顶点，假设三角形两个短边是a,b，长边是c。则，若两短边之和大于等于长边的一半，可实现总数平分；反之，则结果为长边的一半。</li></ul><h3 id="【解决代码】-1"><a href="#【解决代码】-1" class="headerlink" title="【解决代码】"></a>【解决代码】</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">public class Solution2 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Scanner sc&#x3D;new Scanner(System.in);</span><br><span class="line">        int T&#x3D;sc.nextInt();</span><br><span class="line">        while(T--&gt;0)&#123;</span><br><span class="line">            long a,b,c;</span><br><span class="line">            a&#x3D;sc.nextLong();</span><br><span class="line">            b&#x3D;sc.nextLong();</span><br><span class="line">            c&#x3D;sc.nextLong();</span><br><span class="line">            System.out.println(solve(a,b,c));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    public static long solve(long a,long b,long c)&#123;</span><br><span class="line">        long maxx&#x3D;Math.max(Math.max(a,b),c);</span><br><span class="line">        long minn&#x3D;Math.min(Math.min(a,b),c);</span><br><span class="line">        long mid&#x3D;a+b+c-maxx-minn;</span><br><span class="line">        if(minn+mid&gt;&#x3D;maxx&#x2F;2)&#123;</span><br><span class="line">            return up(a+b+c,3);</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            return up(maxx,2);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F;除法向上取整</span><br><span class="line">    private static long up(long a,long b)&#123;</span><br><span class="line">        return a%b&gt;0?a&#x2F;b+1:a&#x2F;b;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><hr><h3 id="案例4-圆环切割"><a href="#案例4-圆环切割" class="headerlink" title="案例4   圆环切割"></a>案例4   圆环切割</h3><h3 id="【题目描述】-2"><a href="#【题目描述】-2" class="headerlink" title="【题目描述】"></a>【题目描述】</h3><p>小易有n个数字排成一个环，你能否将它们分成连续的两个部分(即在环上必须连续)，使得两部分的和相等？</p><h3 id="【输入描述】-2"><a href="#【输入描述】-2" class="headerlink" title="【输入描述】"></a>【输入描述】</h3><p>第一行数据组数T，对于每组数据<br>第一行数字n，表示数字个数</p><p>接下来一行n个数，按顺序给出环上的数字。</p><p>2≤n≤100000,1≤Ai≤10^9</p><h3 id="【输出描述】-2"><a href="#【输出描述】-2" class="headerlink" title="【输出描述】"></a>【输出描述】</h3><p>对于每组数据，一行输出YES/NO</p><h3 id="【示例】-2"><a href="#【示例】-2" class="headerlink" title="【示例】"></a>【示例】</h3><h5 id="示例1：-2"><a href="#示例1：-2" class="headerlink" title="示例1："></a>示例1：</h5><p><strong>输入：</strong></p><blockquote><p>1<br>6<br>1 2 3 4 5 6</p></blockquote><p><strong>输出：</strong></p><blockquote><p>NO</p></blockquote><h5 id="示例2："><a href="#示例2：" class="headerlink" title="示例2："></a>示例2：</h5><p><strong>输入：</strong></p><blockquote><p>1<br>4<br>4 4 5 3</p></blockquote><p><strong>输出：</strong></p><blockquote><p>YES</p></blockquote><h3 id="【解决思路及要点】-2"><a href="#【解决思路及要点】-2" class="headerlink" title="【解决思路及要点】"></a>【解决思路及要点】</h3><ul><li>维护一个前缀和数组，将每个前缀和与圆环和的一半做差，如果存在一个前缀和和这个差相等，那么就可以分割。【具体的原理自己在脑海中构造个圆环想一下】这里利用的是圆环起点可变的特性。</li></ul><h3 id="【解决代码】-2"><a href="#【解决代码】-2" class="headerlink" title="【解决代码】"></a>【解决代码】</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution3</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Scanner sc=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">int</span> T=sc.nextInt();</span><br><span class="line">        <span class="keyword">while</span>(T--&gt;<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">int</span> n=sc.nextInt();</span><br><span class="line">            <span class="keyword">int</span>[] pre=<span class="keyword">new</span> <span class="keyword">int</span>[n];</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">                <span class="keyword">int</span> x=sc.nextInt();</span><br><span class="line">                pre[i]=(i&gt;<span class="number">0</span>)?pre[i-<span class="number">1</span>]+x:x;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(solve(pre))&#123;</span><br><span class="line">                System.out.println(<span class="string">"YES"</span>);</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                System.out.println(<span class="string">"NO"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">solve</span><span class="params">(<span class="keyword">int</span>[] pre)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n=pre.length;</span><br><span class="line">        <span class="comment">//奇数不可能</span></span><br><span class="line">        <span class="keyword">if</span>((pre[n-<span class="number">1</span>]&amp;<span class="number">1</span>)&gt;<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        Set&lt;Integer&gt; set=<span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            <span class="comment">//得到pre[i]与圆环和一半的差值</span></span><br><span class="line">            <span class="keyword">int</span> s=pre[i]-pre[n-<span class="number">1</span>]/<span class="number">2</span>;</span><br><span class="line">            <span class="comment">//若刚好有一个前缀和与这个差值相等，说明可以从前缀中减去，从而构成两部分相等</span></span><br><span class="line">            <span class="keyword">if</span>(set.contains(s))&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//将这个前缀和存入set集合</span></span><br><span class="line">            set.add(pre[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="【题目剖析】"><a href="#【题目剖析】" class="headerlink" title="【题目剖析】"></a>【题目剖析】</h3><ul><li>这题思维性不是那么强，算是一个中等偏下的题，需要对前缀和应用比较熟悉。</li><li>这个题一步一步做，方法应该还有很多，总体而言不是很难。</li></ul><hr><h3 id="案例5：跳柱子"><a href="#案例5：跳柱子" class="headerlink" title="案例5：跳柱子"></a>案例5：跳柱子</h3><h3 id="【题目描述】-3"><a href="#【题目描述】-3" class="headerlink" title="【题目描述】"></a>【题目描述】</h3><p>小易有n根柱子，第i根柱子的高度为hi。一开始小易站在第一根柱子上。小易能从第i根柱子跳到第j根柱子，当且仅当hj≤hi且1≤j−i≤k。其中k为指定的一个数字。<br>另外小易拥有一次释放超能力的机会。这个超能力能让小易从柱子i跳到任意满足1≤j−i≤k的柱子j而无视柱子高度的限制。<br>现在小易想知道，小易是否能到达第n根柱子。</p><h3 id="【输入描述】-3"><a href="#【输入描述】-3" class="headerlink" title="【输入描述】"></a>【输入描述】</h3><p>第一行数据组数T</p><p>对于每组数据，第一行数字n,k接下来一行n个数字表示hi。</p><p>1≤n≤1000,1≤hi≤10^9,1≤T≤10,1≤k≤n</p><h3 id="【输出描述】-3"><a href="#【输出描述】-3" class="headerlink" title="【输出描述】"></a>【输出描述】</h3><p>对于每组数据，输出YES或NO</p><h3 id="【示例】-3"><a href="#【示例】-3" class="headerlink" title="【示例】"></a>【示例】</h3><h5 id="示例1：-3"><a href="#示例1：-3" class="headerlink" title="示例1："></a>示例1：</h5><p><strong>输入：</strong></p><blockquote><p>1<br>5 3<br>6 2 4 3 8</p></blockquote><p><strong>输出：</strong></p><blockquote><p>YES</p></blockquote><h5 id="示例2：-1"><a href="#示例2：-1" class="headerlink" title="示例2："></a>示例2：</h5><p><strong>输入：</strong></p><blockquote><p>1<br>5 2<br>1 8 2 3 4</p></blockquote><p><strong>输出：</strong></p><blockquote><p>NO</p></blockquote><h3 id="【解决思路及要点】-3"><a href="#【解决思路及要点】-3" class="headerlink" title="【解决思路及要点】"></a>【解决思路及要点】</h3><ul><li>明显可以使用dp。</li><li>dp[i][0]表示不使用超能力的情况下是否能到达柱子。</li><li>dp[i][1]表示使用超能力的情况下是否能到达柱子。</li><li>对每个柱子，枚举前面的k个柱子，并更新dp即可。</li><li>具体细节见代码。</li></ul><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution4</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Scanner sc=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">int</span> T=sc.nextInt();</span><br><span class="line">        <span class="keyword">while</span>(T--&gt;<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">int</span> n=sc.nextInt();</span><br><span class="line">            <span class="keyword">int</span> k=sc.nextInt();</span><br><span class="line">            <span class="keyword">int</span>[] height=<span class="keyword">new</span> <span class="keyword">int</span>[n];</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">                height[i]=sc.nextInt();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(solve(height,k))&#123;</span><br><span class="line">                System.out.println(<span class="string">"YES"</span>);</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                System.out.println(<span class="string">"NO"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">solve</span><span class="params">(<span class="keyword">int</span>[] height,<span class="keyword">int</span> k)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n=height.length;</span><br><span class="line">        <span class="keyword">boolean</span>[][] dp=<span class="keyword">new</span> <span class="keyword">boolean</span>[n][<span class="number">2</span>];</span><br><span class="line">        <span class="comment">//初始条件</span></span><br><span class="line">        dp[<span class="number">0</span>][<span class="number">0</span>]=dp[<span class="number">0</span>][<span class="number">1</span>]=<span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=i-<span class="number">1</span>;j&gt;=<span class="number">0</span> &amp;&amp; j&gt;=i-k;j--)&#123;</span><br><span class="line">                <span class="comment">//如果第j根柱子不使用超能力能达到</span></span><br><span class="line">                <span class="keyword">if</span>(dp[j][<span class="number">0</span>])&#123;</span><br><span class="line">                    <span class="comment">//那么使用也是肯定可以的</span></span><br><span class="line">                    dp[j][<span class="number">1</span>]=<span class="keyword">true</span>;</span><br><span class="line">                    <span class="comment">//如果距离和高度都满足条件，那么第i根柱子在不使用超能力的情况下也是可以达到的</span></span><br><span class="line">                    <span class="keyword">if</span>(height[j]&gt;=height[i])&#123;</span><br><span class="line">                        dp[i][<span class="number">0</span>]=<span class="keyword">true</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="comment">//如果第j根柱子使用超能力能达到</span></span><br><span class="line">                <span class="keyword">if</span>(dp[j][<span class="number">1</span>])&#123;</span><br><span class="line">                    <span class="comment">//那么如果满足条件下，第i根柱子在已经使用了超能力的情况下，能够达到</span></span><br><span class="line">                    <span class="keyword">if</span>(height[j]&gt;=height[i])&#123;</span><br><span class="line">                        dp[i][<span class="number">1</span>]=<span class="keyword">true</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//最终的答案是，在允许使用超能力的情况下，能否到达最后一根柱子</span></span><br><span class="line">        <span class="keyword">return</span> dp[n-<span class="number">1</span>][<span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="【题目剖析】-1"><a href="#【题目剖析】-1" class="headerlink" title="【题目剖析】"></a>【题目剖析】</h3><ul><li>算是比较经典的dp，对dp熟悉的话，可以很快的做出。</li><li>整体来说，这题不是很难。</li><li>应该可以在比较快的时间内做出来。</li></ul><hr><h3 id="案例6-乘积"><a href="#案例6-乘积" class="headerlink" title="案例6   乘积"></a>案例6   乘积</h3><h3 id="【题目描述】-4"><a href="#【题目描述】-4" class="headerlink" title="【题目描述】"></a>【题目描述】</h3><p>小易给定你一个长度为n的正整数序列Ai，你每次可以使用1的代价将某个数加一或者减一，你希望用最少的代价使得所有数的乘积等于B，求最小代价（操作结束后每个数也必须是正整数）。</p><h3 id="【输入描述】-4"><a href="#【输入描述】-4" class="headerlink" title="【输入描述】"></a>【输入描述】</h3><p>第一行数字n, B,表示序列长度和目标乘积。</p><p>接下来一行n个正整数表示初始序列。</p><p>1≤n≤10^3 , 1≤B≤ 10^5，1≤Ai≤ 10^5.</p><h3 id="【输出描述】-4"><a href="#【输出描述】-4" class="headerlink" title="【输出描述】"></a>【输出描述】</h3><p>一行一个数字表示答案</p><h3 id="【示例】-4"><a href="#【示例】-4" class="headerlink" title="【示例】"></a>【示例】</h3><h5 id="示例1：-4"><a href="#示例1：-4" class="headerlink" title="示例1："></a>示例1：</h5><p><strong>输入：</strong></p><blockquote><p>5 12<br>1 3 9 2 6</p></blockquote><p><strong>输出：</strong></p><blockquote><p>10</p></blockquote><p><strong>说明：</strong><br>把3变为1需要2的代价，把9变为1需要8的代价，总代价为10。</p><h5 id="示例2：-2"><a href="#示例2：-2" class="headerlink" title="示例2："></a>示例2：</h5><p><strong>输入：</strong></p><blockquote><p>3 15<br>3 8 7</p></blockquote><p><strong>输出：</strong></p><blockquote><p>9</p></blockquote><p><strong>说明：</strong></p><p>把8变为5需要3的代价，把7变为1需要6的代价，总代价为9。</p><h3 id="【解决思路及要点】-4"><a href="#【解决思路及要点】-4" class="headerlink" title="【解决思路及要点】"></a>【解决思路及要点】</h3><ul><li>dp解决，dp[i][j]表示表示让前i个数字乘积为j的最小代价。</li><li>需要大量用到数的因子，故生成一个从1-B的所有数的因子的集合。</li><li>具体转移方程和其它细节在注释中。</li></ul><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution5</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Scanner sc=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">int</span> n=sc.nextInt();</span><br><span class="line">        <span class="keyword">int</span> B=sc.nextInt();</span><br><span class="line">        <span class="keyword">int</span>[] a=<span class="keyword">new</span> <span class="keyword">int</span>[n+<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">            a[i]=sc.nextInt();</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(solve(a,B));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">solve</span><span class="params">(<span class="keyword">int</span>[] a,<span class="keyword">int</span> B)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n=a.length-<span class="number">1</span>;</span><br><span class="line">        <span class="comment">//该集合是1-B的所有数的因子的集合</span></span><br><span class="line">        List&lt;List&lt;Integer&gt;&gt; v=<span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="comment">//初始化集合</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=B;i++)&#123;</span><br><span class="line">            v.add(<span class="keyword">new</span> ArrayList&lt;&gt;());</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//得到1-B所有数的因子的集合</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=B;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=i;j&lt;=B;j+=i)&#123;</span><br><span class="line">                v.get(j).add(i);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//m为B的因子的个数</span></span><br><span class="line">        <span class="keyword">int</span> m=v.get(B).size();</span><br><span class="line">        <span class="keyword">int</span>[] num=<span class="keyword">new</span> <span class="keyword">int</span>[B+<span class="number">1</span>];</span><br><span class="line">        <span class="comment">//从前往后记录B的因子的下标【等于可以从一个因子得到相应的下标，也可以用哈希表实现】</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++)&#123;</span><br><span class="line">            num[v.get(B).get(i)]=i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//dp数组</span></span><br><span class="line">        <span class="keyword">int</span>[][] dp=<span class="keyword">new</span> <span class="keyword">int</span>[n+<span class="number">1</span>][m];</span><br><span class="line">        <span class="comment">//初始化dp[0]为最大值</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;m;i++)&#123;</span><br><span class="line">            dp[<span class="number">0</span>][i]= (<span class="keyword">int</span>) <span class="number">1e9</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;m;j++)&#123;</span><br><span class="line">                <span class="comment">//初始化dp[i][j]为最大值</span></span><br><span class="line">                dp[i][j]= (<span class="keyword">int</span>) <span class="number">1e9</span>;</span><br><span class="line">                <span class="comment">//k遍历B的第j个因子的所有因子</span></span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;v.get(v.get(B).get(j)).size();k++)&#123;</span><br><span class="line">                    <span class="comment">//dp[i-1][num[v.get(v.get(B).get(j)).get(k)]]是前i-1个数乘积为B的第j个因子的第k个因子的最小代价</span></span><br><span class="line">                    <span class="comment">//Math.abs(a[i]-v.get(B).get(j)/v.get(v.get(B).get(j)).get(k))是 第i个数-B的第j个因子/B的第j个因子的第k个因子 的绝对值</span></span><br><span class="line">                    <span class="comment">//这两个之和就是转换的最小代价</span></span><br><span class="line">                    dp[i][j]=Math.min(dp[i][j],dp[i-<span class="number">1</span>][num[v.get(v.get(B).get(j)).get(k)]]</span><br><span class="line">                            +Math.abs(a[i]-v.get(B).get(j)/v.get(v.get(B).get(j)).get(k)));</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//最终答案是前n个数字乘积为B的最小代价</span></span><br><span class="line">        <span class="keyword">return</span> dp[n][m-<span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="【题目剖析】-2"><a href="#【题目剖析】-2" class="headerlink" title="【题目剖析】"></a>【题目剖析】</h3><ul><li>这个题开始我是完全没有做出来，想到dp的思路，但始终找不到转移的点。</li><li>这个题感觉还是比较难的dp了，估计在两小时内做出的人比较少，这场比试真正拉开算法能力强的人与普通人差距的题目。</li><li>算是一个难度dp了。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="http://codehao.top/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="笔试,算法" scheme="http://codehao.top/tags/%E7%AC%94%E8%AF%95-%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>vue项目实战--LAM系统（三）</title>
-    <link href="http://codehao.top/ckemx1b1j000lh0wob2dd3sn9/"/>
-    <id>http://codehao.top/ckemx1b1j000lh0wob2dd3sn9/</id>
+    <link href="http://codehao.top/ckeprlf9g000gk4wo38ux56jw/"/>
+    <id>http://codehao.top/ckeprlf9g000gk4wo38ux56jw/</id>
     <published>2020-09-03T14:22:55.305Z</published>
     <updated>2020-09-03T14:29:32.708Z</updated>
     
@@ -44,8 +70,8 @@
   
   <entry>
     <title>vue项目实战--LAM系统（二）</title>
-    <link href="http://codehao.top/ckemx1b1o000th0woc1dr24w8/"/>
-    <id>http://codehao.top/ckemx1b1o000th0woc1dr24w8/</id>
+    <link href="http://codehao.top/ckeprlfa4000pk4wo44el53x2/"/>
+    <id>http://codehao.top/ckeprlfa4000pk4wo44el53x2/</id>
     <published>2020-09-02T12:09:43.827Z</published>
     <updated>2020-09-03T14:30:24.306Z</updated>
     
@@ -70,8 +96,8 @@
   
   <entry>
     <title>vue项目实战--LAM系统（一）</title>
-    <link href="http://codehao.top/ckemx1b1r000yh0wo8iy7ezy9/"/>
-    <id>http://codehao.top/ckemx1b1r000yh0wo8iy7ezy9/</id>
+    <link href="http://codehao.top/ckeprlfa8000sk4wo96vh5du6/"/>
+    <id>http://codehao.top/ckeprlfa8000sk4wo96vh5du6/</id>
     <published>2020-09-01T13:53:06.729Z</published>
     <updated>2020-09-03T14:37:55.775Z</updated>
     
@@ -96,8 +122,8 @@
   
   <entry>
     <title>58同城前端笔试</title>
-    <link href="http://codehao.top/ckemx1b0x0002h0woeiuc7ush/"/>
-    <id>http://codehao.top/ckemx1b0x0002h0woeiuc7ush/</id>
+    <link href="http://codehao.top/ckeprlf7t0002k4wo1kq36z8u/"/>
+    <id>http://codehao.top/ckeprlf7t0002k4wo1kq36z8u/</id>
     <published>2020-08-27T09:33:03.117Z</published>
     <updated>2020-08-27T11:07:56.507Z</updated>
     
@@ -122,8 +148,8 @@
   
   <entry>
     <title>10行代码搞定年会抽奖</title>
-    <link href="http://codehao.top/ckemx1b0p0000h0wo31ue6jl5/"/>
-    <id>http://codehao.top/ckemx1b0p0000h0wo31ue6jl5/</id>
+    <link href="http://codehao.top/ckeprlf7c0000k4woh4iu62vc/"/>
+    <id>http://codehao.top/ckeprlf7c0000k4woh4iu62vc/</id>
     <published>2020-08-13T14:42:58.681Z</published>
     <updated>2020-08-13T15:28:29.457Z</updated>
     
@@ -148,8 +174,8 @@
   
   <entry>
     <title>Python贪吃蛇游戏</title>
-    <link href="http://codehao.top/ckemx1b1i000jh0wogcp276zm/"/>
-    <id>http://codehao.top/ckemx1b1i000jh0wogcp276zm/</id>
+    <link href="http://codehao.top/ckeprlf98000dk4wogak2749l/"/>
+    <id>http://codehao.top/ckeprlf98000dk4wogak2749l/</id>
     <published>2020-07-21T14:29:25.833Z</published>
     <updated>2020-07-21T14:41:59.069Z</updated>
     
@@ -174,8 +200,8 @@
   
   <entry>
     <title>研究生学位论文格式与书写规范</title>
-    <link href="http://codehao.top/ckemx1b2d001oh0wo81hj9i18/"/>
-    <id>http://codehao.top/ckemx1b2d001oh0wo81hj9i18/</id>
+    <link href="http://codehao.top/ckeprlfbb001jk4wo3jde1ae7/"/>
+    <id>http://codehao.top/ckeprlfbb001jk4wo3jde1ae7/</id>
     <published>2020-07-20T14:02:23.468Z</published>
     <updated>2020-07-21T14:45:43.372Z</updated>
     
@@ -198,8 +224,8 @@
   
   <entry>
     <title>在hexo博客中加入豆瓣读书功能</title>
-    <link href="http://codehao.top/ckemx1b1w0018h0wofefwfp7c/"/>
-    <id>http://codehao.top/ckemx1b1w0018h0wofefwfp7c/</id>
+    <link href="http://codehao.top/ckeprlfao0014k4wo3hhne9jd/"/>
+    <id>http://codehao.top/ckeprlfao0014k4wo3hhne9jd/</id>
     <published>2020-06-20T10:08:37.091Z</published>
     <updated>2020-06-20T10:44:32.512Z</updated>
     
@@ -224,8 +250,8 @@
   
   <entry>
     <title>七牛云如何配置域名的CNAME</title>
-    <link href="http://codehao.top/ckemx1b1q000vh0wohpq45nmc/"/>
-    <id>http://codehao.top/ckemx1b1q000vh0wohpq45nmc/</id>
+    <link href="http://codehao.top/ckeprlfa9000vk4wo4ao4ge2v/"/>
+    <id>http://codehao.top/ckeprlfa9000vk4wo4ao4ge2v/</id>
     <published>2020-06-18T12:28:20.000Z</published>
     <updated>2020-06-20T10:44:52.590Z</updated>
     
@@ -250,8 +276,8 @@
   
   <entry>
     <title>实用工具&amp;学习网站</title>
-    <link href="http://codehao.top/ckemx1b28001kh0wo0a4u505t/"/>
-    <id>http://codehao.top/ckemx1b28001kh0wo0a4u505t/</id>
+    <link href="http://codehao.top/ckeprlfb5001hk4woe4wr76t7/"/>
+    <id>http://codehao.top/ckeprlfb5001hk4woe4wr76t7/</id>
     <published>2020-06-08T08:52:42.463Z</published>
     <updated>2020-06-09T04:17:24.954Z</updated>
     
@@ -274,8 +300,8 @@
   
   <entry>
     <title>基于 Jupyter Notebook 和Plotly的交互式COVID-19实时追踪可视化系统（下）</title>
-    <link href="http://codehao.top/ckemx1b20001fh0wo771ycbf2/"/>
-    <id>http://codehao.top/ckemx1b20001fh0wo771ycbf2/</id>
+    <link href="http://codehao.top/ckeprlfaz001ck4wo8tciczw2/"/>
+    <id>http://codehao.top/ckeprlfaz001ck4wo8tciczw2/</id>
     <published>2020-05-31T10:55:59.297Z</published>
     <updated>2020-06-20T10:28:20.566Z</updated>
     
@@ -298,8 +324,8 @@
   
   <entry>
     <title>基于 Jupyter Notebook 和Plotly的交互式COVID-19实时追踪可视化系统（上）</title>
-    <link href="http://codehao.top/ckemx1b1y001ch0wo5pyk1967/"/>
-    <id>http://codehao.top/ckemx1b1y001ch0wo5pyk1967/</id>
+    <link href="http://codehao.top/ckeprlfap0018k4woau6bexfn/"/>
+    <id>http://codehao.top/ckeprlfap0018k4woau6bexfn/</id>
     <published>2020-05-31T10:55:59.293Z</published>
     <updated>2020-06-20T10:28:09.806Z</updated>
     
@@ -322,8 +348,8 @@
   
   <entry>
     <title>IQ测试集锦</title>
-    <link href="http://codehao.top/ckemx1b150008h0wohycrevao/"/>
-    <id>http://codehao.top/ckemx1b150008h0wohycrevao/</id>
+    <link href="http://codehao.top/ckeprlf8e0008k4wofuuf70o1/"/>
+    <id>http://codehao.top/ckeprlf8e0008k4wofuuf70o1/</id>
     <published>2020-05-11T03:24:18.394Z</published>
     <updated>2020-06-20T10:28:23.051Z</updated>
     
@@ -346,8 +372,8 @@
   
   <entry>
     <title>中国科学引文数据库 （CSCD）</title>
-    <link href="http://codehao.top/ckemx1b1v0015h0wohmv0cp9h/"/>
-    <id>http://codehao.top/ckemx1b1v0015h0wohmv0cp9h/</id>
+    <link href="http://codehao.top/ckeprlfam0011k4wo6ryi4oqv/"/>
+    <id>http://codehao.top/ckeprlfam0011k4wo6ryi4oqv/</id>
     <published>2020-04-30T05:57:14.332Z</published>
     <updated>2020-07-21T14:45:43.369Z</updated>
     
@@ -370,8 +396,8 @@
   
   <entry>
     <title>上传本地项目至gitee（for window）</title>
-    <link href="http://codehao.top/ckemx1b1s0010h0wofp3xa4fk/"/>
-    <id>http://codehao.top/ckemx1b1s0010h0wofp3xa4fk/</id>
+    <link href="http://codehao.top/ckeprlfaj000yk4wo9dtu3p76/"/>
+    <id>http://codehao.top/ckeprlfaj000yk4wo9dtu3p76/</id>
     <published>2020-04-22T13:31:20.000Z</published>
     <updated>2020-05-20T04:11:02.736Z</updated>
     
@@ -394,8 +420,8 @@
   
   <entry>
     <title>浅谈Red Hat和 Centos7</title>
-    <link href="http://codehao.top/ckemx1b2c001mh0woaicfdsem/"/>
-    <id>http://codehao.top/ckemx1b2c001mh0woaicfdsem/</id>
+    <link href="http://codehao.top/ckeprlfbi001lk4wo1krja7q6/"/>
+    <id>http://codehao.top/ckeprlfbi001lk4wo1krja7q6/</id>
     <published>2020-04-22T13:28:20.000Z</published>
     <updated>2020-05-20T04:11:02.729Z</updated>
     
@@ -417,33 +443,9 @@
   </entry>
   
   <entry>
-    <title>Git初始化-git init 疑惑</title>
-    <link href="http://codehao.top/ckemx1b130006h0wodyayc42a/"/>
-    <id>http://codehao.top/ckemx1b130006h0wodyayc42a/</id>
-    <published>2020-04-22T13:21:20.000Z</published>
-    <updated>2020-05-20T04:11:02.679Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="在使用命令git-init后，在内部会生成-git文件夹。"><a href="#在使用命令git-init后，在内部会生成-git文件夹。" class="headerlink" title="在使用命令git init后，在内部会生成.git文件夹。"></a>在使用命令git init后，在内部会生成.git文件夹。</h1><h2 id="倘若若出现-Reinitialized-existing-Git-repository-in-xxx-xx-xxx-xx-并且没有生成-git文件！"><a href="#倘若若出现-Reinitialized-existing-Git-repository-in-xxx-xx-xxx-xx-并且没有生成-git文件！" class="headerlink" title="倘若若出现==Reinitialized existing Git repository in xxx/xx/xxx/xx== 并且没有生成.git文件！"></a>倘若若出现==Reinitialized existing Git repository in xxx/xx/xxx/xx== 并且没有生成.git文件！</h2><blockquote><h2 id="主要原因：隐藏了-git-文件"><a href="#主要原因：隐藏了-git-文件" class="headerlink" title="主要原因：隐藏了.git 文件"></a>主要原因：隐藏了.git 文件</h2><h2 id="解决：当前文件夹→查看→显示和隐藏→勾选隐藏的文件！"><a href="#解决：当前文件夹→查看→显示和隐藏→勾选隐藏的文件！" class="headerlink" title="解决：当前文件夹→查看→显示和隐藏→勾选隐藏的文件！"></a>解决：当前文件夹→查看→显示和隐藏→勾选隐藏的文件！</h2></blockquote><hr><h2 id="★★博主推荐★★：-常用-Git-命令清单"><a href="#★★博主推荐★★：-常用-Git-命令清单" class="headerlink" title="★★博主推荐★★：==常用 Git 命令清单=="></a>★★博主推荐★★：==<a href="http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html" target="_blank" rel="noopener">常用 Git 命令清单</a>==</h2>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-    
-    
-      <category term="Git" scheme="http://codehao.top/tags/Git/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Centos 7下安装nginx，使用yum install nginx，提示没有可用的软件包。</title>
-    <link href="http://codehao.top/ckemx1b17000ah0wo1osw9iet/"/>
-    <id>http://codehao.top/ckemx1b17000ah0wo1osw9iet/</id>
+    <link href="http://codehao.top/ckeprlf830006k4wo18835yps/"/>
+    <id>http://codehao.top/ckeprlf830006k4wo18835yps/</id>
     <published>2020-04-22T13:21:20.000Z</published>
     <updated>2020-05-20T04:11:02.671Z</updated>
     
@@ -465,9 +467,33 @@
   </entry>
   
   <entry>
+    <title>Git初始化-git init 疑惑</title>
+    <link href="http://codehao.top/ckeprlf890007k4wo4yyy7fkb/"/>
+    <id>http://codehao.top/ckeprlf890007k4wo4yyy7fkb/</id>
+    <published>2020-04-22T13:21:20.000Z</published>
+    <updated>2020-05-20T04:11:02.679Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="在使用命令git-init后，在内部会生成-git文件夹。"><a href="#在使用命令git-init后，在内部会生成-git文件夹。" class="headerlink" title="在使用命令git init后，在内部会生成.git文件夹。"></a>在使用命令git init后，在内部会生成.git文件夹。</h1><h2 id="倘若若出现-Reinitialized-existing-Git-repository-in-xxx-xx-xxx-xx-并且没有生成-git文件！"><a href="#倘若若出现-Reinitialized-existing-Git-repository-in-xxx-xx-xxx-xx-并且没有生成-git文件！" class="headerlink" title="倘若若出现==Reinitialized existing Git repository in xxx/xx/xxx/xx== 并且没有生成.git文件！"></a>倘若若出现==Reinitialized existing Git repository in xxx/xx/xxx/xx== 并且没有生成.git文件！</h2><blockquote><h2 id="主要原因：隐藏了-git-文件"><a href="#主要原因：隐藏了-git-文件" class="headerlink" title="主要原因：隐藏了.git 文件"></a>主要原因：隐藏了.git 文件</h2><h2 id="解决：当前文件夹→查看→显示和隐藏→勾选隐藏的文件！"><a href="#解决：当前文件夹→查看→显示和隐藏→勾选隐藏的文件！" class="headerlink" title="解决：当前文件夹→查看→显示和隐藏→勾选隐藏的文件！"></a>解决：当前文件夹→查看→显示和隐藏→勾选隐藏的文件！</h2></blockquote><hr><h2 id="★★博主推荐★★：-常用-Git-命令清单"><a href="#★★博主推荐★★：-常用-Git-命令清单" class="headerlink" title="★★博主推荐★★：==常用 Git 命令清单=="></a>★★博主推荐★★：==<a href="http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html" target="_blank" rel="noopener">常用 Git 命令清单</a>==</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Git" scheme="http://codehao.top/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
     <title>npm和cnpm安装（for windows）</title>
-    <link href="http://codehao.top/ckemx1b1m000qh0wo3q295zrg/"/>
-    <id>http://codehao.top/ckemx1b1m000qh0wo3q295zrg/</id>
+    <link href="http://codehao.top/ckeprlfa0000nk4wo633zhb6j/"/>
+    <id>http://codehao.top/ckeprlfa0000nk4wo633zhb6j/</id>
     <published>2020-04-22T12:58:20.000Z</published>
     <updated>2020-05-20T04:11:02.703Z</updated>
     
@@ -485,32 +511,6 @@
     
     
       <category term="Accumulation" scheme="http://codehao.top/tags/Accumulation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MySQL中pymysql的具体操作</title>
-    <link href="http://codehao.top/ckemx1b1f000gh0wo4n125pcq/"/>
-    <id>http://codehao.top/ckemx1b1f000gh0wo4n125pcq/</id>
-    <published>2020-04-22T12:50:20.000Z</published>
-    <updated>2020-06-20T10:28:12.435Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>##1、导入pymysql包</p><blockquote><pre> import pymysql</pre><p>##2、创建连接对象</p><pre> pymysql.connect(参数列表)</pre></blockquote><p>##3、获取游标对象</p><blockquote><pre> cursor =conn.cursor()</pre></blockquote><p>##4、执行SQL语句</p><blockquote><pre> row_count = cursor.execute(sql)</pre></blockquote><p>##5、获取查询结果集</p><blockquote><pre> result = cursor.fetchall()</pre></blockquote><p>##6、将修改操作提交到数据库</p><blockquote><pre> conn.commit()</pre></blockquote><p>##7、回滚数据</p><blockquote><pre> conn.rollback()</pre></blockquote><p>##8、关闭游标</p><blockquote><pre> cursor.close()</pre></blockquote><p>##9、关闭连接</p><blockquote><pre> conn.close()</pre></blockquote><hr><pre><code>def get_conn():    """    :return: 连接，游标    """    #创建连接    conn = pymysql.connect(host ="127.*.*.*",                       user ="**",                       password ="123456",                       db ="**",                       charset ="utf8")    #创建游标，默认是元组类型    cursor = conn.cursor() # 执行完毕返回结果集默认以元组显示    return conn,cursordef close_conn(conn,cursor):    if cursor:        cursor.close()    if conn:        conn.close()-------------------------------conn,cursor= get_conn()conn.rollback()conn.commit()</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-    
-      <category term="技术" scheme="http://codehao.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="MySQL" scheme="http://codehao.top/tags/MySQL/"/>
     
   </entry>
   
