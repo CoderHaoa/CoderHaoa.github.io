@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://codehao.top/"/>
-  <updated>2020-09-13T05:48:29.896Z</updated>
+  <updated>2020-10-09T07:19:48.431Z</updated>
   <id>http://codehao.top/</id>
   
   <author>
@@ -17,9 +17,33 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>http面试集锦</title>
+    <link href="http://codehao.top/ckg1x79u40018w8woew0j7131/"/>
+    <id>http://codehao.top/ckg1x79u40018w8woew0j7131/</id>
+    <published>2020-10-09T07:15:07.705Z</published>
+    <updated>2020-10-09T07:19:48.431Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="http面试问题集锦"><a href="#http面试问题集锦" class="headerlink" title="http面试问题集锦"></a><a href="https://www.cnblogs.com/rachelxiao/p/12423095.html" target="_blank" rel="noopener">http面试问题集锦</a></h2><h5 id="1、http的请求报文和响应报文？"><a href="#1、http的请求报文和响应报文？" class="headerlink" title="1、http的请求报文和响应报文？"></a><strong>1、http的请求报文和响应报文？</strong></h5><p>http请求报文：请求行（请求方法+url）、请求头，请求体</p><p>http响应报文：状态行（http版本+状态码）、响应头、响应体</p><h5 id="2、常用的http请求类型？"><a href="#2、常用的http请求类型？" class="headerlink" title="2、常用的http请求类型？"></a><strong>2、常用的http请求类型？</strong></h5><p>请求类型很多：GET、POST、HEAD、PUT、DELETE、OPTIONS、TRACE、CONNECT</p><p>最常用：get,post</p><h5 id="3、http和https的区别，为什么https更加安全，ssl加密是怎样的？"><a href="#3、http和https的区别，为什么https更加安全，ssl加密是怎样的？" class="headerlink" title="3、http和https的区别，为什么https更加安全，ssl加密是怎样的？"></a><strong>3、http和https的区别，为什么https更加安全，ssl加密是怎样的？</strong></h5><p>1）http是直接和tcp通信，https=http+ssl加密</p><p>2）http端口号为80，https端口号为443</p><p>3）https基于传输层、http基于应用层</p><p>4）https对于搜索引擎更友好，利于seo，百度、谷歌等搜索引擎优先索引https网页</p><p>ssl加密：发送密文的一方使用对方的公钥进行加密处理“对称的密钥”，然后对方用自己的私钥解密拿到“对称的密钥”，这样可以确保交换的密钥是安全的前提下，使用对称加密方式进行通信。</p><p>所以，HTTPS采用对称加密和非对称加密两者并用的混合加密机制。</p><h5 id="4、如何理解get和post的区别？"><a href="#4、如何理解get和post的区别？" class="headerlink" title="4、如何理解get和post的区别？"></a><strong>4、如何理解get和post的区别？</strong></h5><p>1）get请求参数跟在url后面，有长度限制(浏览器长度限制，如果是内部的get请求则不限制长度)，post请求参数封装在请求头中，无长度限制。</p><p>2）get请求参数暴露，安全性保密性没有post高</p><p>3）get请求会被浏览器缓存起来，post请求内容不会被缓存</p><h5 id="5、有人说post比get安全，这种说法对吗？"><a href="#5、有人说post比get安全，这种说法对吗？" class="headerlink" title="5、有人说post比get安全，这种说法对吗？"></a><strong>5、有人说post比get安全，这种说法对吗？</strong></h5><p>选择性使用，GET对数据进行查询，POST主要对数据进行增删改，get请求不会对服务端数据产生任何影响；因此只要不用get传输保密信息，它还是安全的。</p><h5 id="6、http的常用响应码有哪些？502和504的区别？405和415的区别？302和301的区别？"><a href="#6、http的常用响应码有哪些？502和504的区别？405和415的区别？302和301的区别？" class="headerlink" title="6、http的常用响应码有哪些？502和504的区别？405和415的区别？302和301的区别？"></a><strong>6、http的常用响应码有哪些？502和504的区别？405和415的区别？302和301的区别？</strong></h5><p>1xx（临时响应）</p><p>2xx （成功）</p><p>3xx （重定向）</p><p>301  （永久移动） 请求的网页已永久移动到新位置。服务器返回此响应（对 GET 或 HEAD 请求的响应）时，会自动将请求者转到新位置。</p><p>302  （临时移动） 服务器目前从不同位置的网页响应请求，但请求者应继续使用原有位置来进行以后的请求。</p><p>4xx（客户端请求错误）</p><p>405  （方法禁用）禁用请求中指定的方法。</p><p>415  （不支持的媒体类型）请求的格式不受请求页面的支持。</p><p> 5xx（服务器错误）</p><p>502  （错误网关）服务器作为网关或代理，从上游服务器收到无效响应。</p><p>504  （网关超时） 服务器作为网关或代理，但是没有及时从上游服务器收到请求。</p><p><strong>7、cookie和session的区别？cookie从哪里来？cookie失效时间由哪些方法控制？</strong></p><p>1、cookie数据存放在客户的浏览器上，session数据放在服务器上。</p><p>2、cookie不是很安全，别人可以分析存放在本地的cookie并进行cookie欺骗,考虑到安全应当使用session。</p><p>3、session会在一定时间内保存在服务器上。当访问增多，会比较占用你服务器的性能,考虑到减轻服务器性能方面，应当使用cookie。</p><p>4、单个cookie保存的数据不能超过4K，很多浏览器都限制一个站点最多保存20个cookie。</p><p>5、所以个人建议：</p><p>将登陆信息等重要信息存放为session</p><p>其他信息如果需要保留，可以放在cookie中</p><p>能通过Web Server或者客户端浏览器来获取到Cookie。多数浏览器能够配置允许用户访问Cookies，但是注意不同的站点之间的Cookie是不能共享的。</p><p>Cookie有一个属性expires，设置其值为一个时间，那么当到达此时间后，此cookie失效</p><p>过Okhttp的拦截器去进行持久化cookie</p><p><strong>8、浏览器f5和强制刷新ctrl+f5的区别是什么？</strong></p><p>1.F5使用缓存，并且只有在资源内容发生变化的时候才会去更新资源</p><p>当刷新一个页面的时候，浏览器会尝试使用各种类型的缓存，并且会发送If-Modified-Since头到服务器，如果服务器返回304 Not Modified，那么浏览器会使用本地的缓存；如果服务器返回200 OK和资源内容，那么浏览器会使用返回的资源内容，并把资源内容进行缓存，待下次使用。</p><p>2.CTRL-F5 强制更新页面资源的缓存</p><p>MSIE会发送Cache-Control: no-cache头，Firefox和Chrome除了发送Cache-Control: no-cache头之外，还会发送Pragma: no-cache头。Opera比较另类，不发送任何和缓存相关的头。</p><p><strong>9、http缓存机制是怎样的，如何合理地缓存http？</strong></p><p>Http缓存主要分为两种：强缓存和协商缓存</p><p>1）强缓存基本原理是：所请求的数据在缓存数据库中尚未过期时，不与服务器进行交互，直接使用缓存数据库中的数据。</p><p>Expire 其指定了一个日期/时间， 在这个日期/时间之后，HTTP响应被认为是过时的。但是它本身是一个HTTP1.0标准下的字段，所以如果请求中还有一个置了 “max-age” 或者 “s-max-age” 指令的Cache-Control响应头，那么 Expires 头就会被忽略。</p><p>Cache-Control通用消息头用于在http 请求和响应中通过指定指令来实现缓存机制。其常用的几个取值有：</p><p>private：客户端可以缓存</p><p>public：客户端和代理服务器都可以缓存</p><p>max-age=xxx：缓存的内容将在xxx 秒后失效</p><p>s-max-age=xxx：同s-max-age，但仅适用于共享缓存(比如各个代理)，并且私有缓存中忽略。</p><p>no-cache：需要使用协商缓存来验证缓存数据</p><p>no-store：所有内容都不会缓存，强缓存和协商缓存都不会触发</p><p>must-revalidate：缓存必须在使用之前验证旧资源的状态，并且不可使用过期资源。</p><p>2）当强缓存过期未命中或者响应报文Cache-Control中有must-revalidate标识必须每次请求验证资源的状态时，便使用协商缓存的方式去处理缓存文件。</p><p>协商缓存主要原理是从缓存数据库中取出缓存的标识，然后向浏览器发送请求验证请求的数据是否已经更新，如果已更新则返回新的数据，若未更新则使用缓存数据库中的缓存数据。</p><p><strong>10、请求头中一般有什么？</strong></p><p>1）Accept 作用： 浏览器端可以接受的媒体类型 例：Accept ：text/html </p><p>2）Accept-Encoding： 作用： 浏览器申明自己接收的编码方法，通常指定压缩方法，是否支持压缩，支持什么压缩方法（gzip，deflate）</p><p>3）Accept-Language 作用： 浏览器申明自己接收的语言。 例：Accept-Language: en-us</p><p>4）Connection 例如：　Connection: keep-alive  当一个网页打开完成后，客户端和服务器之间用于传输HTTP数据的TCP连接不会关闭，如果客户端再次访问这个服务器上的网页，会继续使用这一条已经建立的连接</p><p>5）Host（发送请求时，该报头域是必需的） 作用: 请求报头域主要用于指定被请求资源的Internet主机和端口号，它通常从HTTP URL中提取出来的</p><p>6）Referer 作用：当浏览器向web服务器发送请求的时候，一般会带上Referer，告诉服务器我是从哪个页面链接过来的</p><p>7）User-Agent 作用：告诉HTTP服务器， 客户端使用的<a href="http://lib.csdn.net/base/operatingsystem" target="_blank" rel="noopener">操作系统</a>和浏览器的名称和版本.</p><p><strong>11、什么是正向代理，反向代理，中间人攻击？</strong></p><p><img src="/" class="lazyload" data-src="https://img2020.cnblogs.com/blog/1846887/202003/1846887-20200305215238048-636312541.png"  alt="img"></p><p><strong>正向代理即是客户端代理, 代理客户端, 服务端不知道实际发起请求的客户端.</strong></p><p><strong>反向代理即是服务端代理, 代理服务端, 客户端不知道实际提供服务的服务端</strong></p><p>正向代理的用途：</p><p>　　（1）访问原来无法访问的资源，如google</p><p>​    （2） 可以做缓存，加速访问资源</p><p>　　（3）对客户端访问授权，上网进行认证</p><p>　　（4）代理可以记录用户访问记录（上网行为管理），对外隐藏用户信息</p><p>反向代理的作用：</p><p>（1）保证内网的安全，阻止web攻击，大型网站，通常将反向代理作为公网访问地址，Web服务器是内网</p><p>（2）负载均衡，通过反向代理服务器来优化网站的负载</p><p><strong>中间人攻击：</strong></p><p><strong>中间人攻击（Man-in-the-Middle Attack, MITM）是一种由来已久的网络入侵手段，并且当今仍然有着广泛的发展空间，如SMB<a href="https://baike.baidu.com/item/会话劫持" target="_blank" rel="noopener">会话劫持</a>、DNS欺骗等攻击都是典型的MITM攻击。简而言之，所谓的MITM攻击就是通过拦截正常的网络通信数据，并进行数据篡改和嗅探，而通信的双方却毫不知情。</strong></p><p><strong>12、uri和url的区别？</strong></p><p>URI 是统一资源标识符，而 URL 是统一资源定位符。每个 URL 都是 URI，但不一定每个 URI 都是 URL。这是因为 URI 还包括一个子类，即统一资源名称 (URN)，它命名资源但不指定如何定位资源</p><p><strong>13.tcp和udp的区别？</strong></p><p>1、TCP是面向连接的（在客户端和服务器之间传输数据之前要先建立连接），UDP是无连接的（发送数据之前不需要先建立连接）<br>2、TCP提供可靠的服务（通过TCP传输的数据。无差错，不丢失，不重复，且按序到达）；UDP提供面向事务的简单的不可靠的传输。<br>3、UDP具有较好的实时性，工作效率比TCP高，适用于对高速传输和实时性比较高的通讯或广播通信。随着网速的提高，UDP使用越来越多。<br>4、没一条TCP连接只能是点到点的，UDP支持一对一，一对多和多对多的交互通信。<br>5、TCP对系统资源要去比较多，UDP对系统资源要求比较少<br>6、UDP程序结构更加简单<br>7、TCP是流模式，UDP是数据报模式</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Study" scheme="http://codehao.top/tags/Study/"/>
+    
+  </entry>
+  
+  <entry>
     <title>LCCUP&#39;20 力扣杯 秋季编程大赛</title>
-    <link href="http://codehao.top/ckf0oh78m000fa8wo0i7y6j6v/"/>
-    <id>http://codehao.top/ckf0oh78m000fa8wo0i7y6j6v/</id>
+    <link href="http://codehao.top/ckg1x79ti000aw8wob51k48kr/"/>
+    <id>http://codehao.top/ckg1x79ti000aw8wob51k48kr/</id>
     <published>2020-09-13T05:24:55.421Z</published>
     <updated>2020-09-13T05:48:29.896Z</updated>
     
@@ -44,8 +68,8 @@
   
   <entry>
     <title>vue项目实战--LAM系统（七）</title>
-    <link href="http://codehao.top/ckf0oh78t000qa8wo5hl67kpz/"/>
-    <id>http://codehao.top/ckf0oh78t000qa8wo5hl67kpz/</id>
+    <link href="http://codehao.top/ckg1x79tv000tw8wo18lx2tyx/"/>
+    <id>http://codehao.top/ckg1x79tv000tw8wo18lx2tyx/</id>
     <published>2020-09-07T08:44:26.497Z</published>
     <updated>2020-09-08T11:42:47.438Z</updated>
     
@@ -70,8 +94,8 @@
   
   <entry>
     <title>vue项目实战--LAM系统（六）</title>
-    <link href="http://codehao.top/ckf0oh78y000za8wohtboheyv/"/>
-    <id>http://codehao.top/ckf0oh78y000za8wohtboheyv/</id>
+    <link href="http://codehao.top/ckg1x79u00012w8wof7dtepbp/"/>
+    <id>http://codehao.top/ckg1x79u00012w8wof7dtepbp/</id>
     <published>2020-09-07T08:43:09.005Z</published>
     <updated>2020-09-08T11:42:09.653Z</updated>
     
@@ -96,8 +120,8 @@
   
   <entry>
     <title>vue项目实战--LAM系统（五）</title>
-    <link href="http://codehao.top/ckf0oh78v000ta8wo90fh2f2d/"/>
-    <id>http://codehao.top/ckf0oh78v000ta8wo90fh2f2d/</id>
+    <link href="http://codehao.top/ckg1x79tx000xw8woe6ig2yq9/"/>
+    <id>http://codehao.top/ckg1x79tx000xw8woe6ig2yq9/</id>
     <published>2020-09-07T08:41:36.363Z</published>
     <updated>2020-09-08T11:41:28.889Z</updated>
     
@@ -122,8 +146,8 @@
   
   <entry>
     <title>vue项目实战--LAM系统（四）</title>
-    <link href="http://codehao.top/ckf0oh7900011a8wogti55pne/"/>
-    <id>http://codehao.top/ckf0oh7900011a8wogti55pne/</id>
+    <link href="http://codehao.top/ckg1x79ty000zw8woastf9sww/"/>
+    <id>http://codehao.top/ckg1x79ty000zw8woastf9sww/</id>
     <published>2020-09-07T01:41:41.351Z</published>
     <updated>2020-09-07T01:46:56.134Z</updated>
     
@@ -148,8 +172,8 @@
   
   <entry>
     <title>网易笔试-算法部分</title>
-    <link href="http://codehao.top/ckf0oh79v0023a8woaws2hhf8/"/>
-    <id>http://codehao.top/ckf0oh79v0023a8woaws2hhf8/</id>
+    <link href="http://codehao.top/ckg1x79ut002dw8wofq39axtc/"/>
+    <id>http://codehao.top/ckg1x79ut002dw8wofq39axtc/</id>
     <published>2020-09-05T14:17:17.227Z</published>
     <updated>2020-09-07T08:42:47.464Z</updated>
     
@@ -174,8 +198,8 @@
   
   <entry>
     <title>vue项目实战--LAM系统（三）</title>
-    <link href="http://codehao.top/ckf0oh78s000ma8wo76x24467/"/>
-    <id>http://codehao.top/ckf0oh78s000ma8wo76x24467/</id>
+    <link href="http://codehao.top/ckg1x79ts000pw8woflsf16xg/"/>
+    <id>http://codehao.top/ckg1x79ts000pw8woflsf16xg/</id>
     <published>2020-09-03T14:22:55.305Z</published>
     <updated>2020-09-03T14:29:32.708Z</updated>
     
@@ -200,8 +224,8 @@
   
   <entry>
     <title>vue项目实战--LAM系统（二）</title>
-    <link href="http://codehao.top/ckf0oh7920015a8wocn5tbkpa/"/>
-    <id>http://codehao.top/ckf0oh7920015a8wocn5tbkpa/</id>
+    <link href="http://codehao.top/ckg1x79u5001aw8woenll5pi5/"/>
+    <id>http://codehao.top/ckg1x79u5001aw8woenll5pi5/</id>
     <published>2020-09-02T12:09:43.827Z</published>
     <updated>2020-09-07T01:44:15.938Z</updated>
     
@@ -226,8 +250,8 @@
   
   <entry>
     <title>vue项目实战--LAM系统（一）</title>
-    <link href="http://codehao.top/ckf0oh7930018a8wo5azqe54b/"/>
-    <id>http://codehao.top/ckf0oh7930018a8wo5azqe54b/</id>
+    <link href="http://codehao.top/ckg1x79u6001ew8wo72ca2owc/"/>
+    <id>http://codehao.top/ckg1x79u6001ew8wo72ca2owc/</id>
     <published>2020-09-01T13:53:06.729Z</published>
     <updated>2020-09-03T14:37:55.775Z</updated>
     
@@ -252,8 +276,8 @@
   
   <entry>
     <title>58同城前端笔试</title>
-    <link href="http://codehao.top/ckf0oh7860002a8wo2ivu4vmb/"/>
-    <id>http://codehao.top/ckf0oh7860002a8wo2ivu4vmb/</id>
+    <link href="http://codehao.top/ckg1x79t90002w8wo0ybc8um4/"/>
+    <id>http://codehao.top/ckg1x79t90002w8wo0ybc8um4/</id>
     <published>2020-08-27T09:33:03.117Z</published>
     <updated>2020-08-27T11:07:56.507Z</updated>
     
@@ -278,8 +302,8 @@
   
   <entry>
     <title>10行代码搞定年会抽奖</title>
-    <link href="http://codehao.top/ckf0oh77z0000a8wofstb43io/"/>
-    <id>http://codehao.top/ckf0oh77z0000a8wofstb43io/</id>
+    <link href="http://codehao.top/ckg1x79t20000w8wo8tizappp/"/>
+    <id>http://codehao.top/ckg1x79t20000w8wo8tizappp/</id>
     <published>2020-08-13T14:42:58.681Z</published>
     <updated>2020-08-13T15:28:29.457Z</updated>
     
@@ -304,8 +328,8 @@
   
   <entry>
     <title>Python贪吃蛇游戏</title>
-    <link href="http://codehao.top/ckf0oh78q000ka8wo8o5bb4lz/"/>
-    <id>http://codehao.top/ckf0oh78q000ka8wo8o5bb4lz/</id>
+    <link href="http://codehao.top/ckg1x79tr000mw8wo1epc77e7/"/>
+    <id>http://codehao.top/ckg1x79tr000mw8wo1epc77e7/</id>
     <published>2020-07-21T14:29:25.833Z</published>
     <updated>2020-07-21T14:41:59.069Z</updated>
     
@@ -330,8 +354,8 @@
   
   <entry>
     <title>研究生学位论文格式与书写规范</title>
-    <link href="http://codehao.top/ckf0oh79s0021a8woan0y3yo3/"/>
-    <id>http://codehao.top/ckf0oh79s0021a8woan0y3yo3/</id>
+    <link href="http://codehao.top/ckg1x79uq0027w8wocebp2maj/"/>
+    <id>http://codehao.top/ckg1x79uq0027w8wocebp2maj/</id>
     <published>2020-07-20T14:02:23.468Z</published>
     <updated>2020-07-21T14:45:43.372Z</updated>
     
@@ -354,8 +378,8 @@
   
   <entry>
     <title>在hexo博客中加入豆瓣读书功能</title>
-    <link href="http://codehao.top/ckf0oh79e001pa8woeq2mahwt/"/>
-    <id>http://codehao.top/ckf0oh79e001pa8woeq2mahwt/</id>
+    <link href="http://codehao.top/ckg1x79uh001sw8woggqc21ie/"/>
+    <id>http://codehao.top/ckg1x79uh001sw8woggqc21ie/</id>
     <published>2020-06-20T10:08:37.091Z</published>
     <updated>2020-06-20T10:44:32.512Z</updated>
     
@@ -380,8 +404,8 @@
   
   <entry>
     <title>七牛云如何配置域名的CNAME</title>
-    <link href="http://codehao.top/ckf0oh797001ea8wo1mp90sez/"/>
-    <id>http://codehao.top/ckf0oh797001ea8wo1mp90sez/</id>
+    <link href="http://codehao.top/ckg1x79u8001iw8wogvn88hry/"/>
+    <id>http://codehao.top/ckg1x79u8001iw8wogvn88hry/</id>
     <published>2020-06-18T12:28:20.000Z</published>
     <updated>2020-06-20T10:44:52.590Z</updated>
     
@@ -406,8 +430,8 @@
   
   <entry>
     <title>实用工具&amp;学习网站</title>
-    <link href="http://codehao.top/ckf0oh79m001wa8wo1xwg6h8b/"/>
-    <id>http://codehao.top/ckf0oh79m001wa8wo1xwg6h8b/</id>
+    <link href="http://codehao.top/ckg1x79ur0029w8wo54lm70aq/"/>
+    <id>http://codehao.top/ckg1x79ur0029w8wo54lm70aq/</id>
     <published>2020-06-08T08:52:42.463Z</published>
     <updated>2020-06-09T04:17:24.954Z</updated>
     
@@ -430,8 +454,8 @@
   
   <entry>
     <title>基于 Jupyter Notebook 和Plotly的交互式COVID-19实时追踪可视化系统（下）</title>
-    <link href="http://codehao.top/ckf0oh7a00029a8wo068p88f9/"/>
-    <id>http://codehao.top/ckf0oh7a00029a8wo068p88f9/</id>
+    <link href="http://codehao.top/ckg1x79ul0020w8wo6nwh52mv/"/>
+    <id>http://codehao.top/ckg1x79ul0020w8wo6nwh52mv/</id>
     <published>2020-05-31T10:55:59.297Z</published>
     <updated>2020-06-20T10:28:20.566Z</updated>
     
@@ -454,8 +478,8 @@
   
   <entry>
     <title>基于 Jupyter Notebook 和Plotly的交互式COVID-19实时追踪可视化系统（上）</title>
-    <link href="http://codehao.top/ckf0oh79y0026a8woeyp41pgw/"/>
-    <id>http://codehao.top/ckf0oh79y0026a8woeyp41pgw/</id>
+    <link href="http://codehao.top/ckg1x79uj001ww8wo8nt91q3s/"/>
+    <id>http://codehao.top/ckg1x79uj001ww8wo8nt91q3s/</id>
     <published>2020-05-31T10:55:59.293Z</published>
     <updated>2020-06-20T10:28:09.806Z</updated>
     
@@ -478,8 +502,8 @@
   
   <entry>
     <title>IQ测试集锦</title>
-    <link href="http://codehao.top/ckf0oh78e0008a8wo0u73cyve/"/>
-    <id>http://codehao.top/ckf0oh78e0008a8wo0u73cyve/</id>
+    <link href="http://codehao.top/ckg1x79tg0008w8wo7grxeivs/"/>
+    <id>http://codehao.top/ckg1x79tg0008w8wo7grxeivs/</id>
     <published>2020-05-11T03:24:18.394Z</published>
     <updated>2020-06-20T10:28:23.051Z</updated>
     
@@ -497,30 +521,6 @@
     
     
       <category term="Study" scheme="http://codehao.top/tags/Study/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>中国科学引文数据库 （CSCD）</title>
-    <link href="http://codehao.top/ckf0oh79a001ia8wodfb6g15t/"/>
-    <id>http://codehao.top/ckf0oh79a001ia8wodfb6g15t/</id>
-    <published>2020-04-30T05:57:14.332Z</published>
-    <updated>2020-07-21T14:45:43.369Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="中国科学引文数据库-（CSCD）"><a href="#中国科学引文数据库-（CSCD）" class="headerlink" title="中国科学引文数据库 （CSCD）"></a>中国科学引文数据库 （CSCD）</h3><p>​        由于疫情影响，我们无法返校回京，在家呆至5个月的学习效率和在校的学习效率可想而知（SAD）。但是由于毕业时间愈来愈近，我需要利用接下来的时间将毕业的要求逐一解决，首先了解一些CSCD期刊的发表情况，并收集一些CSCD期刊。</p><p>​         CSCD收录我国<a href="https://baike.baidu.com/item/数学/107037" target="_blank" rel="noopener">数学</a>、<a href="https://baike.baidu.com/item/物理/127205" target="_blank" rel="noopener">物理</a>、<a href="https://baike.baidu.com/item/化学/127240" target="_blank" rel="noopener">化学</a>、<a href="https://baike.baidu.com/item/天文学/402068" target="_blank" rel="noopener">天文学</a>、<a href="https://baike.baidu.com/item/地学/6968403" target="_blank" rel="noopener">地学</a>、<a href="https://baike.baidu.com/item/生物学/1358" target="_blank" rel="noopener">生物学</a>、农林科学、<a href="https://baike.baidu.com/item/医药卫生/6889922" target="_blank" rel="noopener">医药卫生</a>、<a href="https://baike.baidu.com/item/工程技术/6998399" target="_blank" rel="noopener">工程技术</a>和<a href="https://baike.baidu.com/item/环境科学/337267" target="_blank" rel="noopener">环境科学</a>等领域出版的中英文科技核心期刊和优秀期刊千余种，被誉为“中国的SCI”。</p><h4 id="近期计划："><a href="#近期计划：" class="headerlink" title="近期计划："></a><strong>近期计划：</strong></h4><h4 id="1、搞清CSCD期刊与核心期刊的区别"><a href="#1、搞清CSCD期刊与核心期刊的区别" class="headerlink" title="1、搞清CSCD期刊与核心期刊的区别"></a>1、搞清CSCD期刊与核心期刊的区别</h4><p>在本质定义上：</p><p>①核心期刊是某学科的主要期刊。一般是指所含专业情报来信息量大，质量高，能够代表专业学科发展水平并受到本学科读者重视的专业期刊。</p><p>②CSCD一般指<a href="https://www.baidu.com/s?wd=中国科学引文数据库&tn=SE_PcZhidaonwhc_ngpagmjz&rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">中国科学引文数据库</a>，收录我国数学、物理、化学、天文学、地学、生物学、农林科学、医药卫生、工程技术和环境科学等领域出版的中英文科技核心期刊和优秀期刊。</p><p>在范围上：</p><p>核心期刊中会有部分被收录到CSCD中，并且CSCD中，并不全是源核心期刊，因此，二者只是有交集。</p><h4 id="2、整理部分CSCD期刊（作参考对象）"><a href="#2、整理部分CSCD期刊（作参考对象）" class="headerlink" title="2、整理部分CSCD期刊（作参考对象）"></a>2、整理部分CSCD期刊（作参考对象）</h4><p><a href="http://www.zhongwenhexinqikan.com/CSCD/jisuanji/" target="_blank" rel="noopener">查找链接</a></p><table><thead><tr><th align="center"></th><th></th></tr></thead><tbody><tr><td align="center"><img src="/" class="lazyload" data-src="http://free-cn-01.cdn.bilnn.com/ddimg/jfs/t1/112023/30/3858/989347/5eaa6459E37c358a7/ee59a2eac60b7fd7.png"  style="zoom: 50%;" /></td><td></td></tr></tbody></table><h4 id="3、进一步确定研究方向，抓紧撰写初稿。"><a href="#3、进一步确定研究方向，抓紧撰写初稿。" class="headerlink" title="3、进一步确定研究方向，抓紧撰写初稿。"></a>3、进一步确定研究方向，抓紧撰写初稿。</h4>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-    
-    
-      <category term="研究生" scheme="http://codehao.top/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/"/>
     
   </entry>
   
