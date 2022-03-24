@@ -1,0 +1,662 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>电影 | CodeHao's Blog</title><meta name="description" content="品影，品人性         .hexo-douban-tabs {     margin-bottom: 15px;     margin-top: 15px; }  .hexo-douban-tab {     padding: 5px; }  .hexo-douban-active {     background: #657b83;     co"><meta name="author" content="CodeHao"><meta name="copyright" content="CodeHao"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="twitter:card" content="summary"><meta name="twitter:title" content="电影"><meta name="twitter:description" content="品影，品人性         .hexo-douban-tabs {     margin-bottom: 15px;     margin-top: 15px; }  .hexo-douban-tab {     padding: 5px; }  .hexo-douban-active {     background: #657b83;     co"><meta name="twitter:image" content="http://codehao.top/img/avatar.gif"><meta property="og:type" content="website"><meta property="og:title" content="电影"><meta property="og:url" content="http://codehao.top/movies/"><meta property="og:site_name" content="CodeHao's Blog"><meta property="og:description" content="品影，品人性         .hexo-douban-tabs {     margin-bottom: 15px;     margin-top: 15px; }  .hexo-douban-tab {     padding: 5px; }  .hexo-douban-active {     background: #657b83;     co"><meta property="og:image" content="http://codehao.top/img/avatar.gif"><meta property="article:published_time" content="2022-03-24T13:58:04.190Z"><meta property="article:modified_time" content="2022-03-24T13:58:04.190Z"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>var autoChangeMode = '2'
+var t = Cookies.get("theme")
+if (autoChangeMode == '1'){
+  var isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+  var isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+  var isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined){
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport){
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour < 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+  }
+  } else if (t == 'light') activateLightMode()
+  else activateDarkMode()
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="canonical" href="http://codehao.top/movies/"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/disqusjs@1.2/dist/disqusjs.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://codehao.top/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: {"text":"敬业,自由,诚信,友善,爱国,富强,民主","fontSize":"15px"},
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  highlightShrink: 'false',
+  isFontAwesomeV5: false,
+  isPhotoFigcaption: false
+  
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: false,
+  isSidebar: false  
+  }</script><noscript><style>
+#page-header {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><link rel="stylesheet" href="/css/iconfont.css"><link rel="stylesheet" href="/css/background.css"><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="CodeHao's Blog" type="application/atom+xml">
+</head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.gif" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">32</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">16</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">5</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 博客</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 菜单</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 观影</span></a></li><li><a class="site-page" href="/album/"><i class="fa-fw fa fa-archive"></i><span> 相册</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/books"><i class="fa-fw fa fa-tags"></i><span> 阅读</span></a></div></div></div></div><div id="body-wrap"><div id="web_bg" data-type="photo"></div><div class="not-index-bg" id="nav" style="background-image: url(https://gitee.com/codehaoa/img-house/raw/master/img/music.jpg)"><div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">CodeHao's Blog</a></span><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 博客</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 菜单</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 观影</span></a></li><li><a class="site-page" href="/album/"><i class="fa-fw fa fa-archive"></i><span> 相册</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/books"><i class="fa-fw fa fa-tags"></i><span> 阅读</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span></span></div><div id="page_site-info"><h1 id="site_title">电影</h1></div></div><main class="layout_page" id="content-inner"><div id="page"><div id="article-container"><blockquote>
+    <p>品影，品人性</p>
+</blockquote>
+
+<style>
+    
+.hexo-douban-tabs {
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.hexo-douban-tab {
+    padding: 5px;
+}
+
+.hexo-douban-active {
+    background: #657b83;
+    color: #fff;
+}
+
+.hexo-douban-item {
+    padding-bottom: 10px;
+    position: relative;
+    clear: both;
+    min-height: 170px;
+    padding: 10px 0;
+    border-bottom: 1px #ddd solid;
+}
+
+@media screen and (max-width: 600px) {
+    .hexo-douban-item {
+        width: 100%;
+    }
+}
+
+.hexo-douban-picture {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 100px;
+}
+
+.hexo-douban-info {
+    padding-left: 120px;
+}
+
+.hexo-douban-meta {
+    font-size: 12px;
+    padding-right: 10px;
+}
+
+.hexo-douban-comments {
+    font-size: 12px;
+}
+
+.hexo-douban-pagination {
+    margin-top: 15px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.hexo-douban-button {
+    padding: 5px;
+}
+
+.hexo-douban-button:hover {
+    background: #657b83;
+    color: #fff;
+}
+
+.hexo-douban-hide {
+    display: none;
+}
+
+.hexo-douban-show {
+    display: block;
+}
+
+
+</style>
+
+<div class="hexo-douban-tabs">
+    <a class="hexo-douban-tab" id="hexo-douban-tab1" href="javascript:;"
+       rel="external">
+        在看
+        (0)</a>
+    <a class="hexo-douban-tab" id="hexo-douban-tab2" href="javascript:;"
+       rel="external">
+        想看
+        (7)</a>
+    <a class="hexo-douban-tab" id="hexo-douban-tab3" href="javascript:;"
+       rel="external">
+        已看
+        (18)</a>
+</div>
+<div>
+    <div id="hexo-douban-item1">
+        
+        <div class="hexo-douban-pagination">
+    <a class="hexo-douban-button hexo-douban-firstpage" href="javascript:;"> 首页</a>
+    <a class="hexo-douban-button hexo-douban-previouspage" href="javascript:;">上一页</a>
+    <span class="hexo-douban-pagenum">2 / 3</span>
+    <a class="hexo-douban-button hexo-douban-nextpage" href="javascript:;">下一页</a>
+    <a class="hexo-douban-button hexo-douban-lastpage" href="javascript:;">尾页</a>
+</div>
+    </div>
+    <div id="hexo-douban-item2">
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2624945594.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/2364086/">隐形人 / The Invisible Man</a>
+        </div>
+        <div class="hexo-douban-meta">2020-02-28(美国) / 2020-12-04(中国大陆) / 伊丽莎白·莫斯 / 奥利弗·杰森-科恩 / 阿尔迪斯·霍吉 / 迈克尔·多曼 / 斯托姆·瑞德 / 本尼迪克·哈迪 / 哈丽特·戴尔 / 瑞妮·林 / 布莱恩·米根 / 薇薇安·格里尔 / 尼古拉斯·霍普 / 克利夫·威廉姆斯 / 萨姆·史密斯 / 扎拉·迈克尔斯 / 纳许·埃哲顿 / 安东尼·布兰登·黄 / 阿玛莉·沃德 / 迈克尔·诺特 / 加拿大 / 澳大利亚 / 美国 / www.theinvisiblemanmovie.com / 雷·沃纳尔 / 124分钟 / 隐形人 / 科幻 / 惊悚 / 恐怖 / 雷·沃纳尔 Leigh Whannell / 赫伯特·乔治·威尔斯 H.G. Wells / 英语</div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2498433749.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/27000061/">我能说 / 아이 캔 스피크</a>
+        </div>
+        <div class="hexo-douban-meta">2017-09-21(韩国) / 罗文姬 / 李帝勋 / 廉惠兰 / 朴哲民 / 李尚熙 / 李知勋 / 郑妍周 / 金素真 / 赵莞基 / 金子英 / 秋延圭 / 李至勋 / 金兰熙 / 孙淑子 / 李在仁 / 郑元昌 / 崔秀英 / 特里斯·布朗 / 李素珍 / 孙成灿 / 李东勇 / 李信成 / 成侑彬 / 禹志贤 / 薛昌熙 / 韩国 / 金炫锡 / 119分钟 / 我能说 / 剧情 / 喜剧 / 金炫锡 Hyeon-seok Kim / 韩语 / 英语</div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2556883031.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/27024959/">绝杀慕尼黑 / Движение вверх</a>
+        </div>
+        <div class="hexo-douban-meta">2017-12-28(俄罗斯) / 2019-06-13(中国大陆) / 弗拉基米尔·马什科夫 / 约翰·萨维奇 / 马拉特·巴沙罗夫 / 谢尔盖·加尔马什 / 伊万·科列斯尼科夫 / 亚历山德拉·雷文科 / 詹姆斯·托拉斯 / 基里尔·扎耶采夫 / 安德烈·斯莫利亚科夫 / 俄罗斯 / 安东·梅格尔季切夫 / 133分钟 / 120分钟(中国大陆) / 绝杀慕尼黑 / 剧情 / 运动 / Nikolay Kulikov / Andrei Kureichik / 格鲁吉亚语 / 俄语 / 英语 / 立陶宛语</div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2612061299.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/30444960/">信条 / Tenet</a>
+        </div>
+        <div class="hexo-douban-meta">2020-08-26(英国) / 2020-09-03(美国) / 2020-09-04(中国大陆) / 约翰·大卫·华盛顿 / 罗伯特·帕丁森 / 伊丽莎白·德比茨基 / 肯尼思·布拉纳 / 亚伦·泰勒-约翰逊 / 迪宝·卡帕蒂娅 / 克蕾曼丝·波西 / 希米什·帕特尔 / 安德鲁·霍华德 / 尤里·科洛科利尼科夫 / 迈克尔·凯恩 / 马丁·唐文 / 卡里娜·韦尔瓦 / 乔纳森·坎普 / 凯蒂·麦克凯布 / 贝恩·科拉科 / 安东尼·莫利纳利 / 特伦特·布克斯顿 / 英格丽·玛格斯 / 瑞奇·切劳洛 / 劳里·谢泼德 / 马克·克雷尼克 / 亚历克斯·威克索 / 丹兹尔·史密斯 / 马塞尔·萨巴特 / 杰里米·西奥伯德 / 菲奥娜·道里夫 / 约翰·威斯利·查特曼 / 杰克·卡特莫尔-斯科特 / 杰佛逊·豪尔 / 凯莱布·斯比尔亚兹 / 肖恩·艾弗里 / 吉米·斯达 / 卡德罗莎·奥娜·卡罗尔 / 美国 / 英国 / www.tenetfilm.com / 克里斯托弗·诺兰 / 150分钟 / 信条 / 剧情 / 动作 / 科幻 / 克里斯托弗·诺兰 Christopher Nolan / 英语 / 俄语 / 乌克兰语 / 爱沙尼亚语 / 印地语 / 挪威语</div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2610358497.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/30299515/">釜山行2：半岛 / 부산행2-반도</a>
+        </div>
+        <div class="hexo-douban-meta">2020-07-15(韩国) / 姜栋元 / 李贞贤 / 权海骁 / 李来 / 金敏载 / 具教焕 / 金度允 / 李艺媛 / 张素妍 / 文宇振 / 丹尼尔·乔伊·奥尔布赖特 / 车始元 / Pierce Conran  / Terri Doty  / 金丹菲 / 金圭白 / 金哲允 / 韩国 / 延尚昊 / 115分钟 / 釜山行2：半岛 / 动作 / 惊悚 / 恐怖 / 延尚昊 Sang-ho Yeon / 韩语 / 英语 / 粤语</div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2240337400.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/25958704/">超新约全书 / Le tout nouveau testament</a>
+        </div>
+        <div class="hexo-douban-meta">2015-05-17(戛纳电影节) / 2015-09-01(比利时) / 伯努瓦·波尔沃德 / 凯瑟琳·德纳芙 / 弗朗索瓦·达密安 / 友兰达·梦露 / 皮利·格劳恩 / 劳拉·薇琳顿 / 塞尔日·拉里维埃尔 / 约翰·雷森 / 马可·洛伦兹尼 / 多米尼克·阿贝尔 / 薇薇安·德·莫恩科 / 约翰·海尔登贝格 / 帕斯卡·杜奎奈 / 哈里·克莱文 / 安妮-玛丽·卢珀 / 艾尔莎·霍本 / 托马斯·冈兹格 / 让-亨利·康佩尔 / 比利时 / 法国 / 卢森堡 / 雅克·范·多梅尔 / 113分钟 / 超新约全书 / 喜剧 / 奇幻 / 雅克·范·多梅尔 Jaco Van Dormael / Thomas Gunzig / 法语 / 德语</div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2569450232.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/30331959/">黑水 / Dark Waters</a>
+        </div>
+        <div class="hexo-douban-meta">2019-11-22(美国点映) / 2019-12-06(美国) / 马克·鲁弗洛 / 安妮·海瑟薇 / 蒂姆·罗宾斯 / 比尔·坎普 / 维克多·加博 / 比尔·普尔曼 / 梅尔·温宁汉姆 / 威廉·杰克森·哈珀 / 路易莎·克劳瑟 / 凯文·克劳利 / 丹尼尔·R·希尔 / 王明 / 西尼·迈尔斯 / 马克·霍克尔 / 考特尼·德科斯基 / 斯嘉丽·希克斯 / 布莱恩·加拉格尔 / 约翰·纽伯格 / 莱曼·陈 / 丹妮丝·达·维拉 / 杰弗里·格罗弗 / 泰里·克拉克 / 杰夫·福尔克 / 温·赖克特 / 乔恩·奥斯贝克 / 理查德·杜恩 / 迈克尔·海尼 / 大卫·皮廷格 / 巴基·贝利 / 罗伯·比洛特 / 美国 / 托德·海因斯 / 126分钟 / 黑水 / 剧情 / 纳撒尼尔·里奇 Nathaniel Rich / 马里奥·科雷亚 Mario Correa / 马修·迈克尔·卡纳汉 Matthew Michael Carnahan / 英语 / 韩语</div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-pagination">
+    <a class="hexo-douban-button hexo-douban-firstpage" href="javascript:;"> 首页</a>
+    <a class="hexo-douban-button hexo-douban-previouspage" href="javascript:;">上一页</a>
+    <span class="hexo-douban-pagenum">2 / 3</span>
+    <a class="hexo-douban-button hexo-douban-nextpage" href="javascript:;">下一页</a>
+    <a class="hexo-douban-button hexo-douban-lastpage" href="javascript:;">尾页</a>
+</div>
+    </div>
+    <div id="hexo-douban-item3">
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2867957830.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/35207856/">人世间</a>
+        </div>
+        <div class="hexo-douban-meta">2022-03-19 /  真实 感动 现实 人性 文革 / ★★★★★ 力荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2606155671.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/34991672/">在一起</a>
+        </div>
+        <div class="hexo-douban-meta">2020-10-10 /  良心剧 疾病 真实事件改编 真实 / ★★★★★ 力荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2621101922.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/35069506/">一点就到家</a>
+        </div>
+        <div class="hexo-douban-meta">2020-10-10 /  国产电影 喜剧 励志 / ★★★★★ 力荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2620083313.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/30128916/">夺冠</a>
+        </div>
+        <div class="hexo-douban-meta">2020-10-10 /  郎平 运动 巩俐 国产电影 女排精神 / ★★★★★ 力荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2621219978.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/25907124/">姜子牙</a>
+        </div>
+        <div class="hexo-douban-meta">2020-10-10 /  奇幻 国产动画 挑战权威 哲理 / ★★★★★ 力荐 </div>
+        <div class="hexo-douban-comments"> 很多人看后，吐槽剧情的复杂。我看后却发现了导演编剧的用意，很值得一看再看的电影，意义非凡！</div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2620453443.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/35051512/">我和我的家乡</a>
+        </div>
+        <div class="hexo-douban-meta">2020-10-10 /  献礼片 搞笑 爱国 / ★★★★★ 力荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2609064048.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/33404425/">隐秘的角落</a>
+        </div>
+        <div class="hexo-douban-meta">2020-07-20 /  网剧 人性 现实 犯罪 悬疑 童话与现实 / ★★★★★ 力荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2531204796.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/27180943/">重启之极海听雷 第一季</a>
+        </div>
+        <div class="hexo-douban-meta">2020-07-20 /  南派系列 盗墓 演技派 求生欲 / ★★★★★ 力荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img2.doubanio.com/view/photo/s_ratio_poster/public/p511118051.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/1295644/">这个杀手不太冷 / Léon</a>
+        </div>
+        <div class="hexo-douban-meta">2020-07-20 /  爱情 感动 动作 犯罪 人性 / ★★★★★ 力荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2561716440.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/1291546/">霸王别姬</a>
+        </div>
+        <div class="hexo-douban-meta">2020-07-20 /  人性 剧情 文革 同性 文艺 / ★★★★★ 力荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img2.doubanio.com/view/photo/s_ratio_poster/public/p480747492.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/1292052/">肖申克的救赎 / The Shawshank Redemption</a>
+        </div>
+        <div class="hexo-douban-meta">2020-07-20 /  励志 成长 人性 信念 / ★★★★★ 力荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2219406504.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/2973079/">霍比特人3：五军之战 / The Hobbit: The Battle of the Five Armies</a>
+        </div>
+        <div class="hexo-douban-meta">2020-06-20 /  指环王前传 / ★★★★☆ 推荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2219665256.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/21349734/">博物馆奇妙夜3 / Night at the Museum: Secret of the Tomb</a>
+        </div>
+        <div class="hexo-douban-meta">2020-06-20 /  科幻 动作 / ★★★★☆ 推荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2614628862.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/30176393/">误杀</a>
+        </div>
+        <div class="hexo-douban-meta">2020-06-20 /  悬疑 / ★★★★☆ 推荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2501863104.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/27024903/">天才枪手 / ฉลาดเกมส์โกง</a>
+        </div>
+        <div class="hexo-douban-meta">2020-06-19 /  考试 犯罪 作弊 / ★★★★☆ 推荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p1008022297.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/3006783/">机械师 / The Mechanic</a>
+        </div>
+        <div class="hexo-douban-meta">2020-06-19 /  暴力 悬疑 / ★★★★☆ 推荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img2.doubanio.com/view/photo/s_ratio_poster/public/p1473670352.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/3008247/">穿条纹睡衣的男孩 / The Boy in the Striped Pajamas</a>
+        </div>
+        <div class="hexo-douban-meta">2020-06-19 /  人性 二战 / ★★★★☆ 推荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2549177902.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/27060077/">绿皮书 / Green Book</a>
+        </div>
+        <div class="hexo-douban-meta">2020-06-19 /  励志 /  </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-pagination">
+    <a class="hexo-douban-button hexo-douban-firstpage" href="javascript:;"> 首页</a>
+    <a class="hexo-douban-button hexo-douban-previouspage" href="javascript:;">上一页</a>
+    <span class="hexo-douban-pagenum">2 / 3</span>
+    <a class="hexo-douban-button hexo-douban-nextpage" href="javascript:;">下一页</a>
+    <a class="hexo-douban-button hexo-douban-lastpage" href="javascript:;">尾页</a>
+</div>
+    </div>
+</div>
+
+<script>
+    /**
+ * Created by myths on 18-2-8.
+ */
+
+Element.prototype.siblings = function () {
+    var siblingElement = [];
+    var sibs = this.parentNode.children;
+    for (var i = 0; i < sibs.length; i++) {
+        if (sibs[i] !== this) {
+            siblingElement.push(sibs[i]);
+        }
+    }
+    return siblingElement;
+};
+function tabClick() {
+    //修改标签样式
+    this.classList.add('hexo-douban-active');
+    var sibs = this.siblings();
+    for (var j = 0; j < sibs.length; j++) {
+        sibs[j].classList.remove('hexo-douban-active');
+    }
+    //显示对应板块
+    var itemId = this.id.replace('tab', 'item');
+    var target = document.getElementById(itemId);
+    target.classList.remove('hexo-douban-hide');
+    target.classList.add('hexo-douban-show');
+    sibs = document.getElementById(itemId).siblings();
+    for (var k = 0; k < sibs.length; k++) {
+        sibs[k].classList.remove('hexo-douban-show');
+        sibs[k].classList.add('hexo-douban-hide');
+    }
+}
+var tabs = document.getElementsByClassName("hexo-douban-tab");
+for (var i = 0; i < tabs.length; i++) {
+    tabs[i].onclick = tabClick;
+    tabs[i].onclick.apply(tabs[i]);
+}
+tabs[2].click();
+
+    var firstpages = document.getElementsByClassName("hexo-douban-firstpage");
+var previouspages = document.getElementsByClassName("hexo-douban-previouspage");
+var nextpages = document.getElementsByClassName("hexo-douban-nextpage");
+var lastpages = document.getElementsByClassName("hexo-douban-lastpage");
+var pagenums = document.getElementsByClassName("hexo-douban-pagenum");
+
+function makePageNum(num, arr) {
+    return (num + 1) + ' / ' + (Math.ceil(arr.length / 10 === 0 ? 1 : Math.ceil(arr.length / 10)));
+}
+
+function firstBtn() {
+    var sibs = this.parentNode.siblings();
+    displayPage(sibs, 0);
+    this.parentNode.getElementsByClassName('hexo-douban-pagenum')[0].innerText = makePageNum(0, sibs);
+}
+
+function previousBtn() {
+    var sibs = this.parentNode.siblings();
+    var currNum = this.parentNode.getElementsByClassName('hexo-douban-pagenum')[0].innerText;
+    currNum = currNum.substr(0, currNum.indexOf('/') - 1);
+    currNum = parseInt(currNum, 10) - 1;
+    if (currNum > 0) {
+        currNum--;
+    }
+    displayPage(sibs, currNum);
+    this.parentNode.getElementsByClassName('hexo-douban-pagenum')[0].innerText = makePageNum(currNum, sibs);
+}
+
+function nextBtn() {
+    var sibs = this.parentNode.siblings();
+    var currNum = this.parentNode.getElementsByClassName('hexo-douban-pagenum')[0].innerText;
+    currNum = currNum.substr(0, currNum.indexOf('/') - 1);
+    currNum = parseInt(currNum, 10) - 1;
+    if (currNum < Math.ceil(sibs.length / 10) - 1) {
+        currNum++;
+    }
+    displayPage(sibs, currNum);
+    this.parentNode.getElementsByClassName('hexo-douban-pagenum')[0].innerText = makePageNum(currNum, sibs);
+}
+
+function lastBtn() {
+    var sibs = this.parentNode.siblings();
+    displayPage(sibs, Math.ceil(sibs.length / 10) - 1);
+    this.parentNode.getElementsByClassName('hexo-douban-pagenum')[0].innerText = makePageNum(Math.ceil(sibs.length / 10) - 1 === -1 ? 0 : Math.ceil(sibs.length / 10) - 1, sibs);
+}
+
+function displayPage(arr, num) {
+    for (var i = 0; i < arr.length; i++) {
+        if (Math.floor(i / 10) === num) {
+            arr[i].classList.remove('hexo-douban-hide');
+            var img = arr[i].getElementsByTagName('img')[0];
+            img.src = img.getAttribute('data-src');
+        } else {
+            arr[i].classList.add('hexo-douban-hide');
+        }
+    }
+}
+
+for (var i = 0; i < firstpages.length; i++) {
+
+    //add listener
+    firstpages[i].onclick = firstBtn;
+    previouspages[i].onclick = previousBtn;
+    nextpages[i].onclick = nextBtn;
+    lastpages[i].onclick = lastBtn;
+
+    //set page num
+    var size = pagenums[i].parentNode.siblings().length;
+    pagenums[i].innerText = '1 / ' + (Math.ceil(size / 10) === 0 ? 1 : Math.ceil(size / 10));
+    firstpages[i].click();
+}
+
+</script>
+
+</div><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><span> 评论</span></div><div id="disqus_thread"></div><script>var disqus_config = function () {
+  this.page.url = '';
+  this.page.identifier = 'movies/index.html';
+  this.page.title = '电影';
+};
+(function() { 
+  var d = document, s = d.createElement('script');
+  s.src = 'https://.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+})();
+</script></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatar.gif" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">CodeHao</div><div class="author-info__description">乐学无止境 人生不设限</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives"><div class="headline">文章</div><div class="length_num">32</div></a></div><div class="card-info-data-item is-center">      <a href="/tags"><div class="headline">标签</div><div class="length_num">16</div></a></div><div class="card-info-data-item is-center">     <a href="/categories"><div class="headline">分类</div><div class="length_num">5</div></a></div></div><div class="card-info-bookmark is-center"><a class="bookmark button--primary button--animated" id="bookmark-it" href="javascript:;" title="加入书签" target="_self"><i class="fa fa-bookmark" aria-hidden="true"></i><span>加入书签</span></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/CoderHaoa" target="_blank" title="Github"><i class="fa fa-github" aria-hidden="true"></i></a><a class="social-icon" href="mailto:code_haotian@163.com" target="_blank" title="Email"><i class="fa fa-envelope" aria-hidden="true"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fa fa-rss" aria-hidden="true"></i></a><a class="social-icon" href="https://www.bilibili.com/" target="_blank" title=""><i class="iconfont icon-bilibili" aria-hidden="true"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fa fa-bullhorn card-announcement-animation" aria-hidden="true"></i><span>公告</span></div><div class="announcement_content">书到用时方恨少，务必及时充电！</div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fa fa-history" aria-hidden="true"></i><span>最新文章</span></div><div class="aside-recent-item"><div class="aside-recent-post"><a href="/cl15275ko000miwlaa2ff4ouo/"><div class="aside-post-cover"><img class="aside-post-bg lazyload" data-src="https://gitee.com/codehaoa/img-house/raw/master/img/poc.png" onerror="this.onerror=null;this.src='/img/404.jpg'" title="POC测试" alt="POC测试"/></div><div class="aside-post-title"><div class="aside-post_title" href="/cl15275ko000miwlaa2ff4ouo/" title="POC测试">POC测试</div><time class="aside-post_meta post-meta__date" title="发表于 2022-03-24 21:39:50">2022-03-24</time></div></a></div><div class="aside-recent-post"><a href="/cl15275ma002xiwla555j9q71/"><div class="aside-post-cover"><img class="aside-post-bg lazyload" data-src="http://r.photo.store.qq.com/psc?/V112BMY13Y8uCR/45NBuzDIW489QBoVep5mcWm1XWT249s4RrvkSkcDr.6lmL9zS*0TROmXmFbelO9Cm0tb1T3mfOv0eU99KhBEdN0cKo4CUn01iezqFbJPDaM!/r" onerror="this.onerror=null;this.src='/img/404.jpg'" title="网易笔试-算法部分" alt="网易笔试-算法部分"/></div><div class="aside-post-title"><div class="aside-post_title" href="/cl15275ma002xiwla555j9q71/" title="网易笔试-算法部分">网易笔试-算法部分</div><time class="aside-post_meta post-meta__date" title="发表于 2022-03-15 21:32:04">2022-03-15</time></div></a></div><div class="aside-recent-post"><a href="/cl15275mc0031iwlab7jdcrc8/"><div class="aside-post-cover"><img class="aside-post-bg lazyload" data-src="https://gitee.com/codehaoa/img-house/raw/master/img/music.jpg?x-oss-process=image/resize,w_850,limit_0" onerror="this.onerror=null;this.src='/img/404.jpg'" title="研究生学位论文格式与书写规范" alt="研究生学位论文格式与书写规范"/></div><div class="aside-post-title"><div class="aside-post_title" href="/cl15275mc0031iwlab7jdcrc8/" title="研究生学位论文格式与书写规范">研究生学位论文格式与书写规范</div><time class="aside-post_meta post-meta__date" title="发表于 2022-03-15 21:32:04">2022-03-15</time></div></a></div><div class="aside-recent-post"><a href="/cl15275ve003diwla7ovd4155/"><div class="aside-post-cover"><img class="aside-post-bg lazyload" data-src="http://r.photo.store.qq.com/psc?/V521UhRD0Xfs5U1VlCKg0JxjNS195Zxt/45NBuzDIW489QBoVep5mcWDcr3DtRnNPOqo7pk.HEgS5H*w2GliziIR85T8fR9QYM5sLbc*6x.3SlznxxLzMta5Y8FcR*evQfA3Pd8bLy00!/r" onerror="this.onerror=null;this.src='/img/404.jpg'" title="疫情数据分析和预测" alt="疫情数据分析和预测"/></div><div class="aside-post-title"><div class="aside-post_title" href="/cl15275ve003diwla7ovd4155/" title="疫情数据分析和预测">疫情数据分析和预测</div><time class="aside-post_meta post-meta__date" title="发表于 2022-03-15 21:32:04">2022-03-15</time></div></a></div><div class="aside-recent-post"><a href="/cl15275m8002riwla1bq731qt/"><div class="aside-post-cover"><img class="aside-post-bg lazyload" data-src="https://oss.gowapp.com/images/2006/09/jpg/0ec1787053414ab59e5269f7d1368be4/2.jpg?x-oss-process=image/resize,w_850,limit_0" onerror="this.onerror=null;this.src='/img/404.jpg'" title="实用工具&amp;学习网站" alt="实用工具&amp;学习网站"/></div><div class="aside-post-title"><div class="aside-post_title" href="/cl15275m8002riwla1bq731qt/" title="实用工具&amp;学习网站">实用工具&amp;学习网站</div><time class="aside-post_meta post-meta__date" title="发表于 2022-03-15 21:32:04">2022-03-15</time></div></a></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fa fa-folder-open" aria-hidden="true"></i><span>分类</span></div><ul class="aside-category-list">
+            <li class="aside-category-list-item"><a class="aside-category-list-link" href="/categories/hexo%E4%BC%98%E5%8C%96/"><span class="aside-category-list-name">hexo优化</span><span class="aside-category-list-count">1</span></a></li><li class="aside-category-list-item"><a class="aside-category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/"><span class="aside-category-list-name">前端</span><span class="aside-category-list-count">7</span></a></li><li class="aside-category-list-item"><a class="aside-category-list-link" href="/categories/%E6%8A%80%E6%9C%AF/"><span class="aside-category-list-name">技术</span><span class="aside-category-list-count">5</span></a></li><li class="aside-category-list-item"><a class="aside-category-list-link" href="/categories/%E6%B8%B8%E6%88%8F/"><span class="aside-category-list-name">游戏</span><span class="aside-category-list-count">1</span></a></li><li class="aside-category-list-item"><a class="aside-category-list-link" href="/categories/%E7%AE%97%E6%B3%95/"><span class="aside-category-list-name">算法</span><span class="aside-category-list-count">2</span></a></li>
+                       
+            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fa fa-tags" aria-hidden="true"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Accumulation/" style="font-size: 16px; color: #999">Accumulation</a> <a href="/tags/CentoS/" style="font-size: 16px; color: #999">CentoS</a> <a href="/tags/Centos/" style="font-size: 18px; color: #999da3">Centos</a> <a href="/tags/Git/" style="font-size: 18px; color: #999da3">Git</a> <a href="/tags/Hexo/" style="font-size: 16px; color: #999">Hexo</a> <a href="/tags/MySQL/" style="font-size: 16px; color: #999">MySQL</a> <a href="/tags/Python/" style="font-size: 18px; color: #999da3">Python</a> <a href="/tags/Study/" style="font-size: 22px; color: #99a5b6">Study</a> <a href="/tags/Tools/" style="font-size: 16px; color: #999">Tools</a> <a href="/tags/Vue/" style="font-size: 24px; color: #99a9bf">Vue</a> <a href="/tags/problem/" style="font-size: 16px; color: #999">problem</a> <a href="/tags/work/" style="font-size: 16px; color: #999">work</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 16px; color: #999">前端</a> <a href="/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/" style="font-size: 18px; color: #999da3">可视化</a> <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/" style="font-size: 20px; color: #99a1ac">研究生</a> <a href="/tags/%E7%AC%94%E8%AF%95/" style="font-size: 16px; color: #999">笔试</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fa fa-archive" aria-hidden="true"></i><span>归档</span></div><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/"><span class="archive-list-date">三月 2022</span><span class="archive-list-count">23</span></a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/"><span class="archive-list-date">六月 2020</span><span class="archive-list-count">1</span></a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/"><span class="archive-list-date">四月 2020</span><span class="archive-list-count">8</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fa fa-line-chart" aria-hidden="true"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="webinfo-article-name">文章数目 :</div><div class="webinfo-article-count">32</div></div><div class="webinfo-item"><div class="webinfo-runtime-name">已运行时间 :</div><div class="webinfo-runtime-count" id="webinfo-runtime-count" start_date="2/2/2020 00:00:00">     </div></div><div class="webinfo-item">      <div class="webinfo-site-uv-name">本站访客数 :</div><div class="webinfo-site-uv-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="webinfo-site-name">本站总访问量 :</div><div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div></div></div></div></div></div></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By CodeHao</div><div class="framework-info"><span>驱动 </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div><div class="footer_custom_text"><script src="//lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script><script src="https://player.lmih.cn/player/js/player.js" id="myhk" key="158995330236" m="1"></script> Hi, welcome to my <a href="https://codehao.top/">blog</a>!</div><div class="icp"><a href="http://www.beian.miit.gov.cn/state/outPortal/loginPortal.action" target="_blank" rel="noopener"><img class="icp-icon" src="/img/icp.png"/><span>京ICP备20022049号</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="简繁转换" target="_self">简体中文</a><i class="darkmode fa fa-moon-o" id="darkmode" title="夜间模式"></i></div><div id="rightside-config-show"><div id="rightside_config" title="设置"><i class="fa fa-cog" aria-hidden="true"></i></div><i class="fa fa-arrow-up" id="go-up" title="回到顶部" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script id="ribbon_piao" mobile="true" src="/js/third-party/piao.js"></script><script src="/js/third-party/activate-power-mode.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script><script src="/js/third-party/ClickShowText.js"></script><script src="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@master/Hexo/js/hideMobileSidebar.js"></script></body></html>
